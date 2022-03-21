@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jump")] 
     public float jumpSpeed;
     public float gravityScale;
-    public float originalGravity;
+    private float _ySpeed;
 
     [Header("Camera")] 
     [SerializeField] private Transform cameraTransform;
@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         CharacterController = GetComponent<CharacterController>();
-        originalGravity = gravityScale;
     }
 
     // Update is called once per frame
@@ -50,7 +50,10 @@ public class PlayerMovement : MonoBehaviour
         movementDirection.Normalize();
 
         Vector3 velocity = movementDirection * magnitude;
+        velocity.y = _ySpeed;
+        
         CharacterController.Move(velocity * Time.deltaTime);
+        _ySpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
 
         if (movementDirection != Vector3.zero)
         {
@@ -62,6 +65,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        
+        _ySpeed = -0.5f;
+        if (Input.GetButtonDown("Jump"))
+        {
+            _ySpeed = jumpSpeed;
+        }
     }
 }
