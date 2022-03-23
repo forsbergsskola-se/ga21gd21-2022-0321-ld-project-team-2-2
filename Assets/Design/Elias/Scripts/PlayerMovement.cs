@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    #region Variables
+
     [Header("Movement")] 
     public float moveSpeed;
     public float rotationSpeed;
@@ -21,14 +23,15 @@ public class PlayerMovement : MonoBehaviour
     //Components
     private CharacterController CharacterController;
     private Animation animator;
-    
+
+    #endregion
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         CharacterController = GetComponent<CharacterController>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         Movement();
@@ -36,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+        
     }
 
     private void Movement()
