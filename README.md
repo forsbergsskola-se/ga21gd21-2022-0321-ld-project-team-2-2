@@ -16,6 +16,8 @@ Feel free to link any existing Linked.in Profiles or Portfolio Websites.
 
 {tdd}
 
+{sdd}
+
 {art-bible}
 
 ## Media
