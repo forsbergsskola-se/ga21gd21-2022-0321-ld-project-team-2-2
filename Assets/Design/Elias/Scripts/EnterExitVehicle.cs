@@ -9,6 +9,8 @@ public class EnterExitVehicle : MonoBehaviour
     
     //Components
     private VehicleMovement vehicleScript;
+
+    public LayerMask entervehicle;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class EnterExitVehicle : MonoBehaviour
     }
     void VehicleUpdate()
     {
+        Collider[] hitcollider = Physics.OverlapSphere(transform.position, 5f, entervehicle);
+        
         if (inVehicle == true && Input.GetKey(KeyCode.F))
         {
             transform.position = vehicleScript.transform.position + new Vector3(3, vehicleScript.transform.position.y, vehicleScript.transform.position.z);
