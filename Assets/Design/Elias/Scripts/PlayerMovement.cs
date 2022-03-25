@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump")] 
     public float jumpSpeed;
+    private float originalStepOffset;
     public float gravityScale;
     private float _ySpeed;
 
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         CharacterController = GetComponent<CharacterController>();
+        originalStepOffset = CharacterController.stepOffset;
     }
     
     void Update()
@@ -38,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
         if (CharacterController.isGrounded)
         {
             Jump();
+        }
+        else
+        {
+            CharacterController.stepOffset = 0;
         }
         
     }
@@ -69,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        CharacterController.stepOffset = originalStepOffset;
         _ySpeed = -0.5f;
         if (Input.GetButtonDown("Jump"))
         {
