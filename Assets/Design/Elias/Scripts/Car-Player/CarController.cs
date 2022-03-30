@@ -3,6 +3,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     public Rigidbody sphereRB;
+    public Rigidbody carRB;
     
     public float fwdSpeed;
     public float revSpeed;
@@ -22,6 +23,7 @@ public class CarController : MonoBehaviour
     {
         // Detach Sphere from car
         sphereRB.transform.parent = null;
+        carRB.transform.parent = null;
 
         normalDrag = sphereRB.drag;
     }

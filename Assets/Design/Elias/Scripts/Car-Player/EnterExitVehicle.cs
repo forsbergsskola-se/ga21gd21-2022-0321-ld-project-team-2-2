@@ -8,7 +8,7 @@ public class EnterExitVehicle : MonoBehaviour
     private bool inVehicle = false;
     
     //Components
-    private VehicleMovement vehicleScript;
+    private CarController _carControllerScript;
 
     public LayerMask entervehicle;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class EnterExitVehicle : MonoBehaviour
         
         if (inVehicle == true && Input.GetKey(KeyCode.F))
         {
-            transform.position = vehicleScript.transform.position + new Vector3(3, vehicleScript.transform.position.y, vehicleScript.transform.position.z);
+            transform.position = _carControllerScript.transform.position + new Vector3(3, _carControllerScript.transform.position.y, _carControllerScript.transform.position.z);
             gameObject.SetActive(true);
         }
         //If player is inside a trigger, a bool will go on, and turn of when you leave. If it's on and press F you enter vehicle.
