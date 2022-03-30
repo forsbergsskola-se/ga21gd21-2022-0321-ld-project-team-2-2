@@ -64,5 +64,7 @@ public class CarController : MonoBehaviour
             sphereRB.AddForce(transform.forward * moveInput, ForceMode.Acceleration); // Add Movement
         else
             sphereRB.AddForce(transform.up * -200f); // Add Gravity
+        
+        carRB.MoveRotation(transform.rotation);
     }
 }
