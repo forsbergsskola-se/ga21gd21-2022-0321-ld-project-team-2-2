@@ -1,36 +1,96 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnterExitVehicle : MonoBehaviour
 {
-    //Car
-    private bool inVehicle = false;
-    
-    //Components
-    private CarController _carControllerScript;
+    [SerializeField] private GameObject human = null;
+    [SerializeField] private GameObject car = null;
+    [SerializeField] private CarController _carController = null;
+    [SerializeField] private Animator carAnimator = null;
+    [SerializeField] private Transform enterCar;
+    public LayerMask vehicles;
 
-    public LayerMask entervehicle;
+    [Header("Cameras")] 
+    [SerializeField] private GameObject playerCamera;
+    [SerializeField] private GameObject carCamera;
+
+    [Header("Input")]
+    [SerializeField] private KeyCode enterExitKey = KeyCode.E;
+    
+    [SerializeField] float closeDistance = 2f;
+
+    private bool inCar = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        inCar = car.activeSelf;
     }
 
     // Update is called once per frame
     void Update()
     {
-        VehicleUpdate();
-    }
-    void VehicleUpdate()
-    {
-        Collider[] hitcollider = Physics.OverlapSphere(transform.position, 5f, entervehicle);
-        
-        if (inVehicle == true && Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(enterExitKey))
         {
-            transform.position = _carControllerScript.transform.position + new Vector3(3, _carControllerScript.transform.position.y, _carControllerScript.transform.position.z);
-            gameObject.SetActive(true);
+            if (inCar)
+            {
+                GetOutOfCar();
+            }
+            else if (CarNearby())
+            {
+                GetIntoCar();
+            }
         }
-        //If player is inside a trigger, a bool will go on, and turn of when you leave. If it's on and press F you enter vehicle.
+    }
+
+    void GetOutOfCar()
+    {
+        inCar = false;
+        human.SetActive(true);
+        human.transform.position = car.transform.position + car.transform.TransformDirection(new Vector3(-2, 0, 0));
+
+        carAnimator.enabled = false;
+        playerCamera.SetActive(true);
+        carCamera.SetActive(false);
+        
+        _carController.enabled = false;
+    }
+
+    void GetIntoCar()
+    {
+        inCar = true;
+        
+        human.SetActive(false);
+
+        carAnimator.enabled = true;
+        playerCamera.SetActive(false);
+        carCamera.SetActive(true);
+
+        _carController.enabled = true;
+    }
+
+    private bool CarNearby()
+    {
+        Collider[] cols = Physics.OverlapSphere(human.transform.position, closeDistance);
+        if (Physics.CheckSphere(human.transform.position, closeDistance, vehicles))
+        {
+            return true;
+        }
+        /*foreach (var entCar in cols)
+        {
+            if (entCar.CompareTag("Vehicle"))
+            {
+                return true;
+            }
+        }*/
+        return false;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireSphere(human.transform.position, closeDistance);
     }
 }
