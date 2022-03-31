@@ -56,7 +56,7 @@ public class WheelController : MonoBehaviour
             }
 
             var emission = smoke.emission;
-            emission.rateOverTime = 50f;
+            //emission.rateOverTime = 50f;
         }
         else
         {
@@ -66,7 +66,7 @@ public class WheelController : MonoBehaviour
             }
             
             var emission = smoke.emission;
-            emission.rateOverTime = 0f;
+            //emission.rateOverTime = 0f;
         }
     }
 }
