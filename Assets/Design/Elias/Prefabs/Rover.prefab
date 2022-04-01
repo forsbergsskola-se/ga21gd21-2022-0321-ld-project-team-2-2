@@ -1686,9 +1686,11 @@ GameObject:
   - component: {fileID: 5059778020449459435}
   - component: {fileID: 5059778020449459446}
   - component: {fileID: 5059778020449459433}
-  m_Layer: 0
+  - component: {fileID: 799561651}
+  - component: {fileID: 799561652}
+  m_Layer: 10
   m_Name: Rover
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1777,6 +1779,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &799561651
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059778020449459434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5753207, y: 2.136724, z: 4.867124}
+  m_Center: {x: -0.037154496, y: 0.568362, z: 0.0343616}
+--- !u!114 &799561652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059778020449459434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ad5463ab0d4314abbdc47794c097cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inRange: 0
 --- !u!1 &5059778020462057739
 GameObject:
   m_ObjectHideFlags: 0

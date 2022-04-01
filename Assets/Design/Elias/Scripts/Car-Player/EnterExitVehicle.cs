@@ -6,11 +6,13 @@ using UnityEngine;
 public class EnterExitVehicle : MonoBehaviour
 {
     [SerializeField] private GameObject human = null;
+    [SerializeField] private CheckInRange _checkInRange;
+    //private bool inRange;
+    
+    [Header("Car")]
     [SerializeField] private GameObject car = null;
     [SerializeField] private CarController _carController = null;
     [SerializeField] private Animator carAnimator = null;
-    [SerializeField] private Transform enterCar;
-    public LayerMask vehicles;
 
     [Header("Cameras")] 
     [SerializeField] private GameObject playerCamera;
@@ -18,10 +20,8 @@ public class EnterExitVehicle : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private KeyCode enterExitKey = KeyCode.E;
-    
-    [SerializeField] float closeDistance = 2f;
 
-    private bool inCar = false;
+    public bool inCar = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,7 @@ public class EnterExitVehicle : MonoBehaviour
             {
                 GetOutOfCar();
             }
-            else if (CarNearby())
+            else if (_checkInRange.inRange)
             {
                 GetIntoCar();
             }
@@ -69,28 +69,5 @@ public class EnterExitVehicle : MonoBehaviour
         carCamera.SetActive(true);
 
         _carController.enabled = true;
-    }
-
-    private bool CarNearby()
-    {
-        Collider[] cols = Physics.OverlapSphere(human.transform.position, closeDistance);
-        if (Physics.CheckSphere(human.transform.position, closeDistance, vehicles))
-        {
-            return true;
-        }
-        /*foreach (var entCar in cols)
-        {
-            if (entCar.CompareTag("Vehicle"))
-            {
-                return true;
-            }
-        }*/
-        return false;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(human.transform.position, closeDistance);
     }
 }
