@@ -4,7 +4,7 @@ public class CarController : MonoBehaviour
 {
     public Rigidbody sphereRB;
     public Rigidbody carRB;
-    
+
     public float fwdSpeed;
     public float revSpeed;
     public float turnSpeed;
@@ -18,7 +18,7 @@ public class CarController : MonoBehaviour
     public float modifiedDrag;
     
     public float alignToGroundTime;
-    
+
     void Start()
     {
         // Detach Sphere from car

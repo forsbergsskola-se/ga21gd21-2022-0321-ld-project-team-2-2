@@ -348,6 +348,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 610789833001711159}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &164809562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5059778020928345822, guid: e62d09fc7d129c147b2db5274b6a9846,
+    type: 3}
+  m_PrefabInstance: {fileID: 5059778019666709318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &176019821
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +710,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471749390}
-  m_LocalRotation: {x: 0.124332555, y: 0.69609004, z: -0.12433253, w: 0.69609016}
+  m_LocalRotation: {x: 0.12433255, y: 0.69609004, z: -0.12433254, w: 0.69609016}
   m_LocalPosition: {x: -23.14, y: 5.5889997, z: -16.630001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1779,7 +1785,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918899862}
-  m_LocalRotation: {x: 0.124332555, y: 0.69609004, z: -0.12433253, w: 0.69609016}
+  m_LocalRotation: {x: 0.12433255, y: 0.69609004, z: -0.12433254, w: 0.69609016}
   m_LocalPosition: {x: -23.14, y: 5.5889997, z: -16.630001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2289,6 +2295,8 @@ MonoBehaviour:
   playerCamera: {fileID: 362129206}
   carCamera: {fileID: 918899862}
   enterExitKey: 101
+  colRB: {fileID: 1351402377}
+  parent: {fileID: 164809562}
   inCar: 0
 --- !u!114 &1290972141
 MonoBehaviour:
@@ -2474,6 +2482,12 @@ Transform:
   m_Father: {fileID: 1232123848}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1351402377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5059778020914909207, guid: e62d09fc7d129c147b2db5274b6a9846,
+    type: 3}
+  m_PrefabInstance: {fileID: 5059778019666709318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1636464207
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,6 +3203,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rover
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059778020449459435, guid: e62d09fc7d129c147b2db5274b6a9846,
+        type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 359888562}
+    - target: {fileID: 5059778020449459435, guid: e62d09fc7d129c147b2db5274b6a9846,
+        type: 3}
+      propertyPath: _EnterExit
+      value: 
+      objectReference: {fileID: 1290972140}
+    - target: {fileID: 8019089177764462527, guid: e62d09fc7d129c147b2db5274b6a9846,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e62d09fc7d129c147b2db5274b6a9846, type: 3}

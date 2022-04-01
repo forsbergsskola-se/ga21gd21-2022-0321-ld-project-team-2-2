@@ -7,7 +7,6 @@ public class EnterExitVehicle : MonoBehaviour
 {
     [SerializeField] private GameObject human = null;
     [SerializeField] private CheckInRange _checkInRange;
-    //private bool inRange;
     
     [Header("Car")]
     [SerializeField] private GameObject car = null;
