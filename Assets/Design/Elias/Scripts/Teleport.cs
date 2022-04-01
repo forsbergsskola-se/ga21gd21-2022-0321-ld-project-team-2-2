@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
+    [Header("Object to teleport")]
     public GameObject objToTp;
+    [Header("Where to teleport")]
     public Transform tpLoc;
 
     void OnTriggerEnter(Collider other)
