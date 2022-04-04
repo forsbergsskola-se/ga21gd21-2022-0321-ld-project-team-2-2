@@ -5,6 +5,9 @@ public class PushBox : MonoBehaviour
     [SerializeField]
     private float forceMagnitude;
 
+    public float pushSpeed;
+    public PlayerMovement _Player;
+
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody rigidbody = hit.collider.attachedRigidbody;
@@ -15,6 +18,12 @@ public class PushBox : MonoBehaviour
             forceDirection.Normalize();
             
             rigidbody.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
+            _Player.moveSpeed = pushSpeed;
+            //Lock the camera
+        }
+        else
+        {
+            _Player.moveSpeed = 10;
         }
     }
 }

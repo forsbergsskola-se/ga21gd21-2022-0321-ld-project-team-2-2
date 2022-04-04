@@ -16,4 +16,9 @@ public class Currency : MonoBehaviour
     {
         
     }
+
+    public void AddScrap()
+    {
+        scrapMetal += 10;
+    }
 }
