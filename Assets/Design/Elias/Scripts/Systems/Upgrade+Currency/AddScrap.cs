@@ -5,7 +5,19 @@ using UnityEngine;
 
 public class AddScrap : MonoBehaviour
 {
-    public Currency _Currency;
+    private Currency _Currency;
+    private GameObject gameManager;
+
+    private void Start()
+    {
+        #region Input
+
+        gameManager = GameObject.Find("GameManager");
+        _Currency = gameManager.GetComponent<Currency>();
+
+        #endregion
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
