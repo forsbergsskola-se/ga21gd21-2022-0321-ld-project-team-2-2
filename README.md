@@ -7,7 +7,7 @@
 ## Team Yoda
 
 *Game Designer*  
-Elias Bernmarker [LinkedIn](https://www.linkedin.com/in/elias-bernmarker-0733a9203/) [Portfolio]()  
+Elias Bernmarker [LinkedIn](https://www.linkedin.com/in/elias-bernmarker-0733a9203/) [Portfolio](https://ivinsiblee.wixsite.com/eliasbernmarker)  
 Sear Waizy [LinkedIn]() [Portfolio]()  
 Erik Matsson [LinkedIn]() [Portfolio]()  
 Joakim Örnefors [LinkedIn]() [Portfolio]()  
