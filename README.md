@@ -1,23 +1,41 @@
-# {game-title}
+# Vantablack
 
 {video}
 
 {description}
 
-## Team Name
+## Team Yoda
 
-{team members and roles}
+*Game Designer*  
+Elias Bernmarker [LinkedIn](https://www.linkedin.com/in/elias-bernmarker-0733a9203/) [Portfolio]()  
+Sear Waizy [LinkedIn]() [Portfolio]()  
+Erik Matsson [LinkedIn]() [Portfolio]()  
+Joakim Örnefors [LinkedIn]() [Portfolio]()  
 
-Feel free to link any existing Linked.in Profiles or Portfolio Websites.
+*Art Designers*  
+Mathilda Christiansson [Linkedin]() [Portfolio]()  
+Rasmus M [Linkedin]() [Portfolio]()  
+Rachael Whelan [Linkedin]() [Portfolio]()  
+Salomon [Linkedin]() [Portfolio]()  
+Jonathan Tesfamichael [Linkedin]() [Portfolio]()  
+
+*Sound Designers*  
+Tom Olovsson [Linkedin]() [Portfolio]()  
+Anton Spetze [Linkedin]() [Portfolio]()  
+Troy Davis [Linkedin]() [Portfolio]()  
+
+---
 
 ## Design Documents
 
-{gdd}
+[Game Design Document](https://docs.google.com/document/d/1dIpyoXbA_LSwrMZkpZ_6TkdrgYcTSZhk3HFP0H3jl9k/edit)
 
-{tdd}
+[Level Design Document](https://docs.google.com/document/d/1llIjDGHlF73zppmzrnmDlWvie7ywvoEfrD4Q0dZOqIM/edit#heading=h.2z099olkbazm)
 
-{sdd}
+[Narrative Design Document](https://docs.google.com/document/d/1drG0h4KtdDyNwhc3mDPv5OqHj-AnxepS_Hkrlbyv2D8/edit#heading=h.m3zp1a5vce58)
 
-{art-bible}
+[Sound Design Document](https://docs.google.com/document/d/1UZKGZ9bi_Ewt-HgvSsOXgWhVNmicdRjvd6_QY40zj_I/edit#heading=h.p0dgyzlpep1r)
+
+[Art Bible](https://docs.google.com/document/d/1Gp-_OCduvRVewzrBZki65FVYS_hIRamSnDovKGr2sAw/edit)
 
 ## Media
