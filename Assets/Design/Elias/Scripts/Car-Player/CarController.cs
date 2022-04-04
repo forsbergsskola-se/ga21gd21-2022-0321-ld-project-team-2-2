@@ -1,24 +1,32 @@
+using System.Collections;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+    #region Variables
+
     public Rigidbody sphereRB;
     public Rigidbody carRB;
 
     public float fwdSpeed;
     public float revSpeed;
+    public float boostSpeed;
     public float turnSpeed;
     public LayerMask groundLayer;
-
+    private float originalSpeed;
+    private float gravityDrag = -200f;
+    
     private float moveInput;
     private float turnInput;
     private bool isCarGrounded;
+    private bool boostCheck = true;
     
     private float normalDrag;
     public float modifiedDrag;
     
     public float alignToGroundTime;
 
+    #endregion
     void Start()
     {
         // Detach Sphere from car
@@ -26,6 +34,8 @@ public class CarController : MonoBehaviour
         carRB.transform.parent = null;
 
         normalDrag = sphereRB.drag;
+
+        originalSpeed = fwdSpeed;
     }
     
     void Update()
@@ -56,6 +66,8 @@ public class CarController : MonoBehaviour
         
         // Calculate Drag
         sphereRB.drag = isCarGrounded ? normalDrag : modifiedDrag;
+        
+        Radio();
     }
 
     private void FixedUpdate()
@@ -63,8 +75,33 @@ public class CarController : MonoBehaviour
         if (isCarGrounded)
             sphereRB.AddForce(transform.forward * moveInput, ForceMode.Acceleration); // Add Movement
         else
-            sphereRB.AddForce(transform.up * -200f); // Add Gravity
+            sphereRB.AddForce(transform.up * gravityDrag); // Add Gravity
         
         carRB.MoveRotation(transform.rotation);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(NitroBoost());
+        }
+    }
+
+    IEnumerator NitroBoost()
+    {
+        if (boostCheck)
+        {
+            boostCheck = false;
+            fwdSpeed = boostSpeed;
+            gravityDrag = -100f;
+            yield return new WaitForSeconds(2);
+            fwdSpeed = originalSpeed;
+            gravityDrag = -200f;
+            yield return new WaitForSeconds(10);
+            boostCheck = true;
+        }
+    }
+
+    void Radio()
+    {
+        
     }
 }
