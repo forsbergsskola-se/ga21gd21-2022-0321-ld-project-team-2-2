@@ -11,6 +11,7 @@ public class WheelController : MonoBehaviour
     
     public float rotationSpeed;
     private Animator anim;
+    public EnterExitVehicle ExitVehicle;
     
     // Start is called before the first frame update
     void Start()
@@ -23,19 +24,19 @@ public class WheelController : MonoBehaviour
     {
         float verticalAxis = Input.GetAxisRaw("Vertical");
         float horizontalAxis = Input.GetAxisRaw("Horizontal");
-
+        
         foreach (var wheel in wheelsToRotate)
         {
             wheel.transform.Rotate(Time.deltaTime * verticalAxis * rotationSpeed,0,0, Space.Self);
         }
 
-        if (horizontalAxis > 0)
+        if (horizontalAxis > 0 && ExitVehicle.inCar)
         {
             //turning right
             anim.SetBool("goingLeft", false);
             anim.SetBool("goingRight", true);
         }
-        else if (horizontalAxis < 0)
+        else if (horizontalAxis < 0 && ExitVehicle.inCar)
         {
             //turning left
             anim.SetBool("goingRight", false);

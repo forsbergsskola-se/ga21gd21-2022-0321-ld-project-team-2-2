@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5059778020449459434}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59e5b2030ec19f44698b799c291e6f68, type: 3}
   m_Name: 
@@ -1759,6 +1759,7 @@ MonoBehaviour:
   - {fileID: 5059778020889072269}
   smoke: {fileID: 0}
   rotationSpeed: 1000
+  ExitVehicle: {fileID: 0}
 --- !u!95 &5059778020449459433
 Animator:
   serializedVersion: 4

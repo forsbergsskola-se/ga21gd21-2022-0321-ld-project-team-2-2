@@ -22,10 +22,12 @@ public class EnterExitVehicle : MonoBehaviour
 
     public bool inCar = false;
 
+    public Rigidbody carCol;
+
     // Start is called before the first frame update
     void Start()
     {
-        inCar = car.activeSelf;
+
     }
 
     // Update is called once per frame
@@ -55,6 +57,7 @@ public class EnterExitVehicle : MonoBehaviour
         carCamera.SetActive(false);
         
         _carController.enabled = false;
+        carCol.isKinematic = true;
     }
 
     void GetIntoCar()
@@ -68,5 +71,6 @@ public class EnterExitVehicle : MonoBehaviour
         carCamera.SetActive(true);
 
         _carController.enabled = true;
+        carCol.isKinematic = false;
     }
 }

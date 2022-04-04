@@ -1,16 +1,21 @@
+using System;
 using UnityEngine;
 
 public class CheckInRange : MonoBehaviour
 {
     public bool inRange;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             inRange = true;
         }
-        else
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
             inRange = false;
         }
