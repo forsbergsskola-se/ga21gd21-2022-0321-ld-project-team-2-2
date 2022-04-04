@@ -14,9 +14,9 @@ Joakim Örnefors [LinkedIn]() [Portfolio]()
 
 *Art Designers*  
 Mathilda Christiansson [Linkedin]() [Portfolio]()  
-Rasmus M [Linkedin]() [Portfolio]()  
+Rasmus Mårtenson [Linkedin]() [Portfolio]()  
 Rachael Whelan [Linkedin]() [Portfolio]()  
-Salomon [Linkedin]() [Portfolio]()  
+Salomon Edström [Linkedin]() [Portfolio]()  
 Jonathan Tesfamichael [Linkedin]() [Portfolio]()  
 
 *Sound Designers*  
