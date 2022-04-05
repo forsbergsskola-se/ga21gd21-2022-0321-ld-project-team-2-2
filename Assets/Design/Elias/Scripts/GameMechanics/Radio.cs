@@ -15,11 +15,10 @@ public class Radio : MonoBehaviour
     #endregion
 
    
-    instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio");
 
     void Start()
     {
-
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio");
     }
 
     // Update is called once per frame
@@ -62,25 +61,27 @@ public class Radio : MonoBehaviour
         {
 
             RadioStation++;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/ChangeChannel");
-
             if (RadioStation == 4)
             {
                 RadioStation = 1;
-
             }
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ChangeChannel");
+            instance.setParameterByName("SwitchChannel", RadioStation);
+
+            
         }
 
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)//BWD
         {
             RadioStation--;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/ChangeChannel");
-
             if (RadioStation == 0)
             {
-
                 RadioStation = 3;
             }
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ChangeChannel");
+            instance.setParameterByName("SwitchChannel", RadioStation);
+
+            
         }
     }
 }
