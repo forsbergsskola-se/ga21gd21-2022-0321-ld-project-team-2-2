@@ -8,5 +8,6 @@ public class CollisionEffects : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Instantiate(hitEffectPrefab, other.GetContact(0).point, Quaternion.identity);
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/Vehicle/VehicleCollide");
     }
 }

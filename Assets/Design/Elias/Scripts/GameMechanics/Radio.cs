@@ -16,6 +16,8 @@ public class Radio : MonoBehaviour
     void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio/Radio");
+        instance.start();
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff",0);
     }
 
     // Update is called once per frame
@@ -28,6 +30,12 @@ public class Radio : MonoBehaviour
         if (_EnterExit.inCar && Input.GetKeyDown(KeyCode.V))
         {
             radioOn = !radioOn;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Radio/ChangeChannel");
+        }
+
+        if (_EnterExit.inCar == false)
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff",0);
         }
     }
 
@@ -35,14 +43,12 @@ public class Radio : MonoBehaviour
     {
         if (radioOn)
         {
-            instance.start();
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff", 1);
             ChangeStation();
         }
         else
         {
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff",0);
-           
         }
     }
     
