@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8854081813365434104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PickupScrapMetal
+  m_EditorClassIdentifier: 
+  Path: event:/PickupScrapMetal
+  Guid:
+    Data1: 79235792
+    Data2: 1149392500
+    Data3: -1040598874
+    Data4: -1494136362
+  Banks:
+  - {fileID: 13837934557362021}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6854543336778464075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,10 +145,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637846821962195206
+  lastModified: 637847514832032160
   FileSizes:
   - Name: 
-    Value: 1158
+    Value: 1284
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -146,13 +173,16 @@ MonoBehaviour:
   - {fileID: 6341434563393817515}
   - {fileID: -1397942703281295750}
   - {fileID: 8800682028193845858}
+  - {fileID: 7544176036562736359}
+  - {fileID: 2313400595365130487}
+  - {fileID: -8854081813365434104}
   EditorParameters:
   - {fileID: -6854543336778464075}
   MasterBanks:
   - {fileID: 13837934557362021}
   StringsBanks:
   - {fileID: -1379663404521464833}
-  cacheTime: 637846821962195206
+  cacheTime: 637847514832032160
   cacheVersion: 10
 --- !u!114 &13837934557362021
 MonoBehaviour:
@@ -169,7 +199,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637846821962175199
+  lastModified: 637847514832007345
   FileSizes: []
   Exists: 1
 --- !u!114 &1653520909323533150
@@ -196,6 +226,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2313400595365130487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footstep
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep
+  Guid:
+    Data1: -916841083
+    Data2: 1122179445
+    Data3: 307529400
+    Data4: -924399008
+  Banks:
+  - {fileID: 13837934557362021}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
 --- !u!114 &4876006417958876691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +336,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7544176036562736359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TestMusik
+  m_EditorClassIdentifier: 
+  Path: event:/TestMusik
+  Guid:
+    Data1: -178951052
+    Data2: 1190577544
+    Data3: 1167548815
+    Data4: 1709956643
+  Banks:
+  - {fileID: 13837934557362021}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 593789
 --- !u!114 &8201341703542384694
 MonoBehaviour:
   m_ObjectHideFlags: 0

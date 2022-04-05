@@ -31,9 +31,13 @@ public class NewBehaviourScript : MonoBehaviour
         {
         FMOD.Studio.EventInstance.tempIns = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
         tempInst.start();
-        tempInst.release();
+        tempInst.release
+
+        Changing parameters:
+        if (enter what triggers the param change) myInstance.setParameterByName("ParameterName", 40f);
         
         }
         */
+
     }
 }
