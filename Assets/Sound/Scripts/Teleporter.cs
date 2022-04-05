@@ -15,8 +15,6 @@ public class Teleporter : MonoBehaviour
     {
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
-
-    // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
         myInstance = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
