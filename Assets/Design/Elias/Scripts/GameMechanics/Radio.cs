@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Radio : MonoBehaviour
 {
-
     #region Variables
 
     public EnterExitVehicle _EnterExit;
@@ -13,8 +12,6 @@ public class Radio : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
 
     #endregion
-
-   
 
     void Start()
     {
@@ -27,8 +24,6 @@ public class Radio : MonoBehaviour
         if (_EnterExit.inCar)
         {
             TurnOn();
-            TurnOff();
-
         }
         if (_EnterExit.inCar && Input.GetKeyDown(KeyCode.V))
         {
@@ -41,27 +36,18 @@ public class Radio : MonoBehaviour
         if (radioOn)
         {
             instance.start();
-            ChangeStation();//Start music
-
+            ChangeStation();
         }
-    }
-
-    void TurnOff()
-    {
-        if (radioOn == false)
+        else
         {
             instance.release();
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Radio/ChangeChannel");
-          
-            //Stop music
         }
     }
-
+    
     void ChangeStation()
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)//FWD
         {
-            
             RadioStation++;
 
             if (RadioStation == 4)
@@ -71,8 +57,6 @@ public class Radio : MonoBehaviour
 
             FMODUnity.RuntimeManager.PlayOneShot("event:/Radio/ChangeChannel");
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SwitchChannel", RadioStation);
-
-
         }
 
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)//BWD
@@ -85,8 +69,6 @@ public class Radio : MonoBehaviour
             }
             FMODUnity.RuntimeManager.PlayOneShot("event:/Radio/ChangeChannel");
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SwitchChannel", RadioStation);
-
-
         }
     }
 }
