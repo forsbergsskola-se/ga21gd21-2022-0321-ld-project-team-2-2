@@ -36,11 +36,13 @@ public class Radio : MonoBehaviour
         if (radioOn)
         {
             instance.start();
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff", 1);
             ChangeStation();
         }
         else
         {
-            instance.release();
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff",0);
+           
         }
     }
     
