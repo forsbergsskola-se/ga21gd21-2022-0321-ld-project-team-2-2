@@ -1517,7 +1517,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 7.70098, y: 1}
+    m_SensorSize: {x: 7.38914, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -1540,7 +1540,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738245255}
-  m_LocalRotation: {x: 0.14500889, y: -0.1507864, z: 0.02236598, w: 0.9776174}
+  m_LocalRotation: {x: 0.14500889, y: -0.15078643, z: 0.022365987, w: 0.9776173}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1602,7 +1602,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 7.70098, y: 1}
+    m_SensorSize: {x: 7.38914, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -2133,7 +2133,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 7.70098, y: 1}
+    m_SensorSize: {x: 7.38914, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -2285,7 +2285,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 7.70098, y: 1}
+    m_SensorSize: {x: 7.38914, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -2548,6 +2548,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1599552295}
+    - target: {fileID: 7221842456877972878, guid: b61086a92f3058c42aa1ceb7f9b0c7fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7464167587214255252, guid: b61086a92f3058c42aa1ceb7f9b0c7fa,
         type: 3}
       propertyPath: m_Mesh
