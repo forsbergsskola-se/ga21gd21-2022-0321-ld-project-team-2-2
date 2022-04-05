@@ -25,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController CharacterController;
     private Animation animator;
 
+    //public Footsteps FS;
+    //Sedan klura ut var dessa går:
+    //FS.Move();
+    //FS.StopMoving();
+
     #endregion
 
     private void Start()
@@ -52,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
         float magnitude = movementDirection.magnitude;
