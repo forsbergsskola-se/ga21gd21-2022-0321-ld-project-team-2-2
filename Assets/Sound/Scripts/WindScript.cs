@@ -23,7 +23,7 @@ public class WindScript : MonoBehaviour
             int windRandom = Random.Range(0, 100);
             yield return new WaitForSeconds(20);
             Debug.Log(windRandom);
-            myInstance.setParameterByName("WindAmt", windRandom);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("WindAmt", windRandom);
             }
         }
     }
