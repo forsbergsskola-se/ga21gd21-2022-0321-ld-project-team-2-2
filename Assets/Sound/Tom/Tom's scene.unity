@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2160.0078, g: 2263.8164, b: 3286.5078, a: 1}
+  m_IndirectSpecularColor: {r: 2161.25, g: 2267.916, b: 3299.5664, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -680,8 +680,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1823688467}
   - component: {fileID: 1823688466}
-  - component: {fileID: 1823688465}
   - component: {fileID: 1823688468}
+  - component: {fileID: 1823688470}
+  - component: {fileID: 1823688471}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -689,14 +690,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1823688465
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823688464}
-  m_Enabled: 1
 --- !u!20 &1823688466
 Camera:
   m_ObjectHideFlags: 0
@@ -879,6 +872,40 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &1823688470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823688464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
+--- !u!114 &1823688471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823688464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ce7701bd210254c9c61567733915c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeEventHere:
+    Guid:
+      Data1: -995654965
+      Data2: 1209111032
+      Data3: -743839846
+      Data4: -300852321
+    Path: event:/Ambience/AmbienceDesert
+  is3D: 1
 --- !u!1 &2013410473
 GameObject:
   m_ObjectHideFlags: 1
