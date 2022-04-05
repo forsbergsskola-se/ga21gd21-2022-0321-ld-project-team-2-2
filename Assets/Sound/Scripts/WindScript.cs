@@ -13,16 +13,17 @@ public class WindScript : MonoBehaviour
         myInstance = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
         if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         myInstance.start();
-        myInstance.setParameterByName("WindAmt", 0f);
+        myInstance.setParameterByName("WindAmt", 0);
         StartCoroutine(Waiter());
+
         IEnumerator Waiter()
         {
             for (; ; )
             {
-            float windRandom = Random.Range(0f, 100f);
-            yield return new WaitForSeconds(60);
-            print(windRandom);
-            myInstance.setParameterByName("WindAmt", windRandom);
+            int windRandom = Random.Range(0, 100);
+            yield return new WaitForSeconds(20);
+            Debug.Log(windRandom);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("WindAmt", windRandom);
             }
         }
     }
