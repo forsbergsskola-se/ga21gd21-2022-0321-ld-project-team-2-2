@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Radio : MonoBehaviour
 {
+
     #region Variables
 
     public EnterExitVehicle _EnterExit;
     private bool radioOn;//Might have to make public
-    private float radioStation = 1f;
+    int RadioStation = 1;
+    private FMOD.Studio.EventInstance instance;
 
     #endregion
+
+   
+    instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio");
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,6 +29,7 @@ public class Radio : MonoBehaviour
         {
             TurnOn();
             TurnOff();
+
         }
         if (_EnterExit.inCar && Input.GetKeyDown(KeyCode.V))
         {
@@ -34,8 +41,9 @@ public class Radio : MonoBehaviour
     {
         if (radioOn)
         {
-            ChangeStation();
-            //Start music
+            instance.start();
+            ChangeStation();//Start music
+
         }
     }
 
@@ -43,6 +51,7 @@ public class Radio : MonoBehaviour
     {
         if (radioOn == false)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ChangeChannel");
             //Stop music
         }
     }
@@ -51,18 +60,26 @@ public class Radio : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)//FWD
         {
-            radioStation++;
-            if (radioStation == 4f)
+
+            RadioStation++;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ChangeChannel");
+
+            if (RadioStation == 4)
             {
-                radioStation = 1f;
+                RadioStation = 1;
+
             }
         }
+
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)//BWD
         {
-            radioStation--;
-            if (radioStation == 0f)
+            RadioStation--;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ChangeChannel");
+
+            if (RadioStation == 0)
             {
-                radioStation = 3f;
+
+                RadioStation = 3;
             }
         }
     }
