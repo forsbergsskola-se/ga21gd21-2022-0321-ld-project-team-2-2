@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class Radio : MonoBehaviour
 {
+
     #region Variables
 
     public EnterExitVehicle _EnterExit;
-    private bool radioOn;//Might have to make public
-    private float radioStation = 1f;
+    private bool radioOn = true;//Might have to make public
+    int RadioStation = 1;
+    private FMOD.Studio.EventInstance instance;
 
     #endregion
+
+   
+
     void Start()
     {
-        
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio/Radio");
     }
 
     // Update is called once per frame
@@ -23,6 +28,7 @@ public class Radio : MonoBehaviour
         {
             TurnOn();
             TurnOff();
+
         }
         if (_EnterExit.inCar && Input.GetKeyDown(KeyCode.V))
         {
@@ -34,8 +40,9 @@ public class Radio : MonoBehaviour
     {
         if (radioOn)
         {
-            ChangeStation();
-            //Start music
+            instance.start();
+            ChangeStation();//Start music
+
         }
     }
 
@@ -43,6 +50,9 @@ public class Radio : MonoBehaviour
     {
         if (radioOn == false)
         {
+            instance.release();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Radio/ChangeChannel");
+          
             //Stop music
         }
     }
@@ -51,19 +61,32 @@ public class Radio : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)//FWD
         {
-            radioStation++;
-            if (radioStation == 4f)
+            
+            RadioStation++;
+
+            if (RadioStation == 4)
             {
-                radioStation = 1f;
+                RadioStation = 1;
             }
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Radio/ChangeChannel");
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SwitchChannel", RadioStation);
+
+
         }
+
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)//BWD
         {
-            radioStation--;
-            if (radioStation == 0f)
+            Debug.Log("RadioStation+");
+            RadioStation--;
+            if (RadioStation == 0)
             {
-                radioStation = 3f;
+                RadioStation = 3;
             }
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Radio/ChangeChannel");
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SwitchChannel", RadioStation);
+
+
         }
     }
 }
