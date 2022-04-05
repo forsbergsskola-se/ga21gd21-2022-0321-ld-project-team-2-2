@@ -5,16 +5,22 @@ public class CarController : MonoBehaviour
 {
     #region Variables
 
+    [Header("Rigidbodies")]
     public Rigidbody sphereRB;
     public Rigidbody carRB;
 
+    [Header("Normal")]
     public float fwdSpeed;
     public float revSpeed;
-    public float boostSpeed;
     public float turnSpeed;
     public LayerMask groundLayer;
     private float originalSpeed;
-    private float gravityDrag = -200f;
+    public float gravityDrag = -200f;
+    
+    [Header("Boost")]
+    public float boostSpeed;
+    public float newGravity;
+    public float cooldown;
     
     private float moveInput;
     private float turnInput;
@@ -66,8 +72,6 @@ public class CarController : MonoBehaviour
         
         // Calculate Drag
         sphereRB.drag = isCarGrounded ? normalDrag : modifiedDrag;
-        
-        Radio();
     }
 
     private void FixedUpdate()
@@ -91,17 +95,12 @@ public class CarController : MonoBehaviour
         {
             boostCheck = false;
             fwdSpeed = boostSpeed;
-            gravityDrag = -100f;
+            gravityDrag = newGravity;
             yield return new WaitForSeconds(2);
             fwdSpeed = originalSpeed;
             gravityDrag = -200f;
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(cooldown);
             boostCheck = true;
         }
-    }
-
-    void Radio()
-    {
-        
     }
 }
