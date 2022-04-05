@@ -8,6 +8,7 @@ public class Radio : MonoBehaviour
 
     public EnterExitVehicle _EnterExit;
     private bool radioOn;//Might have to make public
+    private float radioStation = 1f;
 
     #endregion
     void Start()
@@ -50,11 +51,19 @@ public class Radio : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)//FWD
         {
-            
+            radioStation++;
+            if (radioStation == 4f)
+            {
+                radioStation = 1f;
+            }
         }
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)//BWD
         {
-            
+            radioStation--;
+            if (radioStation == 0f)
+            {
+                radioStation = 3f;
+            }
         }
     }
 }

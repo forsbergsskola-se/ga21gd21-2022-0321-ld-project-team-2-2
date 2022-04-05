@@ -21,7 +21,6 @@ public class EnterExitVehicle : MonoBehaviour
     [SerializeField] private KeyCode enterExitKey = KeyCode.E;
 
     public bool inCar = false;
-
     public Rigidbody carCol;
 
     // Start is called before the first frame update
