@@ -28,5 +28,13 @@ public class Teleporter : MonoBehaviour
         myInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         myInstance.release();
     }
+    void Update()
+    {
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+    }
+    public void Action()
+    {
+        myInstance.setParameterByName("TeleportAction", 1f);
+    }
 
 }
