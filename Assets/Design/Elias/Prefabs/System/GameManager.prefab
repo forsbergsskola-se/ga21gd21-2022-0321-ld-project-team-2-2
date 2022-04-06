@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2766805036538975004}
   - component: {fileID: 4115937512979129772}
   - component: {fileID: 2055933980}
+  - component: {fileID: 2055933983}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -117,4 +118,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f11194322a73845b97967977f3eeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _EnterExit: {fileID: 2766805036538975004}
+--- !u!114 &2055933983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766805036538975002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf20e744a20ba448856fd3e1003024b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  car: {fileID: 0}
   _EnterExit: {fileID: 2766805036538975004}
