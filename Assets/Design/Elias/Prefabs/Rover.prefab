@@ -1735,6 +1735,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  gravityDrag: -200
+  boostSpeed: 200
+  newGravity: -50
+  cooldown: 5
   modifiedDrag: 1
   alignToGroundTime: 20
 --- !u!114 &5059778020449459446
