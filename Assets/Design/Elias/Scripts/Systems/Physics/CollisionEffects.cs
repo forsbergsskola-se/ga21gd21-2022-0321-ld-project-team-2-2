@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class CollisionEffects : MonoBehaviour
 {
-
     public GameObject hitEffectPrefab;
-
     private void OnCollisionEnter(Collision other)
     {
         Instantiate(hitEffectPrefab, other.GetContact(0).point, Quaternion.identity);
-        //FMODUnity.RuntimeManager.PlayOneShot("event:/Vehicle/VehicleCollide");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Vehicle/VehicleCollide");
     }
 }
