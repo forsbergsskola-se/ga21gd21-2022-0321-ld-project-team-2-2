@@ -77,7 +77,7 @@ public class CarController : MonoBehaviour
     private void FixedUpdate()
     {
         if (isCarGrounded)
-            sphereRB.AddForce(transform.forward * moveInput, ForceMode.Acceleration); // Add Movement
+            sphereRB.AddForce(transform.forward * moveInput, ForceMode.Acceleration); // Add Movement 
         else
             sphereRB.AddForce(transform.up * gravityDrag); // Add Gravity
         
