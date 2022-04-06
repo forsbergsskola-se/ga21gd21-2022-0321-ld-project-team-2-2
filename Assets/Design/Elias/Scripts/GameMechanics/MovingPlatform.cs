@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
+    public GameObject player;
     [SerializeField] private List<Transform> waypoints;
     [SerializeField] private float moveSpeed = 5f;
     private int _currentWaypoint;
@@ -31,5 +33,21 @@ public class MovingPlatform : MonoBehaviour
         if (_currentWaypoint != waypoints.Count) return;
         waypoints.Reverse();
         _currentWaypoint = 0;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player.transform.parent = transform;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player.transform.parent = null;
+        }
     }
 }
