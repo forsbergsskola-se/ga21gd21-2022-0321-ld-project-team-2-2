@@ -19,13 +19,15 @@ public class WindScript : MonoBehaviour
 
         IEnumerator Waiter(int seconds)
         {
-            for (; ; )
-            {
+            
+            
             int windRandom = Random.Range(0, 100);
             yield return new WaitForSeconds(seconds);
             Debug.Log(windRandom);
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("WindAmt", windRandom);
-            }
+            myInstance.setParameterByName("WindAmt", windRandom);
+            //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("WindAmt", windRandom);
+            StartCoroutine(Waiter(weatherDuration));
+            
         }
     }
     

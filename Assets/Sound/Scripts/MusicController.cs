@@ -9,7 +9,6 @@ public class MusicController : MonoBehaviour
 
     public MusicController mc; -< dra in scriptet här :) SÅ kan man referera till olika scripts 
 
-
     int playerHealth = 100;
 
     public void damagePlayer(int _amt)
@@ -18,15 +17,7 @@ public class MusicController : MonoBehaviour
     Debug.Log("Player Health: " + playerHealth)
     
     Another script with DamageController
-
-    
-    
-     
-     
-     
-     
-     
-     */
+    */
     public FMODUnity.EventReference musicEvRef;
     private FMOD.Studio.EventInstance musicEvInst;
     void Start()
