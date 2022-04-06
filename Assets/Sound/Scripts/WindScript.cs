@@ -5,16 +5,20 @@ using UnityEngine;
 public class WindScript : MonoBehaviour
 {
     public FMODUnity.EventReference placeEventHere;
-    private FMOD.Studio.EventInstance myInstance;
+    private FMOD.Studio.EventInstance windInstance;
     public bool is3D = true;
-    public int weatherDuration;
+    public int minDuration;
+    public int maxDuration;
+    private int weatherDuration;
+
     // Start is called before the first frame update
     void Start()
     {
-        myInstance = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
-        if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
-        myInstance.start();
-        myInstance.setParameterByName("WindAmt", 0);
+        windInstance = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
+        if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        windInstance.start();
+        windInstance.setParameterByName("WindAmt", 0);
+        weatherDuration = Random.Range(minDuration, maxDuration);
         StartCoroutine(Waiter(weatherDuration));
 
         IEnumerator Waiter(int seconds)
@@ -23,12 +27,13 @@ public class WindScript : MonoBehaviour
             yield return new WaitForSeconds(seconds);
             Debug.Log(windRandom);
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("WindAmt", windRandom);
+            weatherDuration = Random.Range(minDuration, maxDuration);
             StartCoroutine(Waiter(weatherDuration));
         }
     }
     
     private void Update()
     {
-        if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
 }
