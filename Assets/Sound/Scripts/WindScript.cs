@@ -18,6 +18,7 @@ public class WindScript : MonoBehaviour
     {
         windInstance = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
         FMOD.Studio.EventDescription windAmountParameter_EventDescription;
+        windInstance.getDescription(out windAmountParameter_EventDescription);
 
         if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         windInstance.start();
