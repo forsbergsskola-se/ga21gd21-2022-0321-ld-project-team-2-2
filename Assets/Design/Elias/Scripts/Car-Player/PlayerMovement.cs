@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     
     //Components
     private CharacterController CharacterController;
-    private Animation animator;
+    private Animator animator;
 
     public SoundManager Manager;
 
@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         //Cursor.lockState = CursorLockMode.Locked;
         CharacterController = GetComponent<CharacterController>();
         originalStepOffset = CharacterController.stepOffset;
@@ -73,12 +74,14 @@ public class PlayerMovement : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation =
                 Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-            Manager.Move();
+            //Manager.Move();
+            animator.SetBool("isWalking", true);
 
         }
         else
         {
-            Manager.StopMoving();
+            animator.SetBool("isWalking", false);
+            //Manager.StopMoving();
         }
     }
 
@@ -90,5 +93,12 @@ public class PlayerMovement : MonoBehaviour
         {
             _ySpeed = jumpSpeed;
         }
+    }
+
+    void PlayFootstepsEvent(string path)
+    {
+        FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(path);
+        Footsteps.start();
+        Footsteps.release();
     }
 }
