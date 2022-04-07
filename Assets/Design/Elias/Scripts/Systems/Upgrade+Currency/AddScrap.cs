@@ -7,6 +7,7 @@ public class AddScrap : MonoBehaviour
 {
     private Currency _Currency;
     private GameObject gameManager;
+    public SoundManager Manager;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class AddScrap : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Manager.PickUpSound();
             _Currency.AddScrap();
             Destroy(gameObject);
         }

@@ -453,7 +453,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1698112, y: 1}
+    m_SensorSize: {x: 2.0508022, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -1646,7 +1646,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1698112, y: 1}
+    m_SensorSize: {x: 2.0508022, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -1987,6 +1987,46 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2140002031}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &455583845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455583837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739f23aaf76965b48b381ca84b2dc387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeEventHere:
+    Guid:
+      Data1: 79235792
+      Data2: 1149392500
+      Data3: -1040598874
+      Data4: -1494136362
+    Path: event:/PickupScrapMetal
+  is3D: 0
+--- !u!114 &455583849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455583837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52458577f216f3748abe74be0322ad63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeEventHere:
+    Guid:
+      Data1: -916841083
+      Data2: 1122179445
+      Data3: 307529400
+      Data4: -924399008
+    Path: event:/Footstep
+  is3D: 0
 --- !u!1 &457388193
 GameObject:
   m_ObjectHideFlags: 0
@@ -10326,7 +10366,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4302
+  m_Name: pb_Mesh30714
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11594,7 +11634,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1698112, y: 1}
+    m_SensorSize: {x: 2.0508022, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -12129,7 +12169,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh44246
+  m_Name: pb_Mesh31124
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12395,6 +12435,11 @@ PrefabInstance:
       propertyPath: _Currency
       value: 
       objectReference: {fileID: 508870202}
+    - target: {fileID: 5111867270370447741, guid: b1a32d70ba21686448fe4919f361c837,
+        type: 3}
+      propertyPath: scrapSound
+      value: 
+      objectReference: {fileID: 455583845}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a32d70ba21686448fe4919f361c837, type: 3}
 --- !u!1 &1660691770
@@ -13802,7 +13847,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1698112, y: 1}
+    m_SensorSize: {x: 2.0508022, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -14012,6 +14057,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1830400477}
     m_Modifications:
+    - target: {fileID: 610789832747327017, guid: 707221b5ac2d50a4e964307f37d7ea80,
+        type: 3}
+      propertyPath: FS
+      value: 
+      objectReference: {fileID: 455583849}
     - target: {fileID: 610789832747327017, guid: 707221b5ac2d50a4e964307f37d7ea80,
         type: 3}
       propertyPath: cameraTransform
