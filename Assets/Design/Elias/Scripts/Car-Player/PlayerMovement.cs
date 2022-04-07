@@ -25,10 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController CharacterController;
     private Animation animator;
 
-    //public Footsteps FS;
-    //Sedan klura ut var dessa g�r:
-    //FS.Move();
-    //FS.StopMoving();
+    public Footsteps FS;
 
     #endregion
 
@@ -76,11 +73,12 @@ public class PlayerMovement : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation =
                 Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-                //Footstepsounds!!!!
+            FS.Move();
+
         }
         else
         {
-            //No Footstepsounds!!!        
+            FS.StopMoving();
         }
     }
 
