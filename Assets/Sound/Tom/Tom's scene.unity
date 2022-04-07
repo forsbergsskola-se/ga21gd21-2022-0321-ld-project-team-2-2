@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1262.0977, g: 1240.1504, b: 1682.793, a: 1}
+  m_IndirectSpecularColor: {r: 1261.7979, g: 1239.46, b: 1680.8516, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -583,6 +583,135 @@ Transform:
   m_Father: {fileID: 1364886473}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &260628369
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 676911015}
+    m_Modifications:
+    - target: {fileID: 8909538361167394033, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_Name
+      value: SphereTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394034, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394036, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394036, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportHumEventHere.Path
+      value: event:/InteractiveObjects/Teleporter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportActionEventHere.Path
+      value: event:/InteractiveObjects/TeleporterAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportHumEventHere.Guid.Data1
+      value: -697755403
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportHumEventHere.Guid.Data2
+      value: 1127084418
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportHumEventHere.Guid.Data3
+      value: 306466486
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportHumEventHere.Guid.Data4
+      value: -655248522
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportActionEventHere.Guid.Data1
+      value: -134618877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportActionEventHere.Guid.Data2
+      value: 1094815638
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportActionEventHere.Guid.Data3
+      value: 677222791
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909538361167394037, guid: 9a4f70f916862be478f30525d0ed0016,
+        type: 3}
+      propertyPath: placeTeleportActionEventHere.Guid.Data4
+      value: -1391741093
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a4f70f916862be478f30525d0ed0016, type: 3}
 --- !u!1 &293344248
 GameObject:
   m_ObjectHideFlags: 0
@@ -11405,7 +11534,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227463663}
-  m_LocalRotation: {x: 0.18255739, y: 0.00000001891404, z: -0.0000000035119139, w: 0.98319525}
+  m_LocalRotation: {x: 0.18255739, y: -0.000000018914042, z: 0.0000000035119143, w: 0.98319525}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11985,7 +12114,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4296
+  m_Name: pb_Mesh44246
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
