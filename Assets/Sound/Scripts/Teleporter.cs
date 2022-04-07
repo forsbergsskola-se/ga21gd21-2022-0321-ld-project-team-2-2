@@ -6,35 +6,46 @@ public class Teleporter : MonoBehaviour
 {
     //Jag behöver fixa en funktion för att sätta en temporär parameter så en one-shot kan komma utöver loop-eventet när spelaren teleporteras.
 
-    public FMODUnity.EventReference placeEventHere;
-    private FMOD.Studio.EventInstance myInstance;
+    public FMODUnity.EventReference placeTeleportHumEventHere;
+    public FMODUnity.EventReference placeTeleportActionEventHere;
+    private FMOD.Studio.EventInstance teleportHumInstance;
+    private FMOD.Studio.EventInstance teleportActionInstance;
     public bool is3D = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(teleportHumInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        myInstance = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
-        myInstance.start();
+        if (other.tag == "Player")
+        {
+            teleportHumInstance = FMODUnity.RuntimeManager.CreateInstance(placeTeleportHumEventHere);
+            teleportActionInstance = FMODUnity.RuntimeManager.CreateInstance(placeTeleportActionEventHere);
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(teleportHumInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(teleportActionInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            teleportHumInstance.start();
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        myInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        myInstance.release();
+        teleportHumInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        teleportHumInstance.release();
+        teleportActionInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        teleportActionInstance.release();
     }
     void Update()
     {
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(teleportHumInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(teleportActionInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
     public void Action()
     {
-        myInstance.setParameterByName("TeleportAction", 1f);
+        teleportActionInstance.start();
+        teleportActionInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
 }
