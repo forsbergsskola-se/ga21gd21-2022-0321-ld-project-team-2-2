@@ -13,11 +13,12 @@ public class WindScript : MonoBehaviour
     FMOD.Studio.PARAMETER_ID windAmountParameter_ID;
     private float paramVal = 0f;
 
-
     // Start is called before the first frame update
     void Start()
     {
         windInstance = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
+        FMOD.Studio.EventDescription windAmountParameter_EventDescription;
+
         if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         windInstance.start();
         windInstance.setParameterByName("WindAmt", 0);
