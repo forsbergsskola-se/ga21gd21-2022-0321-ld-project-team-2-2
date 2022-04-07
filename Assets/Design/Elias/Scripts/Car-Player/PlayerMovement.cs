@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private Animation animator;
 
     //public Footsteps FS;
-    //Sedan klura ut var dessa går:
+    //Sedan klura ut var dessa gï¿½r:
     //FS.Move();
     //FS.StopMoving();
 
@@ -76,6 +76,11 @@ public class PlayerMovement : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation =
                 Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+                //Footstepsounds!!!!
+        }
+        else
+        {
+            //No Footstepsounds!!!        
         }
     }
 
