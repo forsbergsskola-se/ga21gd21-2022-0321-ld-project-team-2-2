@@ -32,10 +32,13 @@ public class Teleporter : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        teleportHumInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        teleportHumInstance.release();
-        teleportActionInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        teleportActionInstance.release();
+        if (other.tag == "Player")
+        {
+            teleportHumInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            teleportHumInstance.release();
+            teleportActionInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            teleportActionInstance.release();
+        }
     }
     void Update()
     {
