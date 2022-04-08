@@ -21,7 +21,11 @@ public class SoundManager : MonoBehaviour
     public FMODUnity.EventReference footPlaceEventHere;
     private FMOD.Studio.EventInstance myInstance;
     private bool footIs3D = false;
-    
+
+    [Header("Music")]
+    public FMODUnity.EventReference musicEvRef;
+    private FMOD.Studio.EventInstance musicEvInst;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,8 @@ public class SoundManager : MonoBehaviour
         //Footsteps
         myInstance = FMODUnity.RuntimeManager.CreateInstance(footPlaceEventHere);
         if (footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+
+        musicEvInst.start();
     }
 
     // Update is called once per frame
@@ -67,5 +73,13 @@ public class SoundManager : MonoBehaviour
     public void StopMoving()
     {
         myInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+    public void FadeMusic()
+    {
+        musicEvInst.setParameterByName("InCar", 1f);
+    }
+    public void FadeInMusic()
+    {
+        musicEvInst.setParameterByName("InCar", 0);
     }
 }
