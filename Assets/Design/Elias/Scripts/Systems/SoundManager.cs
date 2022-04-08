@@ -29,6 +29,9 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        musicEvInst = FMODUnity.RuntimeManager.CreateInstance(musicEvRef);
+        //music
+        musicEvInst.start();
         //Scrap Pickup
         scrapPickupInstance = FMODUnity.RuntimeManager.CreateInstance(scrapPlaceEventHere);
         if (scrapIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(scrapPickupInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
@@ -37,7 +40,6 @@ public class SoundManager : MonoBehaviour
         myInstance = FMODUnity.RuntimeManager.CreateInstance(footPlaceEventHere);
         if (footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
-        musicEvInst.start();
     }
 
     // Update is called once per frame
