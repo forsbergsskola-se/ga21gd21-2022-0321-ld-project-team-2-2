@@ -20,6 +20,9 @@ public class EnterExitVehicle : MonoBehaviour
     [Header("Input")]
     [SerializeField] private KeyCode enterExitKey = KeyCode.E;
 
+    [Header("MusicFader")]
+    public SoundManager SoundStuff;
+
     public bool inCar = false;
     public Rigidbody carCol;
 
@@ -54,6 +57,7 @@ public class EnterExitVehicle : MonoBehaviour
         carAnimator.enabled = false;
         playerCamera.SetActive(true);
         carCamera.SetActive(false);
+        SoundStuff.FadeInMusic();
         
         _carController.enabled = false;
         carCol.isKinematic = true;
@@ -68,7 +72,7 @@ public class EnterExitVehicle : MonoBehaviour
         carAnimator.enabled = true;
         playerCamera.SetActive(false);
         carCamera.SetActive(true);
-
+        SoundStuff.FadeMusic();
         _carController.enabled = true;
         carCol.isKinematic = false;
     }

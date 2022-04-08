@@ -24,12 +24,10 @@ public class MusicController : MonoBehaviour
     {
         musicEvInst = FMODUnity.RuntimeManager.CreateInstance(musicEvRef);
         musicEvInst.start();
-
     }
 
     public void ChangeMusicHealthParam(int _val)
     {
-        musicEvInst.setParameterByName("playerHealth", _val);
 
     }
 
