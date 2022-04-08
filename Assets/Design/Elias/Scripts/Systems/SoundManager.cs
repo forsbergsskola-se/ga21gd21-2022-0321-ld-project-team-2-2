@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     [Header("Height Check")] 
     public Transform player;
     public Transform car;
+    public WindScript WindHeightController;
 
     private float height;
     public EnterExitVehicle _EnterExit;
@@ -47,10 +48,12 @@ public class SoundManager : MonoBehaviour
         if (_EnterExit.inCar)
         {
             height = car.position.y;
+            WindHeightController.HeightParam(height);
         }
         else
         {
             height = player.position.y;
+            WindHeightController.HeightParam(height);
         }
     }
     public void PickUpSound()

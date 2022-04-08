@@ -10,15 +10,18 @@ public class WindScript : MonoBehaviour
     public int minDuration;
     public int maxDuration;
     private int weatherDuration;
-    FMOD.Studio.PARAMETER_ID windAmountParameter_ID;
-    private float paramVal = 0f;
+    FMOD.Studio.PARAMETER_ID heightParam_ID;
 
     // Start is called before the first frame update
     void Start()
     {
         windInstance = FMODUnity.RuntimeManager.CreateInstance(placeEventHere);
-        FMOD.Studio.EventDescription windAmountParameter_EventDescription;
-        windInstance.getDescription(out windAmountParameter_EventDescription);
+        FMOD.Studio.EventDescription heightParam_EventDescription;
+        windInstance.getDescription(out heightParam_EventDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION heightParam_ParameterDescription;
+        heightParam_EventDescription.getParameterDescriptionByName("Height", out heightParam_ParameterDescription);
+        heightParam_ID = heightParam_ParameterDescription.id;
+
 
         if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         windInstance.start();
@@ -36,10 +39,14 @@ public class WindScript : MonoBehaviour
             StartCoroutine(Waiter(weatherDuration));
         }
     }
-    
     private void Update()
     {
         if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
-
     }
+
+    public void HeightParam(float height)
+    {
+        windInstance.setParameterByID(heightParam_ID, height);
+    }
+
 }
