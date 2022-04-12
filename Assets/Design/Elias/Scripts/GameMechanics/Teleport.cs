@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
+    
+    public string TagFilter = "";
     [Header("Object to teleport")]
     public GameObject objToTp;
     [Header("Where to teleport")]
@@ -12,7 +14,7 @@ public class Teleport : MonoBehaviour
     public Teleporter TeleportSound;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(TagFilter))
         {
             objToTp.transform.position = tpLoc.transform.position;
             TeleportSound.Action();
