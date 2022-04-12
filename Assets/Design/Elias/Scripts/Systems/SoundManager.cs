@@ -26,6 +26,10 @@ public class SoundManager : MonoBehaviour
     public FMODUnity.EventReference musicEvRef;
     private FMOD.Studio.EventInstance musicEvInst;
     bool stinger1Played = false;
+    bool stinger2Played = false;
+    bool stinger3Played = false;
+    bool stinger4Played = false;
+    bool stinger5Played = false;
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +92,56 @@ public class SoundManager : MonoBehaviour
     public void MusicStinger1()
     {
         if (!stinger1Played)
-        musicEvInst.setParameterByName("Stinger1", 1);
-        stinger1Played = true;
+        {
+            musicEvInst.setParameterByName("Stinger1", 1);
+            stinger1Played = true;
+        }
+        
     }
+    public void MusicStinger2()
+    {
+        if (!stinger2Played)
+        {
+            musicEvInst.setParameterByName("Stinger2", 1);
+            stinger2Played = true;
+        }
+    }
+    public void MusicStinger3()
+    {
+        if (!stinger3Played)
+        {
+            musicEvInst.setParameterByName("Stinger3", 1);
+            stinger3Played = true;
+        }
+    }
+    public void MusicStinger4()
+    {
+        if (!stinger4Played)
+        {
+            musicEvInst.setParameterByName("Stinger4", 1);
+            stinger4Played = true;
+        }
+    }
+    public void MusicStinger5()
+    {
+        if (!stinger5Played)
+        {
+            musicEvInst.setParameterByName("Stinger5", 1);
+            stinger5Played = true;
+        }
+    }
+    public void SolvedPuzzleStinger()
+    {
+        musicEvInst.setParameterByName("SolvedPuzzle", 1);
+    }
+    public void SetAmbienceZone(int zone)
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InDesert", zone == 1 ? 1 : 0);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InStartingArea", zone == 2 ? 1 : 0);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InLake", zone == 3 ? 1 : 0);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InMountains", zone == 4 ? 1 : 0);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InValley", zone == 5 ? 1 : 0);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InRuins", zone == 6 ? 1 : 0);
+    }
+
 }
