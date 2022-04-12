@@ -8,7 +8,7 @@ public class PressurePlate : MonoBehaviour
     public GameObject door;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Door"))
+        if (other.CompareTag("Box"))
         {
             //Play animation
         }
@@ -16,7 +16,7 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Door"))
+        if (other.CompareTag("Box"))
         {
             //Stop animation
         }
