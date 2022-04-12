@@ -25,6 +25,7 @@ public class SoundManager : MonoBehaviour
     [Header("Music")]
     public FMODUnity.EventReference musicEvRef;
     private FMOD.Studio.EventInstance musicEvInst;
+    bool stinger1Played = false;
 
     // Start is called before the first frame update
     void Start()
@@ -83,5 +84,11 @@ public class SoundManager : MonoBehaviour
     public void FadeInMusic()
     {
         musicEvInst.setParameterByName("InCar", 0);
+    }
+    public void MusicStinger1()
+    {
+        if (!stinger1Played)
+        musicEvInst.setParameterByName("Stinger1", 1);
+        stinger1Played = true;
     }
 }

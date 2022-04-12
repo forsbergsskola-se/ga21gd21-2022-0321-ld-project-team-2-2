@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8909538361167394034}
   - component: {fileID: 8909538361167394036}
   - component: {fileID: 8909538361167394035}
-  - component: {fileID: 8909538361167394037}
   m_Layer: 0
-  m_Name: SphereTrigger
+  m_Name: SphereTrigger 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,23 +62,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8909538361167394037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8909538361167394033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30f35b1f21b12944486c507922ad8ffe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placeEventHere:
-    Guid:
-      Data1: -697755403
-      Data2: 1127084418
-      Data3: 306466486
-      Data4: -655248522
-    Path: event:/InteractiveObjects/Teleporter
-  is3D: 1
