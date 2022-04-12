@@ -1,18 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject door;
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Door"))
+        {
+            //Play animation
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Door"))
+        {
+            //Stop animation
+        }
     }
 }
