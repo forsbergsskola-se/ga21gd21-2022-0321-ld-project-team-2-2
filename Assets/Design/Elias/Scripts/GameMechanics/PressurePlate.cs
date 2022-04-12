@@ -5,20 +5,21 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public GameObject door;
+    public string TagFilter = "";
+    public Animator door;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Box"))
+        if (other.CompareTag(TagFilter))
         {
-            //Play animation
+            door.SetBool("openDoor", true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Box"))
+        if (other.CompareTag(TagFilter))
         {
-            //Stop animation
+            door.SetBool("openDoor", false);
         }
     }
 }
