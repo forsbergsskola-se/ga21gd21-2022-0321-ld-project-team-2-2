@@ -16,8 +16,8 @@ public class Teleport : MonoBehaviour
     {
         if (other.gameObject.CompareTag(TagFilter))
         {
-            objToTp.transform.position = tpLoc.transform.position;
             TeleportSound.Action();
+            objToTp.transform.position = tpLoc.transform.position;
         }
     }
 }

@@ -48,7 +48,6 @@ public class Teleporter : MonoBehaviour
     public void Action()
     {
         teleportActionInstance.start();
-        teleportActionInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
 }
