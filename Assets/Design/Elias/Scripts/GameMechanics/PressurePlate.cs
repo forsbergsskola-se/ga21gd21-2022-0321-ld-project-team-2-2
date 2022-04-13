@@ -7,10 +7,12 @@ public class PressurePlate : MonoBehaviour
 {
     public string TagFilter = "";
     public Animator door;
+    public PressurePlateAudio PlayAudio;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(TagFilter))
         {
+            PlayAudio.PressurePlateDownAudio();
             door.SetBool("openDoor", true);
         }
     }
@@ -19,7 +21,9 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.CompareTag(TagFilter))
         {
+            PlayAudio.PressurePlateUpAudio();
             door.SetBool("openDoor", false);
         }
     }
+
 }
