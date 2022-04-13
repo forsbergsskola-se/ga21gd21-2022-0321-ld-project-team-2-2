@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public string TagFilter = "";
     public Animator door;
     public PressurePlateAudio PlayAudio;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(TagFilter))
+        if (other.CompareTag("Player") || other.CompareTag("Box"))
         {
             PlayAudio.PressurePlateDown();
             door.SetBool("openDoor", true);
@@ -19,7 +18,7 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(TagFilter))
+        if (other.CompareTag("Player") || other.CompareTag("Box"))
         {
             PlayAudio.PressurePlateUp();
             door.SetBool("openDoor", false);
