@@ -51,6 +51,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8397023823783521978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDesert/InLake
+  m_EditorClassIdentifier: 
+  Name: InLake
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1157014525
+    data2: 2035758206
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-8111367038711703816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDesert/InValley
+  m_EditorClassIdentifier: 
+  Name: InValley
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1966192199
+    data2: 18890049
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-7382167185974796097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +119,30 @@ MonoBehaviour:
   ID:
     data1: 3585517453
     data2: 3902911652
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-7376606482447659593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InMountains
+  m_EditorClassIdentifier: 
+  Name: InMountains
+  StudioPath: parameter:/InMountains
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 285085921
+    data2: 3602933542
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -178,6 +250,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5180902636013687152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Ruins
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Ruins
+  Guid:
+    Data1: -1576765275
+    Data2: 1340582953
+    Data3: 1233459601
+    Data4: -213085283
+  Banks:
+  - {fileID: 4384081652382146694}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-3818140754397303723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +303,12 @@ MonoBehaviour:
   Parameters:
   - {fileID: -7382167185974796097}
   - {fileID: 4033098170099153921}
+  - {fileID: 8410658363413066990}
+  - {fileID: 4010428279644548120}
+  - {fileID: -2190656184695816768}
+  - {fileID: -8111367038711703816}
+  - {fileID: -147705186096759310}
+  - {fileID: -8397023823783521978}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -284,6 +389,54 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3513189559392635578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InDesert
+  m_EditorClassIdentifier: 
+  Name: InDesert
+  StudioPath: parameter:/InDesert
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4291619429
+    data2: 3093050495
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2824098436593370997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InRuins
+  m_EditorClassIdentifier: 
+  Name: InRuins
+  StudioPath: parameter:/InRuins
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 601249196
+    data2: 830586811
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-2665160037268922171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +464,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2190656184695816768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDesert/InRuins
+  m_EditorClassIdentifier: 
+  Name: InRuins
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 601249196
+    data2: 830586811
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2000797848714327672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InStartingArea
+  m_EditorClassIdentifier: 
+  Name: InStartingArea
+  StudioPath: parameter:/InStartingArea
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2426099296
+    data2: 1862168771
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-943635450152741635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +563,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-147705186096759310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDesert/InStartingArea
+  m_EditorClassIdentifier: 
+  Name: InStartingArea
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2426099296
+    data2: 1862168771
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,15 +616,22 @@ MonoBehaviour:
   - {fileID: -420071491260826602}
   - {fileID: -6677818536614275810}
   - {fileID: 2425164296196702152}
+  - {fileID: -5180902636013687152}
   EditorParameters:
   - {fileID: 8991761548351473804}
   - {fileID: -7371684681067009291}
   - {fileID: -5806570789155493835}
+  - {fileID: -2000797848714327672}
+  - {fileID: 4316094614307504532}
+  - {fileID: 1885923048348440085}
+  - {fileID: -7376606482447659593}
+  - {fileID: -2824098436593370997}
+  - {fileID: -3513189559392635578}
   MasterBanks:
   - {fileID: 4384081652382146694}
   StringsBanks:
   - {fileID: 3110713833002474831}
-  cacheTime: 637853740486721294
+  cacheTime: 637854509469434138
   cacheVersion: 10
 --- !u!114 &1321876768454346420
 MonoBehaviour:
@@ -428,6 +660,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 55
   Length: 0
+--- !u!114 &1885923048348440085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InValley
+  m_EditorClassIdentifier: 
+  Name: InValley
+  StudioPath: parameter:/InValley
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1966192199
+    data2: 18890049
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &2425164296196702152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,10 +726,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637853740486721294
+  lastModified: 637854509469434138
   FileSizes:
   - Name: 
-    Value: 2048
+    Value: 2386
   Exists: 1
 --- !u!114 &3689948949795330414
 MonoBehaviour:
@@ -523,6 +779,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4010428279644548120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDesert/InMountains
+  m_EditorClassIdentifier: 
+  Name: InMountains
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 285085921
+    data2: 3602933542
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4033098170099153921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +827,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4316094614307504532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InLake
+  m_EditorClassIdentifier: 
+  Name: InLake
+  StudioPath: parameter:/InLake
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1157014525
+    data2: 2035758206
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4384081652382146694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +866,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637853740486701291
+  lastModified: 637854509469414133
   FileSizes: []
   Exists: 1
 --- !u!114 &4416405901122388848
@@ -773,6 +1077,30 @@ MonoBehaviour:
     data1: 2046385601
     data2: 909619543
   Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8410658363413066990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDesert/InDesert
+  m_EditorClassIdentifier: 
+  Name: InDesert
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4291619429
+    data2: 3093050495
+  Type: 0
   IsGlobal: 1
   Labels: []
   Exists: 1
