@@ -12,7 +12,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.CompareTag(TagFilter))
         {
-            //PlayAudio.PressurePlateDownAudio();
+            PlayAudio.PressurePlateDown();
             door.SetBool("openDoor", true);
         }
     }
@@ -21,7 +21,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.CompareTag(TagFilter))
         {
-            //PlayAudio.PressurePlateUpAudio();
+            PlayAudio.PressurePlateUp();
             door.SetBool("openDoor", false);
         }
     }

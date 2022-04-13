@@ -298,7 +298,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4384081652382146694}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters:
   - {fileID: -7382167185974796097}
@@ -464,6 +464,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2623093145438249617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/AppearingPlatform
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/AppearingPlatform
+  Guid:
+    Data1: 1522204375
+    Data2: 1274855555
+    Data3: -1289053045
+    Data4: 606278551
+  Banks:
+  - {fileID: 4384081652382146694}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2190656184695816768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,33 +563,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-420071491260826602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/InteractiveObjects/Platforms
-  m_EditorClassIdentifier: 
-  Path: event:/InteractiveObjects/Platforms
-  Guid:
-    Data1: 1522204375
-    Data2: 1274855555
-    Data3: -1289053045
-    Data4: 606278551
-  Banks:
-  - {fileID: 4384081652382146694}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-147705186096759310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,7 +605,6 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 1321876768454346420}
   - {fileID: 8055922293579695759}
-  - {fileID: 5793033465668461472}
   - {fileID: -5478773198784424437}
   - {fileID: 4416405901122388848}
   - {fileID: 4981144052272774359}
@@ -613,10 +612,14 @@ MonoBehaviour:
   - {fileID: -2665160037268922171}
   - {fileID: -3818140754397303723}
   - {fileID: -8461964917147876146}
-  - {fileID: -420071491260826602}
   - {fileID: -6677818536614275810}
   - {fileID: 2425164296196702152}
   - {fileID: -5180902636013687152}
+  - {fileID: 7716697062250523122}
+  - {fileID: 5129242769659232715}
+  - {fileID: 7331926604812577757}
+  - {fileID: -2623093145438249617}
+  - {fileID: 2283388420369052960}
   EditorParameters:
   - {fileID: 8991761548351473804}
   - {fileID: -7371684681067009291}
@@ -631,7 +634,7 @@ MonoBehaviour:
   - {fileID: 4384081652382146694}
   StringsBanks:
   - {fileID: 3110713833002474831}
-  cacheTime: 637854509469434138
+  cacheTime: 637854581751985343
   cacheVersion: 10
 --- !u!114 &1321876768454346420
 MonoBehaviour:
@@ -684,6 +687,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &2283388420369052960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/DisappearingPlatform
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/DisappearingPlatform
+  Guid:
+    Data1: -2052368130
+    Data2: 1284800350
+    Data3: -632824437
+    Data4: -2121627958
+  Banks:
+  - {fileID: 4384081652382146694}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2425164296196702152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,10 +756,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637854509469434138
+  lastModified: 637854581751985343
   FileSizes:
   - Name: 
-    Value: 2386
+    Value: 2586
   Exists: 1
 --- !u!114 &3689948949795330414
 MonoBehaviour:
@@ -866,7 +896,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637854509469414133
+  lastModified: 637854581751861361
   FileSizes: []
   Exists: 1
 --- !u!114 &4416405901122388848
@@ -954,6 +984,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 677
+--- !u!114 &5129242769659232715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/PressurePlateUp
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/PressurePlateUp
+  Guid:
+    Data1: -2078388725
+    Data2: 1321792463
+    Data3: -119328595
+    Data4: 905846559
+  Banks:
+  - {fileID: 4384081652382146694}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5729385570785441138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,7 +1035,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5793033465668461472
+--- !u!114 &7331926604812577757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -988,22 +1045,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/InteractiveObjects/PressurePlates
+  m_Name: snapshot:/Valley
   m_EditorClassIdentifier: 
-  Path: event:/InteractiveObjects/PressurePlates
+  Path: snapshot:/Valley
   Guid:
-    Data1: -2078388725
-    Data2: 1321792463
-    Data3: -119328595
-    Data4: 905846559
+    Data1: -215943052
+    Data2: 1254090940
+    Data3: 1249270180
+    Data4: -667704409
   Banks:
   - {fileID: 4384081652382146694}
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
+  Is3D: 0
+  IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &7406907676101578778
 MonoBehaviour:
@@ -1029,6 +1086,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &7716697062250523122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/PressurePlateDown
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/PressurePlateDown
+  Guid:
+    Data1: -746761469
+    Data2: 1171795277
+    Data3: -1343065197
+    Data4: 1823316883
+  Banks:
+  - {fileID: 4384081652382146694}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8055922293579695759
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.38354, g: 325.1084, b: 430.30957, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -640,7 +640,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351026526}
-  m_LocalRotation: {x: 0.124980405, y: 0.64208066, z: -0.10717537, w: 0.7487495}
+  m_LocalRotation: {x: 0.12498043, y: 0.64208066, z: -0.10717538, w: 0.7487495}
   m_LocalPosition: {x: 6165.163, y: 190.56624, z: 4987.092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1769,7 +1769,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 7.1585903, y: 1}
+    m_SensorSize: {x: 2.0494652, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -2018,7 +2018,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 7.1585903, y: 1}
+    m_SensorSize: {x: 2.0494652, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -2041,7 +2041,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825711678}
-  m_LocalRotation: {x: 0.1249804, y: 0.6420806, z: -0.10717538, w: 0.7487495}
+  m_LocalRotation: {x: 0.12498039, y: 0.64208066, z: -0.107175365, w: 0.74874955}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2283,7 +2283,7 @@ PrefabInstance:
       objectReference: {fileID: 2036684662}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: musicEvRef.Path
-      value: event:/TestMusik
+      value: event:/Music/Music
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: WindHeightController
@@ -2790,7 +2790,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 7.1585903, y: 1}
+    m_SensorSize: {x: 2.0494652, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -3598,7 +3598,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 7.1585903, y: 1}
+    m_SensorSize: {x: 2.0494652, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
