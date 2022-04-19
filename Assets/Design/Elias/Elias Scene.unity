@@ -1072,36 +1072,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 610789833001711159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &288335911 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 610789832747327017, guid: 707221b5ac2d50a4e964307f37d7ea80,
-    type: 3}
-  m_PrefabInstance: {fileID: 610789833001711159}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 80655042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385e39a9b0f2cf54d8f50c36b85bdb1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &288335913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 80655042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9e47e87a2acf94ca4ea1e8508eb7ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryKey: 9
-  controller: {fileID: 288335911}
-  playerCamera: {fileID: 362129206}
-  inventoryCamera: {fileID: 1950522298}
-  ui: {fileID: 648792812}
-  player: {fileID: 288335904}
 --- !u!1 &326903569
 GameObject:
   m_ObjectHideFlags: 0
@@ -6381,7 +6351,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471749390}
-  m_LocalRotation: {x: 0.16464335, y: -8.557586e-10, z: -1.4314035e-10, w: 0.98635316}
+  m_LocalRotation: {x: 0.16464335, y: 8.557586e-10, z: 1.4314051e-10, w: 0.98635316}
   m_LocalPosition: {x: -8.66, y: 6.14, z: -23.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10896,7 +10866,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122887585}
-  m_LocalRotation: {x: 0.14672238, y: 0.000000019029128, z: -0.000000002822545, w: 0.98917776}
+  m_LocalRotation: {x: 0.14672238, y: -0.000000019029125, z: 0.0000000028225442, w: 0.98917776}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18405,6 +18375,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 633527217}
     m_Modifications:
+    - target: {fileID: 288335913, guid: 707221b5ac2d50a4e964307f37d7ea80, type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 648792812}
+    - target: {fileID: 288335913, guid: 707221b5ac2d50a4e964307f37d7ea80, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 362129206}
+    - target: {fileID: 288335913, guid: 707221b5ac2d50a4e964307f37d7ea80, type: 3}
+      propertyPath: inventoryCamera
+      value: 
+      objectReference: {fileID: 1950522298}
     - target: {fileID: 610789832747327017, guid: 707221b5ac2d50a4e964307f37d7ea80,
         type: 3}
       propertyPath: Manager
