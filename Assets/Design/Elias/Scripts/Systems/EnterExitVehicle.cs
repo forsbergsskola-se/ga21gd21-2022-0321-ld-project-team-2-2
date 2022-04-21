@@ -20,7 +20,7 @@ public class EnterExitVehicle : MonoBehaviour
     [Header("Input")]
     [SerializeField] private KeyCode enterExitKey = KeyCode.E;
 
-    [Header("MusicFader")]
+    [Header("Music and sound")]
     public SoundManager SoundStuff;
 
     public bool inCar = false;
@@ -45,6 +45,7 @@ public class EnterExitVehicle : MonoBehaviour
             {
                 GetIntoCar();
             }
+
         }
     }
 

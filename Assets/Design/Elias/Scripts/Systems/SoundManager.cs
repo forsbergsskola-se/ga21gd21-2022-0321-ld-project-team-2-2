@@ -31,6 +31,11 @@ public class SoundManager : MonoBehaviour
     bool stinger4Played = false;
     bool stinger5Played = false;
 
+    [Header("Vehicle")]
+    public FMODUnity.EventReference placeEventHere;
+    private FMOD.Studio.EventInstance vehicleAccelerationInstance;
+    FMOD.Studio.PARAMETER_ID rpmParam_ID;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +49,13 @@ public class SoundManager : MonoBehaviour
         //Footsteps
         myInstance = FMODUnity.RuntimeManager.CreateInstance(footPlaceEventHere);
         if (footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+
+        //RPM Vehicle
+        FMOD.Studio.EventDescription rpmParam_EventDescription;
+        vehicleAccelerationInstance.getDescription(out rpmParam_EventDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION rpmParam_ParameterDescription;
+        rpmParam_EventDescription.getParameterDescriptionByName("RPM", out rpmParam_ParameterDescription);
+        rpmParam_ID = rpmParam_ParameterDescription.id;
 
     }
 
@@ -143,5 +155,8 @@ public class SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InValley", zone == 5 ? 1 : 0);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InRuins", zone == 6 ? 1 : 0);
     }
-
+    public void SetVehicleRPM(float rpm)
+    {
+        vehicleAccelerationInstance.setParameterByID(rpmParam_ID, rpm);
+    }
 }
