@@ -24,9 +24,9 @@ public class Teleporter : MonoBehaviour
         if (other.tag == "Player")
         {
             teleportHumInstance = FMODUnity.RuntimeManager.CreateInstance(placeTeleportHumEventHere);
-            teleportActionInstance = FMODUnity.RuntimeManager.CreateInstance(placeTeleportActionEventHere);
+            
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(teleportHumInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
-            FMODUnity.RuntimeManager.AttachInstanceToGameObject(teleportActionInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            
             teleportHumInstance.start();
         }
     }
@@ -47,6 +47,8 @@ public class Teleporter : MonoBehaviour
     }
     public void Action()
     {
+        teleportActionInstance = FMODUnity.RuntimeManager.CreateInstance(placeTeleportActionEventHere);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(teleportActionInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         teleportActionInstance.start();
     }
 
