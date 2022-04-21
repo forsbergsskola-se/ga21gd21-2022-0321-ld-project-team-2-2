@@ -171,6 +171,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-7364952185738497092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/InStartingArea
+  m_EditorClassIdentifier: 
+  Name: InStartingArea
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2426099296
+    data2: 1862168771
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-6677818536614275810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +217,33 @@ MonoBehaviour:
   - {fileID: 4384081652382146694}
   IsStream: 0
   Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6137604262401636876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/JumpSound
+  m_EditorClassIdentifier: 
+  Path: event:/JumpSound
+  Guid:
+    Data1: 66578862
+    Data2: 1241125952
+    Data3: 354458558
+    Data4: 1850159443
+  Banks:
+  - {fileID: 4384081652382146694}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -491,6 +542,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2354749289427349771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/InValley
+  m_EditorClassIdentifier: 
+  Name: InValley
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1966192199
+    data2: 18890049
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-2190656184695816768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +695,7 @@ MonoBehaviour:
   - {fileID: 7331926604812577757}
   - {fileID: -2623093145438249617}
   - {fileID: 2283388420369052960}
+  - {fileID: -6137604262401636876}
   EditorParameters:
   - {fileID: 8991761548351473804}
   - {fileID: -7371684681067009291}
@@ -634,7 +710,7 @@ MonoBehaviour:
   - {fileID: 4384081652382146694}
   StringsBanks:
   - {fileID: 3110713833002474831}
-  cacheTime: 637854581688192441
+  cacheTime: 637861436558722238
   cacheVersion: 10
 --- !u!114 &1321876768454346420
 MonoBehaviour:
@@ -663,6 +739,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 55
   Length: 0
+--- !u!114 &1595325079858087555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/InRuins
+  m_EditorClassIdentifier: 
+  Name: InRuins
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 601249196
+    data2: 830586811
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &1885923048348440085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +783,30 @@ MonoBehaviour:
   ID:
     data1: 1966192199
     data2: 18890049
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2195186817594475133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/InDesert
+  m_EditorClassIdentifier: 
+  Name: InDesert
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4291619429
+    data2: 3093050495
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -741,6 +865,30 @@ MonoBehaviour:
   MinDistance: 2.6000001
   MaxDistance: 50
   Length: 18420
+--- !u!114 &2840180059203971729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/InMountains
+  m_EditorClassIdentifier: 
+  Name: InMountains
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 285085921
+    data2: 3602933542
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &3110713833002474831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,10 +904,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637854581688192441
+  lastModified: 637861436558722238
   FileSizes:
   - Name: 
-    Value: 2586
+    Value: 2626
   Exists: 1
 --- !u!114 &3689948949795330414
 MonoBehaviour:
@@ -857,6 +1005,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4171308261255232577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/InLake
+  m_EditorClassIdentifier: 
+  Name: InLake
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1157014525
+    data2: 2035758206
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4316094614307504532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,7 +1068,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637854581688172443
+  lastModified: 637861436558702231
   FileSizes: []
   Exists: 1
 --- !u!114 &4416405901122388848
@@ -930,6 +1102,12 @@ MonoBehaviour:
   - {fileID: 4445801801441431603}
   - {fileID: -3729924464817989480}
   - {fileID: -943635450152741635}
+  - {fileID: -2354749289427349771}
+  - {fileID: 4171308261255232577}
+  - {fileID: -7364952185738497092}
+  - {fileID: 2195186817594475133}
+  - {fileID: 1595325079858087555}
+  - {fileID: 2840180059203971729}
   MinDistance: 1
   MaxDistance: 20
   Length: 598197
@@ -1026,7 +1204,7 @@ MonoBehaviour:
   Name: RPM
   StudioPath: 
   Min: 0
-  Max: 100
+  Max: 10
   Default: 0
   ID:
     data1: 3961408258
