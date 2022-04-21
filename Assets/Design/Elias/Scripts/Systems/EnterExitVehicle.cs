@@ -59,6 +59,7 @@ public class EnterExitVehicle : MonoBehaviour
         playerCamera.SetActive(true);
         carCamera.SetActive(false);
         SoundStuff.FadeInMusic();
+        SoundStuff.StopCarSound();
         
         _carController.enabled = false;
         carCol.isKinematic = true;
@@ -74,6 +75,7 @@ public class EnterExitVehicle : MonoBehaviour
         playerCamera.SetActive(false);
         carCamera.SetActive(true);
         SoundStuff.FadeMusic();
+        SoundStuff.StartCarSound();
         _carController.enabled = true;
         carCol.isKinematic = false;
     }

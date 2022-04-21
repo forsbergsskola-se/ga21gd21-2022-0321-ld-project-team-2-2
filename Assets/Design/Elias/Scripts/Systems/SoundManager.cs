@@ -32,7 +32,7 @@ public class SoundManager : MonoBehaviour
     bool stinger5Played = false;
 
     [Header("Vehicle")]
-    public FMODUnity.EventReference placeEventHere;
+    public FMODUnity.EventReference vehiclePlaceEventHere;
     private FMOD.Studio.EventInstance vehicleAccelerationInstance;
     FMOD.Studio.PARAMETER_ID rpmParam_ID;
 
@@ -51,6 +51,7 @@ public class SoundManager : MonoBehaviour
         if (footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
         //RPM Vehicle
+        vehicleAccelerationInstance = FMODUnity.RuntimeManager.CreateInstance(vehiclePlaceEventHere);
         FMOD.Studio.EventDescription rpmParam_EventDescription;
         vehicleAccelerationInstance.getDescription(out rpmParam_EventDescription);
         FMOD.Studio.PARAMETER_DESCRIPTION rpmParam_ParameterDescription;
@@ -158,5 +159,13 @@ public class SoundManager : MonoBehaviour
     public void SetVehicleRPM(float rpm)
     {
         vehicleAccelerationInstance.setParameterByID(rpmParam_ID, rpm);
+    }
+    public void StartCarSound()
+    {
+        vehicleAccelerationInstance.start();
+    }
+    public void StopCarSound()
+    {
+        vehicleAccelerationInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }
