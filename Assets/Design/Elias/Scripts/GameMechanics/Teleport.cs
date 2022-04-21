@@ -14,9 +14,9 @@ public class Teleport : MonoBehaviour
     public Teleporter TeleportSound;
     void OnTriggerEnter(Collider other)
     {
+        TeleportSound.Action();
         if (other.gameObject.CompareTag(TagFilter))
         {
-            TeleportSound.Action();
             objToTp.transform.position = tpLoc.transform.position;
         }
     }
