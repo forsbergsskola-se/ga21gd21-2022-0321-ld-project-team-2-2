@@ -5963,6 +5963,12 @@ MonoBehaviour:
   - {fileID: 1856815864}
   - {fileID: 795370253}
   - {fileID: 1122887587}
+--- !u!1 &409693695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2766805036538975002, guid: f675f108c20434444a3b24ac4c3338cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2766805037674428656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &446922524
 Mesh:
   m_ObjectHideFlags: 0
@@ -6229,7 +6235,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471749390}
-  m_LocalRotation: {x: 0.16464335, y: 8.557586e-10, z: 1.4314051e-10, w: 0.98635316}
+  m_LocalRotation: {x: 0.16464335, y: -8.557586e-10, z: -1.4314035e-10, w: 0.98635316}
   m_LocalPosition: {x: -8.66, y: 6.14, z: -23.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10974,7 +10980,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122887585}
-  m_LocalRotation: {x: 0.14672238, y: -0.000000019029125, z: 0.0000000028225442, w: 0.98917776}
+  m_LocalRotation: {x: 0.14672238, y: 0.000000019029128, z: -0.000000002822545, w: 0.98917776}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11732,7 +11738,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2766805037674428656}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 409693695}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7571cd815646344f8c411db38fc74b6, type: 3}
@@ -11762,12 +11768,26 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2766805037674428656}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 409693695}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf20e744a20ba448856fd3e1003024b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1296933896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409693695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd628990dd8753649836c54aad1fc274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 2069412880}
+  speed: 0
 --- !u!1 &1302307125
 GameObject:
   m_ObjectHideFlags: 0
@@ -17858,6 +17878,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!54 &2069412880 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5059778020518162640, guid: e62d09fc7d129c147b2db5274b6a9846,
+    type: 3}
+  m_PrefabInstance: {fileID: 5059778019666709318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2099074357
 GameObject:
   m_ObjectHideFlags: 0
@@ -18686,6 +18712,11 @@ PrefabInstance:
       propertyPath: carCamera
       value: 
       objectReference: {fileID: 918899862}
+    - target: {fileID: 2766805036538975004, guid: f675f108c20434444a3b24ac4c3338cb,
+        type: 3}
+      propertyPath: SoundStuff
+      value: 
+      objectReference: {fileID: 1296933895}
     - target: {fileID: 2766805036538975004, guid: f675f108c20434444a3b24ac4c3338cb,
         type: 3}
       propertyPath: carAnimator
