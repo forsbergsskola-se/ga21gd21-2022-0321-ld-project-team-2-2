@@ -22,6 +22,10 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance myInstance;
     private bool footIs3D = false;
 
+    [Header("Jump")]
+    public FMODUnity.EventReference jumpPlaceEventHere;
+    private FMOD.Studio.EventInstance jumpingInstance;
+
     [Header("Music")]
     public FMODUnity.EventReference musicEvRef;
     private FMOD.Studio.EventInstance musicEvInst;
@@ -58,6 +62,9 @@ public class SoundManager : MonoBehaviour
         rpmParam_EventDescription.getParameterDescriptionByName("RPM", out rpmParam_ParameterDescription);
         rpmParam_ID = rpmParam_ParameterDescription.id;
 
+        //jumping sound
+        jumpingInstance = FMODUnity.RuntimeManager.CreateInstance(jumpPlaceEventHere);
+
     }
 
     // Update is called once per frame
@@ -89,6 +96,10 @@ public class SoundManager : MonoBehaviour
     public void Move()
     {
         myInstance.start();
+    }
+    public void PlayJumpSound()
+    {
+        jumpingInstance.start();
     }
     public void StopMoving()
     {

@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             _ySpeed = jumpSpeed;
+            Manager.PlayJumpSound();
         }
     }
 
