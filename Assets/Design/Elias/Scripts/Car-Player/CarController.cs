@@ -24,7 +24,7 @@ public class CarController : MonoBehaviour
     
     private float moveInput;
     private float turnInput;
-    private bool isCarGrounded;
+    public bool isCarGrounded;
     private bool boostCheck = true;
     
     private float normalDrag;

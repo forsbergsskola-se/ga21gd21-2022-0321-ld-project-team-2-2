@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeyManager : MonoBehaviour
 {
-    private int keys;
+    [SerializeField] private int keys;
     // Start is called before the first frame update
     void Start()
     {

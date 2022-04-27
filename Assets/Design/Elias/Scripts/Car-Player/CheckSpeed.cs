@@ -7,6 +7,7 @@ public class CheckSpeed : MonoBehaviour
     public Rigidbody car;
     public SoundManager VehicleSound;
     public EnterExitVehicle EnterExit;
+    public CarController CarController;
 
     public float speed;
     // Start is called before the first frame update
@@ -18,7 +19,7 @@ public class CheckSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EnterExit.inCar)
+        if (EnterExit.inCar && CarController.isCarGrounded == false)
         {
             speed = car.velocity.magnitude / 2;
             VehicleSound.SetVehicleRPM(speed);

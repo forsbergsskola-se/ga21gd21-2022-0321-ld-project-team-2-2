@@ -50,8 +50,7 @@ public class OpenUpgradeScreen : MonoBehaviour
     }
 
     void UIFollow()
-    {
-        //ui.transform.LookAt(inventoryCamera.transform);
-        //ui.transform.Rotate(0, 0, 0);
+    {      
+        ui.transform.position = new Vector3(1, 2);
     }
 }
