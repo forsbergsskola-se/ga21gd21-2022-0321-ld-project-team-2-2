@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2055933980}
   - component: {fileID: 2055933983}
   - component: {fileID: 1296933899}
+  - component: {fileID: 2040139246}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -92,7 +93,7 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   carCamera: {fileID: 0}
   enterExitKey: 101
-  SoundStuff: {fileID: 0}
+  SoundStuff: {fileID: 2055933983}
   inCar: 0
   carCol: {fileID: 0}
 --- !u!114 &4115937512979129772
@@ -151,6 +152,13 @@ MonoBehaviour:
       Data3: 307529400
       Data4: -924399008
     Path: event:/Footstep
+  jumpPlaceEventHere:
+    Guid:
+      Data1: 66578862
+      Data2: 1241125952
+      Data3: 354458558
+      Data4: 1850159443
+    Path: event:/JumpSound
   musicEvRef:
     Guid:
       Data1: -178951052
@@ -158,6 +166,13 @@ MonoBehaviour:
       Data3: 1167548815
       Data4: 1709956643
     Path: event:/Music/Music
+  vehiclePlaceEventHere:
+    Guid:
+      Data1: 373801292
+      Data2: 1213569678
+      Data3: 384690609
+      Data4: 843747936
+    Path: event:/Vehicle/VehicleAcceleration
 --- !u!114 &1296933899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +187,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currency: {fileID: 4115937512979129772}
   text: {fileID: 0}
+--- !u!114 &2040139246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766805036538975002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd628990dd8753649836c54aad1fc274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 0}
+  VehicleSound: {fileID: 2055933983}
+  EnterExit: {fileID: 2766805036538975004}
+  speed: 0
