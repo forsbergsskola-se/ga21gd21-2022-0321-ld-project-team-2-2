@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1047.4229, g: 456.28467, b: 175.31848, a: 1}
+  m_IndirectSpecularColor: {r: 1471.5986, g: 643.92285, b: 275.92358, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -265,7 +265,7 @@ PrefabInstance:
     - target: {fileID: 1050597651022208572, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 3598
+      value: 3610
       objectReference: {fileID: 0}
     - target: {fileID: 2603396848783397524, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
@@ -295,7 +295,7 @@ PrefabInstance:
     - target: {fileID: 4400782305240045769, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2785
+      value: 2821
       objectReference: {fileID: 0}
     - target: {fileID: 4626836950916183177, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
@@ -325,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 5776690655322128842, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2598
+      value: 2628
       objectReference: {fileID: 0}
     - target: {fileID: 5794090227374715837, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
@@ -350,7 +350,7 @@ PrefabInstance:
     - target: {fileID: 6399971233226151865, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 3613
+      value: 3619
       objectReference: {fileID: 0}
     - target: {fileID: 6963513796860376986, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
@@ -360,7 +360,7 @@ PrefabInstance:
     - target: {fileID: 6963513796860376986, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2782
+      value: 2824
       objectReference: {fileID: 0}
     - target: {fileID: 7102460338244201906, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
@@ -375,7 +375,7 @@ PrefabInstance:
     - target: {fileID: 7308250634329673306, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 3586
+      value: 3604
       objectReference: {fileID: 0}
     - target: {fileID: 7656369105134571685, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
@@ -460,7 +460,7 @@ PrefabInstance:
     - target: {fileID: 9090788085565090030, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 4031
+      value: 4055
       objectReference: {fileID: 0}
     - target: {fileID: 9159163271957067702, guid: a39565dac2d36c3448b0e01b98c47fa9,
         type: 3}
@@ -557,14 +557,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157207112}
-  m_LocalRotation: {x: 0.9991132, y: -0, z: -0, w: 0.042106282}
+  m_LocalRotation: {x: 0.9977872, y: -0, z: -0, w: 0.06648897}
   m_LocalPosition: {x: 554.2, y: 189.7, z: 286.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 175.174, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 172.375, y: 0, z: 0}
 --- !u!114 &157207115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,7 +1008,7 @@ PrefabInstance:
     - target: {fileID: 7082492084245094851, guid: ff625943495cdff4c98109ec3fae73d2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -84
+      value: -386
       objectReference: {fileID: 0}
     - target: {fileID: 7082492084245094851, guid: ff625943495cdff4c98109ec3fae73d2,
         type: 3}
@@ -2686,7 +2686,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 2.0251107, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -2836,7 +2836,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 2.0251107, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -3301,7 +3301,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 2.0251107, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -3427,7 +3427,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 2.0251107, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -3978,6 +3978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924347638592391174, guid: cdb37f7dbb767db449b02cd9f67fd4d1,
+        type: 3}
+      propertyPath: fwdSpeed
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 6924347638592391175, guid: cdb37f7dbb767db449b02cd9f67fd4d1,
         type: 3}
