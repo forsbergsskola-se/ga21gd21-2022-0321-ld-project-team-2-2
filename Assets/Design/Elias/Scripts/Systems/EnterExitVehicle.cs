@@ -11,6 +11,7 @@ public class EnterExitVehicle : MonoBehaviour
     [Header("Car")]
     [SerializeField] private GameObject car = null;
     [SerializeField] private CarController _carController = null;
+    [SerializeField] private WheelController _wheel = null;
     [SerializeField] private Animator carAnimator = null;
 
     [Header("Cameras")] 
@@ -62,6 +63,7 @@ public class EnterExitVehicle : MonoBehaviour
         SoundStuff.StopCarSound();
         
         _carController.enabled = false;
+        _wheel.enabled = false;
         carCol.isKinematic = true;
     }
 
@@ -76,7 +78,9 @@ public class EnterExitVehicle : MonoBehaviour
         carCamera.SetActive(true);
         SoundStuff.FadeMusic();
         SoundStuff.StartCarSound();
+        
         _carController.enabled = true;
+        _wheel.enabled = true;
         carCol.isKinematic = false;
     }
 }

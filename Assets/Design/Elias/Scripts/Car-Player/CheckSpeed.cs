@@ -19,7 +19,7 @@ public class CheckSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EnterExit.inCar && CarController.isCarGrounded == false)
+        if (EnterExit.inCar && CarController.isCarGrounded)
         {
             speed = car.velocity.magnitude / 2;
             VehicleSound.SetVehicleRPM(speed);

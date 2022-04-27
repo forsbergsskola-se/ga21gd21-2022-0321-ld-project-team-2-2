@@ -25,7 +25,7 @@ public class KeyPickup : MonoBehaviour
         {
             keyManager.AddKey();
             //PlaySound
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,17 +17,14 @@ public class OpenUpgradeScreen : MonoBehaviour
     
     private bool inMenu = false;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         UIFollow();
-        if (Input.GetKeyDown(interact))
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && Input.GetKeyDown(interact))
         {
             if (inMenu)
             {
