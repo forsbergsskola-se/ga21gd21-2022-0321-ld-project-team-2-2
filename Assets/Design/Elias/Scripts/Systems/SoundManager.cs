@@ -40,6 +40,23 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance vehicleAccelerationInstance;
     FMOD.Studio.PARAMETER_ID rpmParam_ID;
 
+    [Header("Dialogue")]
+    public FMODUnity.EventReference dialogue1PlaceEventHere;
+    public FMODUnity.EventReference dialogue2PlaceEventHere;
+    public FMODUnity.EventReference dialogue3PlaceEventHere;
+    public FMODUnity.EventReference dialogue4PlaceEventHere;
+    public FMODUnity.EventReference dialogue5PlaceEventHere;
+    private FMOD.Studio.EventInstance dialogue1Instance;
+    private FMOD.Studio.EventInstance dialogue2Instance;
+    private FMOD.Studio.EventInstance dialogue3Instance;
+    private FMOD.Studio.EventInstance dialogue4Instance;
+    private FMOD.Studio.EventInstance dialogue5Instance;
+    bool dialogue1HasBeenPlayed = false;
+    bool dialogue2HasBeenPlayed = false;
+    bool dialogue3HasBeenPlayed = false;
+    bool dialogue4HasBeenPlayed = false;
+    bool dialogue5HasBeenPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -178,5 +195,67 @@ public class SoundManager : MonoBehaviour
     public void StopCarSound()
     {
         vehicleAccelerationInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+    public void PlayDialogue(int dialogueNumber)
+    {
+        if (dialogueNumber == 1 && !dialogue1HasBeenPlayed)
+        {
+            dialogue1HasBeenPlayed = true;
+            dialogue1Instance = FMODUnity.RuntimeManager.CreateInstance(dialogue1PlaceEventHere);
+            dialogue1Instance.start();
+        }
+        else if (dialogueNumber == 2 && !dialogue2HasBeenPlayed)
+        {
+            dialogue2HasBeenPlayed = true;
+            ScrapDialogueInstances(1);
+            dialogue2Instance = FMODUnity.RuntimeManager.CreateInstance(dialogue2PlaceEventHere);
+            dialogue2Instance.start();
+        }
+        else if (dialogueNumber == 3 && !dialogue3HasBeenPlayed)
+        {
+            dialogue3HasBeenPlayed = true;
+            ScrapDialogueInstances(2);
+            dialogue3Instance = FMODUnity.RuntimeManager.CreateInstance(dialogue3PlaceEventHere);
+            dialogue3Instance.start();
+        }
+        else if(dialogueNumber == 4 && !dialogue4HasBeenPlayed)
+        {
+            dialogue4HasBeenPlayed = true;
+            ScrapDialogueInstances(3);
+            dialogue4Instance = FMODUnity.RuntimeManager.CreateInstance(dialogue4PlaceEventHere);
+            dialogue4Instance.start();
+        }
+        else if (dialogueNumber == 5 && !dialogue4HasBeenPlayed)
+        {
+            dialogue5HasBeenPlayed = true;
+            ScrapDialogueInstances(4);
+            dialogue5Instance = FMODUnity.RuntimeManager.CreateInstance(dialogue5PlaceEventHere);
+            dialogue5Instance.start();
+
+        }
+    }
+    public void PauseDialoguePlayback()
+    {
+        dialogue1Instance.setPaused(true);
+        dialogue2Instance.setPaused(true);
+        dialogue3Instance.setPaused(true);
+        dialogue4Instance.setPaused(true);
+        dialogue5Instance.setPaused(true);
+    }
+    public void ScrapDialogueInstances(int dialogueNumber)
+    {
+        if (dialogueNumber == 1) dialogue1Instance.release();
+        if (dialogueNumber == 2) dialogue2Instance.release();
+        if (dialogueNumber == 3) dialogue3Instance.release();
+        if (dialogueNumber == 4) dialogue4Instance.release();
+        if (dialogueNumber == 5) dialogue5Instance.release();
+    }
+    public void ResumeDialoguePlayback()
+    {
+        dialogue1Instance.setPaused(false);
+        dialogue2Instance.setPaused(false);
+        dialogue3Instance.setPaused(false);
+        dialogue4Instance.setPaused(false);
+        dialogue5Instance.setPaused(false);
     }
 }
