@@ -23,6 +23,11 @@ public class CheckSpeed : MonoBehaviour
         {
             speed = car.velocity.magnitude / 2;
             VehicleSound.SetVehicleRPM(speed);
+            VehicleSound.SetVehicleGroundParameter(1);
+        }
+        else if (EnterExit.inCar && !CarController.isCarGrounded)
+        {
+            VehicleSound.SetVehicleGroundParameter(0);
         }
         
     }

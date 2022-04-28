@@ -39,6 +39,7 @@ public class SoundManager : MonoBehaviour
     public FMODUnity.EventReference vehiclePlaceEventHere;
     private FMOD.Studio.EventInstance vehicleAccelerationInstance;
     FMOD.Studio.PARAMETER_ID rpmParam_ID;
+    FMOD.Studio.PARAMETER_ID carGroundedParam_ID;
 
     [Header("Dialogue")]
     public FMODUnity.EventReference dialogue1PlaceEventHere;
@@ -67,19 +68,23 @@ public class SoundManager : MonoBehaviour
         myInstance = FMODUnity.RuntimeManager.CreateInstance(footPlaceEventHere);
         if (footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
-        //RPM Vehicle
+        //RPM and groundcheck Vehicle
         vehicleAccelerationInstance = FMODUnity.RuntimeManager.CreateInstance(vehiclePlaceEventHere);
         FMOD.Studio.EventDescription rpmParam_EventDescription;
+        FMOD.Studio.EventDescription carGroundedParam_EventDescription;
         vehicleAccelerationInstance.getDescription(out rpmParam_EventDescription);
+        vehicleAccelerationInstance.getDescription(out carGroundedParam_EventDescription);
         FMOD.Studio.PARAMETER_DESCRIPTION rpmParam_ParameterDescription;
+        FMOD.Studio.PARAMETER_DESCRIPTION carGroundedParam_ParameterDescription;
         rpmParam_EventDescription.getParameterDescriptionByName("RPM", out rpmParam_ParameterDescription);
+        carGroundedParam_EventDescription.getParameterDescriptionByName("CarGrounded", out carGroundedParam_ParameterDescription);
         rpmParam_ID = rpmParam_ParameterDescription.id;
+        carGroundedParam_ID = carGroundedParam_ParameterDescription.id;
 
         //jumping sound
         jumpingInstance = FMODUnity.RuntimeManager.CreateInstance(jumpPlaceEventHere);
 
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -88,7 +93,6 @@ public class SoundManager : MonoBehaviour
         //Footsteps
         if(footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
-
     void Wind()
     {
         if (_EnterExit.inCar)
@@ -183,6 +187,10 @@ public class SoundManager : MonoBehaviour
     public void SetVehicleRPM(float rpm)
     {
         vehicleAccelerationInstance.setParameterByID(rpmParam_ID, rpm);
+    }
+    public void SetVehicleGroundParameter(int vehicleIsGrounded)
+    {
+        vehicleAccelerationInstance.setParameterByID(carGroundedParam_ID, vehicleIsGrounded);
     }
     public void StartCarSound()
     {
