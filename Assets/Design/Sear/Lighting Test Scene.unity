@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1503.6211, g: 668.85156, b: 291.61133, a: 1}
+  m_IndirectSpecularColor: {r: 1465.0127, g: 639.4033, b: 273.2649, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1378,7 +1378,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -3.229, y: 0, z: 0}
 --- !u!1001 &486698968
 PrefabInstance:
@@ -2686,7 +2686,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0251107, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -2791,7 +2791,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160701952}
-  m_LocalRotation: {x: 0.13304745, y: 0.4170074, z: -0.0618538, w: 0.8969824}
+  m_LocalRotation: {x: 0.13304746, y: 0.4170074, z: -0.061853815, w: 0.8969824}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2836,7 +2836,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0251107, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -3256,7 +3256,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499569630}
-  m_LocalRotation: {x: 0.16554251, y: 0.41448537, z: -0.076960765, w: 0.89155746}
+  m_LocalRotation: {x: 0.16554248, y: 0.41448534, z: -0.07696074, w: 0.89155746}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3301,7 +3301,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0251107, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -3332,7 +3332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1513383336
 Transform:
   m_ObjectHideFlags: 0
@@ -3388,22 +3388,22 @@ PrefabInstance:
     - target: {fileID: 4568289773075227520, guid: 9fbd3debfbd75ac449e5d2d973ecedef,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.98940325
       objectReference: {fileID: 0}
     - target: {fileID: 4568289773075227520, guid: 9fbd3debfbd75ac449e5d2d973ecedef,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4568289773075227520, guid: 9fbd3debfbd75ac449e5d2d973ecedef,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.1451938
       objectReference: {fileID: 0}
     - target: {fileID: 4568289773075227520, guid: 9fbd3debfbd75ac449e5d2d973ecedef,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4568289773075227520, guid: 9fbd3debfbd75ac449e5d2d973ecedef,
         type: 3}
@@ -3413,7 +3413,7 @@ PrefabInstance:
     - target: {fileID: 4568289773075227520, guid: 9fbd3debfbd75ac449e5d2d973ecedef,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 16.697
       objectReference: {fileID: 0}
     - target: {fileID: 4568289773075227520, guid: 9fbd3debfbd75ac449e5d2d973ecedef,
         type: 3}
@@ -3496,7 +3496,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0251107, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -3886,7 +3886,7 @@ PrefabInstance:
     - target: {fileID: 6924347638592391173, guid: cdb37f7dbb767db449b02cd9f67fd4d1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6924347638592391173, guid: cdb37f7dbb767db449b02cd9f67fd4d1,
         type: 3}
