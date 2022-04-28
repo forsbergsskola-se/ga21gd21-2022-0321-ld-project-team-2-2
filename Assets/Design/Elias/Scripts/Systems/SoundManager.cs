@@ -198,7 +198,7 @@ public class SoundManager : MonoBehaviour
         {
             dialogue1HasBeenPlayed = true;
             dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue1PlaceEventHere);
-            dialogue1Instance.start();
+            dialogueInstance.start();
             dialogueInstance.release();
         }
         else if (dialogueNumber == 2 && !dialogue2HasBeenPlayed)
