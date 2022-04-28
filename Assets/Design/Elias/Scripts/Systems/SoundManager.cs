@@ -236,6 +236,6 @@ public class SoundManager : MonoBehaviour
     }
     public void ResumeDialoguePlayback()
     {
-        dialogueInstance.setPaused(false)
+        dialogueInstance.setPaused(false);
     }
 }
