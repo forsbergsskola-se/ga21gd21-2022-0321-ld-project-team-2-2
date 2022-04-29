@@ -7,8 +7,8 @@ public class WindScript : MonoBehaviour
     public FMODUnity.EventReference placeEventHere;
     private FMOD.Studio.EventInstance windInstance;
     public bool is3D = true;
-    public int minDuration;
-    public int maxDuration;
+    public int minDuration = 30;
+    public int maxDuration = 180;
     private int weatherDuration;
     FMOD.Studio.PARAMETER_ID heightParam_ID;
 
