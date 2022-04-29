@@ -9628,7 +9628,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SoundBuddy
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 501847404}
     - target: {fileID: -8489106145340327782, guid: fafb26ce0eb4d694788a3194845bcc5c,
         type: 3}
       propertyPath: ambienceZone
@@ -22589,8 +22589,8 @@ MonoBehaviour:
       Data4: -300852321
     Path: event:/Ambience/AmbienceDesert
   is3D: 1
-  minDuration: 0
-  maxDuration: 0
+  minDuration: 20
+  maxDuration: 300
 --- !u!114 &1343787349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30956,7 +30956,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970208989}
-  m_LocalRotation: {x: -0.0026546859, y: 0.9933037, z: -0.11312538, w: -0.023309616}
+  m_LocalRotation: {x: -0.0026546903, y: 0.9933037, z: -0.1131254, w: -0.023309652}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
