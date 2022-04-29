@@ -770,7 +770,7 @@ MonoBehaviour:
   - {fileID: 4384081652382146694}
   StringsBanks:
   - {fileID: 3110713833002474831}
-  cacheTime: 637867563177037102
+  cacheTime: 637868312632468261
   cacheVersion: 10
 --- !u!114 &1321876768454346420
 MonoBehaviour:
@@ -991,10 +991,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637867563177037102
+  lastModified: 637868312632468261
   FileSizes:
   - Name: 
-    Value: 2852
+    Value: 2924
   Exists: 1
 --- !u!114 &3689948949795330414
 MonoBehaviour:
@@ -1155,7 +1155,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637867563176997068
+  lastModified: 637868312632438253
   FileSizes: []
   Exists: 1
 --- !u!114 &4416405901122388848
@@ -1313,9 +1313,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/VehicleAcceleration/CarLift
+  m_Name: parameter:/VehicleAcceleration/CarGrounded
   m_EditorClassIdentifier: 
-  Name: CarLift
+  Name: CarGrounded
   StudioPath: 
   Min: 0
   Max: 1
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   ID:
     data1: 4087577559
     data2: 4183276051
-  Type: 1
+  Type: 0
   IsGlobal: 0
   Labels: []
   Exists: 1
