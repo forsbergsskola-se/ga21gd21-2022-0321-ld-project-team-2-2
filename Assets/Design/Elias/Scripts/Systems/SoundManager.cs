@@ -35,6 +35,12 @@ public class SoundManager : MonoBehaviour
     bool stinger4Played = false;
     bool stinger5Played = false;
 
+    [Header("Keycards")]
+    public FMODUnity.EventReference keycardPickUpPlaceEventHere;
+    public FMODUnity.EventReference keycardUsePlaceEventHere;
+    private FMOD.Studio.EventInstance keycardPickUp;
+    private FMOD.Studio.EventInstance keycardUse;
+
     [Header("Vehicle")]
     public FMODUnity.EventReference vehiclePlaceEventHere;
     public FMODUnity.EventReference enterVehiclePlaceEventHere;
@@ -92,7 +98,6 @@ public class SoundManager : MonoBehaviour
         //entering or exiting cars
         enterVehicle = FMODUnity.RuntimeManager.CreateInstance(enterVehiclePlaceEventHere);
         exitVehicle = FMODUnity.RuntimeManager.CreateInstance(exitVehiclePlaceEventHere);
-
     }
     // Update is called once per frame
     void Update()
@@ -256,5 +261,19 @@ public class SoundManager : MonoBehaviour
     public void PlayExitVehicleSound()
     {
         exitVehicle.start();
+    }
+    public void PlayKeycardUseSound(bool doorUnlocked)
+    {
+        if (doorUnlocked) keycardUse.setParameterByName("Unlocked", 1);
+        else keycardUse.setParameterByName("Unlocked", 0);
+        keycardUse = FMODUnity.RuntimeManager.CreateInstance(keycardUsePlaceEventHere);
+        keycardUse.start();
+        keycardUse.release();
+    }
+    public void PlayKeycardPickUpSound()
+    {
+        keycardPickUp = FMODUnity.RuntimeManager.CreateInstance(keycardPickUpPlaceEventHere);
+        keycardPickUp.start();
+        keycardUse.release();
     }
 }
