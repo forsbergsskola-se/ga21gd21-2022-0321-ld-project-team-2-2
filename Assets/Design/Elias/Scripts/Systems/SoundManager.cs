@@ -48,6 +48,7 @@ public class SoundManager : MonoBehaviour
     public FMODUnity.EventReference dialogue4PlaceEventHere;
     public FMODUnity.EventReference dialogue5PlaceEventHere;
     private FMOD.Studio.EventInstance dialogueInstance;
+
     bool dialogue1HasBeenPlayed = false;
     bool dialogue2HasBeenPlayed = false;
     bool dialogue3HasBeenPlayed = false;
@@ -206,37 +207,29 @@ public class SoundManager : MonoBehaviour
         {
             dialogue1HasBeenPlayed = true;
             dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue1PlaceEventHere);
-            dialogueInstance.start();
-            dialogueInstance.release();
         }
         else if (dialogueNumber == 2 && !dialogue2HasBeenPlayed)
         {
             dialogue2HasBeenPlayed = true;
             dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue2PlaceEventHere);
-            dialogueInstance.start();
-            dialogueInstance.release();
         }
         else if (dialogueNumber == 3 && !dialogue3HasBeenPlayed)
         {
             dialogue3HasBeenPlayed = true;
             dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue3PlaceEventHere);
-            dialogueInstance.start();
-            dialogueInstance.release();
         }
         else if(dialogueNumber == 4 && !dialogue4HasBeenPlayed)
         {
             dialogue4HasBeenPlayed = true;
             dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue4PlaceEventHere);
-            dialogueInstance.start();
-            dialogueInstance.release();
         }
         else if (dialogueNumber == 5 && !dialogue5HasBeenPlayed)
         {
             dialogue5HasBeenPlayed = true;
             dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue5PlaceEventHere);
-            dialogueInstance.start();
-            dialogueInstance.release();
         }
+        dialogueInstance.start();
+        dialogueInstance.release();
     }
     public void PauseDialoguePlayback()
     {
