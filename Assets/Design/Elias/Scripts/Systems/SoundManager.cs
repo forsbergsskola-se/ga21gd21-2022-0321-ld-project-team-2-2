@@ -197,6 +197,7 @@ public class SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InMountains", zone == 4 ? 1 : 0);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InValley", zone == 5 ? 1 : 0);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InRuins", zone == 6 ? 1 : 0);
+        Debug.Log("Entering zone " + zone);
     }
     public void SetVehicleRPM(float rpm)
     {

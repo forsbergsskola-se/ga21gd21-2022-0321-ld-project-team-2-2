@@ -75,11 +75,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f35b1f21b12944486c507922ad8ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeEventHere:
+  placeTeleportHumEventHere:
     Guid:
       Data1: -697755403
       Data2: 1127084418
       Data3: 306466486
       Data4: -655248522
     Path: event:/InteractiveObjects/Teleporter
+  placeTeleportActionEventHere:
+    Guid:
+      Data1: -134618877
+      Data2: 1094815638
+      Data3: 677222791
+      Data4: -1391741093
+    Path: event:/InteractiveObjects/TeleporterAction
   is3D: 1

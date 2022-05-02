@@ -5,6 +5,7 @@ using UnityEngine;
 public class AmbienceZone : MonoBehaviour
 {
     public SoundManager SoundBuddy;
+    public EnterExitVehicle VehicleCheck;
     /*FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InDesert", zone == 1 ? 1 : 0);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InStartingArea", zone == 2 ? 1 : 0);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InLake", zone == 3 ? 1 : 0);
@@ -26,7 +27,7 @@ public class AmbienceZone : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
             SoundBuddy.SetAmbienceZone(ambienceZone);
         }
