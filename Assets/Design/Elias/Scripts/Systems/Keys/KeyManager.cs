@@ -21,4 +21,16 @@ public class KeyManager : MonoBehaviour
     {
         keys++;
     }
+
+    public void OpenDoor()
+    {
+        if (keys == 5)
+        {
+            //open door/play animation
+        }
+        else
+        {
+            //Play clip of poddy saying no bueno
+        }
+    }
 }
