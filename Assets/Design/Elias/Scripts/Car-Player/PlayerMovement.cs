@@ -107,4 +107,9 @@ public class PlayerMovement : MonoBehaviour
         Footsteps.start();
         Footsteps.release();
     }
+    void PlayLandingSound(string path)
+    {
+        FMOD.Studio.EventInstance landingInstance = FMODUnity.RuntimeManager.CreateInstance(path);
+        landingInstance.start();
+    }
 }

@@ -132,11 +132,6 @@ public class SoundManager : MonoBehaviour
     {
         jumpingInstance.start();
     }
-    public void PlayLandingSound(string path)
-    {
-        FMOD.Studio.EventInstance landingInstance = FMODUnity.RuntimeManager.CreateInstance(path);
-        landingInstance.start();
-    }
     public void StopMoving()
     {
         myInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
