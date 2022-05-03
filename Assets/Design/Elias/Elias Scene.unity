@@ -28470,7 +28470,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856815862}
-  m_LocalRotation: {x: -0.01536869, y: 0.9843705, z: -0.11210799, w: -0.13494562}
+  m_LocalRotation: {x: -0.015368685, y: 0.9843705, z: -0.11210802, w: -0.13494559}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33339,6 +33339,27 @@ MonoBehaviour:
   inventoryCamera: {fileID: 1950522298}
   ui: {fileID: 648792812}
   player: {fileID: 4763689779767942391}
+  openInventoryPlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  closeInventoryPlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  clickPlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &5284928193911473744
 MonoBehaviour:
   m_ObjectHideFlags: 0
