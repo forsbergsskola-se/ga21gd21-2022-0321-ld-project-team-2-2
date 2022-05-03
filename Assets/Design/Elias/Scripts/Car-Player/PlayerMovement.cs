@@ -91,8 +91,13 @@ public class PlayerMovement : MonoBehaviour
         _ySpeed = -0.5f;
         if (Input.GetButtonDown("Jump"))
         {
+            animator.SetBool("isJumping", true);
             _ySpeed = jumpSpeed;
             Manager.PlayJumpSound();
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 
