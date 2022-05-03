@@ -250,6 +250,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6473514351311813406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VehicleAcceleration/CarLevel
+  m_EditorClassIdentifier: 
+  Name: CarLevel
+  StudioPath: 
+  Min: 1
+  Max: 3
+  Default: 1
+  ID:
+    data1: 31671230
+    data2: 2226261378
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6137604262401636876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +375,7 @@ MonoBehaviour:
   Parameters:
   - {fileID: 5729385570785441138}
   - {fileID: 5301422526028084517}
-  - {fileID: -4303819683430501626}
+  - {fileID: -6473514351311813406}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -375,7 +399,7 @@ MonoBehaviour:
     Data4: -1030098233
   Banks:
   - {fileID: 4384081652382146694}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -409,6 +433,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4867375149538204780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UseKeycard/Unlocked
+  m_EditorClassIdentifier: 
+  Name: Unlocked
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1189501970
+    data2: 4094614762
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4303819683430501626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,8 +881,8 @@ MonoBehaviour:
   - {fileID: 2687513343048003166}
   - {fileID: -5268918374888845319}
   - {fileID: -3765515455648048119}
-  - {fileID: -6526304676601430622}
-  - {fileID: 4961914343716094463}
+  - {fileID: 9069484201309198855}
+  - {fileID: 4108400375902960713}
   EditorParameters:
   - {fileID: 8991761548351473804}
   - {fileID: -7371684681067009291}
@@ -849,7 +897,7 @@ MonoBehaviour:
   - {fileID: 4384081652382146694}
   StringsBanks:
   - {fileID: 3110713833002474831}
-  cacheTime: 637870143617083193
+  cacheTime: 637871797859306962
   cacheVersion: 10
 --- !u!114 &1321876768454346420
 MonoBehaviour:
@@ -1024,7 +1072,7 @@ MonoBehaviour:
     Data4: 854827230
   Banks:
   - {fileID: 4384081652382146694}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -1070,7 +1118,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637870143617083193
+  lastModified: 637870844308232169
   FileSizes:
   - Name: 
     Value: 3102
@@ -1171,6 +1219,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4108400375902960713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PickupKeycard
+  m_EditorClassIdentifier: 
+  Path: event:/PickupKeycard
+  Guid:
+    Data1: -2086222342
+    Data2: 1306965827
+    Data3: 425060754
+    Data4: 350483894
+  Banks:
+  - {fileID: 4384081652382146694}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4171308261255232577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,7 +1309,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637870143617023179
+  lastModified: 637871797859306962
   FileSizes: []
   Exists: 1
 --- !u!114 &4416405901122388848
@@ -1661,3 +1736,31 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &9069484201309198855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/UseKeycard
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/UseKeycard
+  Guid:
+    Data1: -1743531253
+    Data2: 1095305367
+    Data3: 486302364
+    Data4: -901520988
+  Banks:
+  - {fileID: 4384081652382146694}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4867375149538204780}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
