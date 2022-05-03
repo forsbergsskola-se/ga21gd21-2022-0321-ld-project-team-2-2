@@ -25,6 +25,8 @@ public class SoundManager : MonoBehaviour
     [Header("Jump")]
     public FMODUnity.EventReference jumpPlaceEventHere;
     private FMOD.Studio.EventInstance jumpingInstance;
+    public FMODUnity.EventReference landingPlaceEventHere;
+    private FMOD.Studio.EventInstance landingInstance;
 
     [Header("Music")]
     public FMODUnity.EventReference musicEvRef;
@@ -94,6 +96,7 @@ public class SoundManager : MonoBehaviour
 
         //jumping sound
         jumpingInstance = FMODUnity.RuntimeManager.CreateInstance(jumpPlaceEventHere);
+        landingInstance = FMODUnity.RuntimeManager.CreateInstance(landingPlaceEventHere);
 
         //entering or exiting cars
         enterVehicle = FMODUnity.RuntimeManager.CreateInstance(enterVehiclePlaceEventHere);
@@ -132,6 +135,11 @@ public class SoundManager : MonoBehaviour
     {
         jumpingInstance.start();
     }
+    public void PlayLandingSound()
+    {
+        landingInstance.start();
+    }
+
     public void StopMoving()
     {
         myInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
