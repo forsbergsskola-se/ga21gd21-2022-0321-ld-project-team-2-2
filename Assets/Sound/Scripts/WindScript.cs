@@ -22,7 +22,6 @@ public class WindScript : MonoBehaviour
         heightParam_EventDescription.getParameterDescriptionByName("Height", out heightParam_ParameterDescription);
         heightParam_ID = heightParam_ParameterDescription.id;
 
-
         if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         windInstance.start();
         windInstance.setParameterByName("WindAmt", 0);
@@ -33,7 +32,7 @@ public class WindScript : MonoBehaviour
         {
             int windRandom = Random.Range(0, 100);
             yield return new WaitForSeconds(seconds);
-            Debug.Log(windRandom);
+
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("WindAmt", windRandom);
             weatherDuration = Random.Range(minDuration, maxDuration);
             StartCoroutine(Waiter(weatherDuration));
