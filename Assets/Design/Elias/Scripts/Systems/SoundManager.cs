@@ -59,6 +59,12 @@ public class SoundManager : MonoBehaviour
     public FMODUnity.EventReference dialogue5PlaceEventHere;
     private FMOD.Studio.EventInstance dialogueInstance;
 
+    [Header("Inventory sounds")]
+    public FMODUnity.EventReference inventoryPlaceEventHere;
+    public FMODUnity.EventReference clickPlaceEventHere;
+    private FMOD.Studio.EventInstance inventoryInstance;
+    private FMOD.Studio.EventInstance clickInstance;
+
     bool dialogue1HasBeenPlayed = false;
     bool dialogue2HasBeenPlayed = false;
     bool dialogue3HasBeenPlayed = false;
@@ -98,6 +104,9 @@ public class SoundManager : MonoBehaviour
         //entering or exiting cars
         enterVehicle = FMODUnity.RuntimeManager.CreateInstance(enterVehiclePlaceEventHere);
         exitVehicle = FMODUnity.RuntimeManager.CreateInstance(exitVehiclePlaceEventHere);
+
+        //Inventory
+        clickInstance = FMODUnity.RuntimeManager.CreateInstance(clickPlaceEventHere);
     }
     // Update is called once per frame
     void Update()
@@ -276,5 +285,15 @@ public class SoundManager : MonoBehaviour
         keycardPickUp = FMODUnity.RuntimeManager.CreateInstance(keycardPickUpPlaceEventHere);
         keycardPickUp.start();
         keycardUse.release();
+    }
+    public void PlayOpenInventorySound()
+    {
+        inventoryInstance = FMODUnity.RuntimeManager.CreateInstance(inventoryPlaceEventHere);
+        inventoryInstance.start();
+    }
+    public void PlayCloseInventorySound()
+    {
+        inventoryInstance.setParameterByName("InventoryOpen", 0);
+        inventoryInstance.release();
     }
 }

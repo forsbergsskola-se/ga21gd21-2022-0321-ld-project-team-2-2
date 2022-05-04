@@ -20980,7 +20980,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166109768}
-  m_LocalRotation: {x: -0.0022302582, y: 0.9951971, z: -0.09503897, w: -0.023354067}
+  m_LocalRotation: {x: -0.0022302584, y: 0.99519706, z: -0.09503899, w: -0.023354063}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23533,6 +23533,10 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1836078951}
+    - target: {fileID: 288335913, guid: 707221b5ac2d50a4e964307f37d7ea80, type: 3}
+      propertyPath: UISoundManager
+      value: 
+      objectReference: {fileID: 501847404}
     - target: {fileID: 288335913, guid: 707221b5ac2d50a4e964307f37d7ea80, type: 3}
       propertyPath: inventoryCamera
       value: 
@@ -26455,7 +26459,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679431762}
-  m_LocalRotation: {x: -0.002230259, y: 0.99519706, z: -0.09503899, w: -0.023354061}
+  m_LocalRotation: {x: -0.0022302584, y: 0.99519706, z: -0.09503898, w: -0.023354061}
   m_LocalPosition: {x: -12.6402, y: 6.21, z: -15.04431}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -28683,6 +28687,10 @@ PrefabInstance:
       value: event:/Dialogue/Dialogue5
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Path
+      value: event:/UI/Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: jumpPlaceEventHere.Guid.Data1
       value: 66578862
       objectReference: {fileID: 0}
@@ -28797,6 +28805,22 @@ PrefabInstance:
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: dialogue5PlaceEventHere.Guid.Data4
       value: -865839860
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Guid.Data1
+      value: 255435067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Guid.Data2
+      value: 1309765136
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Guid.Data3
+      value: -1034924865
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Guid.Data4
+      value: -288326428
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: keycardUsePlaceEventHere.Guid.Data1
@@ -31080,7 +31104,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970208989}
-  m_LocalRotation: {x: -0.0026546903, y: 0.9933037, z: -0.1131254, w: -0.023309652}
+  m_LocalRotation: {x: -0.0026546859, y: 0.9933037, z: -0.11312538, w: -0.023309616}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

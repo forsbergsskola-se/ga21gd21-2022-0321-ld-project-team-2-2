@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenInventory : MonoBehaviour
 {
     public KeyCode inventoryKey = KeyCode.Tab;
+    public SoundManager UISoundManager;
     [SerializeField] private PlayerMovement controller;
 
     [Header("Cameras")] 
@@ -17,14 +18,6 @@ public class OpenInventory : MonoBehaviour
     [Header("Lerp")]
     public Transform player;
 
-    [Header("Inventory sounds")]
-    public FMODUnity.EventReference openInventoryPlaceEventHere;
-    public FMODUnity.EventReference closeInventoryPlaceEventHere;
-    public FMODUnity.EventReference clickPlaceEventHere;
-    private FMOD.Studio.EventInstance openInventoryInstance;
-    private FMOD.Studio.EventInstance closeInventoryInstance;
-    private FMOD.Studio.EventInstance clickInstance;
-
     private Vector3 pointA;
     private Vector3 pointB;
     private float a = 0.5f;
@@ -33,12 +26,6 @@ public class OpenInventory : MonoBehaviour
 
 
     // Update is called once per frame
-    private void Start()
-    {
-        openInventoryInstance = FMODUnity.RuntimeManager.CreateInstance(openInventoryPlaceEventHere);
-        closeInventoryInstance = FMODUnity.RuntimeManager.CreateInstance(closeInventoryPlaceEventHere);
-        clickInstance = FMODUnity.RuntimeManager.CreateInstance(clickPlaceEventHere);
-    }
     void Update()
     {
         UIFollow();
@@ -46,22 +33,21 @@ public class OpenInventory : MonoBehaviour
         {
             if (inInventory)
             {
-                closeInventoryInstance.start();
                 controller.enabled = true;
                 playerCamera.SetActive(true);
                 inventoryCamera.SetActive(false);
-                
                 ui.SetActive(false);
+                UISoundManager.PlayCloseInventorySound();
             }
             else
             {
-                openInventoryInstance.start();
+                
                 controller.enabled = false;
                 inventoryCamera.SetActive(true);
                 playerCamera.SetActive(false);
                 //Enable mouse
-                
                 ui.SetActive(true);
+                UISoundManager.PlayOpenInventorySound();
             }
             inInventory = !inInventory;
         }
