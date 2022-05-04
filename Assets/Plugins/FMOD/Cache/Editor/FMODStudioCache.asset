@@ -64,7 +64,7 @@ MonoBehaviour:
   StudioPath: parameter:/InDesert
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 4291619429
     data2: 3093050495
@@ -187,7 +187,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 4291619429
     data2: 3093050495
@@ -361,7 +361,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -437,7 +437,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -484,7 +484,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637871898334681609
+  lastModified: 637872647564931683
   FileSizes: []
   Exists: 1
 --- !u!114 &-3833077897003525923
@@ -503,7 +503,7 @@ MonoBehaviour:
   StudioPath: parameter:/InStartingArea
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -637,6 +637,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-2075286548915313201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicle/VehicleEnter
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicle/VehicleEnter
+  Guid:
+    Data1: -2093430043
+    Data2: 1123981061
+    Data3: -666387278
+    Data4: -1474507279
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2054388049305667022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,7 +809,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 100
-  Default: 0
+  Default: 50.5
   ID:
     data1: 3585517453
     data2: 3902911652
@@ -895,6 +922,8 @@ MonoBehaviour:
   - {fileID: 1716956804277546839}
   - {fileID: 3919478413920566505}
   - {fileID: 6587882358802093786}
+  - {fileID: 105023392822853316}
+  - {fileID: -2075286548915313201}
   EditorParameters:
   - {fileID: -3833077897003525923}
   - {fileID: 8464545129761389062}
@@ -909,8 +938,35 @@ MonoBehaviour:
   - {fileID: -3973300900861439473}
   StringsBanks:
   - {fileID: 1776436100405253887}
-  cacheTime: 637871898334761400
+  cacheTime: 637872647564991699
   cacheVersion: 10
+--- !u!114 &105023392822853316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicle/VehicleExit
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicle/VehicleExit
+  Guid:
+    Data1: -492926105
+    Data2: 1128236349
+    Data3: -1638278240
+    Data4: 2062017460
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &112659699549219811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,7 +983,7 @@ MonoBehaviour:
   StudioPath: parameter:/WindAmt
   Min: 0
   Max: 100
-  Default: 0
+  Default: 50.5
   ID:
     data1: 3585517453
     data2: 3902911652
@@ -1052,10 +1108,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637871898334761400
+  lastModified: 637872647564991699
   FileSizes:
   - Name: 
-    Value: 3116
+    Value: 3198
   Exists: 1
 --- !u!114 &2476937039477096205
 MonoBehaviour:
@@ -1205,7 +1261,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 4291619429
     data2: 3093050495
