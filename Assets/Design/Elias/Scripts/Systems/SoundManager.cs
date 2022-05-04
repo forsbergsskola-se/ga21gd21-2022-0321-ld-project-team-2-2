@@ -293,7 +293,8 @@ public class SoundManager : MonoBehaviour
     }
     public void PlayCloseInventorySound()
     {
-        inventoryInstance.setParameterByName("InventoryOpen", 0);
+        inventoryInstance.setParameterByName("InventoryOpen", 0f);
+        Debug.Log("Closed inventory");
         //inventoryInstance.release();
     }
 }
