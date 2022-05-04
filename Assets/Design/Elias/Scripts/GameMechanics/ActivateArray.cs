@@ -6,11 +6,7 @@ public class ActivateArray : MonoBehaviour
     public MovingPlatform[] Platforms;
 
     public PressurePlateAudio PlayAudio;
-
-    private void Start()
-    {
-        //Platforms = gameObject.GetComponentsInChildren<MovingPlatform>();
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
