@@ -16,6 +16,7 @@ public class Manager : MonoBehaviour
             Vector3 newPosition = transform.position;
             newPosition.y = -50;
             gameObject.transform.position = newPosition;
+            Destroy(gameObject);
         }
     }
 }
