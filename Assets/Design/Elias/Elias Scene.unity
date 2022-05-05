@@ -10752,7 +10752,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471749390}
-  m_LocalRotation: {x: -0.0019415058, y: 0.99526346, z: -0.09504532, w: -0.020330409}
+  m_LocalRotation: {x: -0.001941506, y: 0.99526346, z: -0.09504532, w: -0.020330409}
   m_LocalPosition: {x: -12.719115, y: 6.21, z: -15.040844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17654,12 +17654,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099126357}
   m_CullTransparentMesh: 1
---- !u!1 &1108028175 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1387995872979791916, guid: 0dbf497418eeea74dbdf9a4e53711296,
-    type: 3}
-  m_PrefabInstance: {fileID: 1387995871871769379}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1108028180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1387995872979791927, guid: 0dbf497418eeea74dbdf9a4e53711296,
@@ -18025,7 +18019,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122887585}
-  m_LocalRotation: {x: -0.0015723648, y: 0.99682397, z: -0.07697414, w: -0.020362303}
+  m_LocalRotation: {x: -0.001572362, y: 0.99682397, z: -0.07697414, w: -0.020362267}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -28456,7 +28450,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856815862}
-  m_LocalRotation: {x: -0.0023109824, y: 0.99336994, z: -0.11313292, w: -0.020291712}
+  m_LocalRotation: {x: -0.0023109827, y: 0.99336994, z: -0.11313294, w: -0.020291712}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33325,32 +33319,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryKey: 9
+  UISoundManager: {fileID: 0}
   controller: {fileID: 5284928193911473745}
   playerCamera: {fileID: 362129206}
   inventoryCamera: {fileID: 1950522298}
   ui: {fileID: 648792812}
   player: {fileID: 4763689779767942391}
-  openInventoryPlaceEventHere:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  closeInventoryPlaceEventHere:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  clickPlaceEventHere:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!114 &5284928193911473744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34415,11 +34389,11 @@ PrefabInstance:
         type: 3}
       propertyPath: objToTp
       value: 
-      objectReference: {fileID: 1108028175}
+      objectReference: {fileID: 80655042}
     - target: {fileID: 8438105953090038767, guid: 3142f642087913943bab3a0e065e7bea,
         type: 3}
       propertyPath: TagFilter
-      value: Box
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3142f642087913943bab3a0e065e7bea, type: 3}

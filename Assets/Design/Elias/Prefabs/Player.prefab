@@ -1570,7 +1570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5504163639189090930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.14, z: 0}
+  m_LocalPosition: {x: 768.81195, y: 164.03516, z: 351.11816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2162,32 +2162,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryKey: 9
+  UISoundManager: {fileID: 0}
   controller: {fileID: 610789832747327017}
   playerCamera: {fileID: 0}
   inventoryCamera: {fileID: 0}
   ui: {fileID: 0}
   player: {fileID: 5033594153639246198}
-  openInventoryPlaceEventHere:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  closeInventoryPlaceEventHere:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  clickPlaceEventHere:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!114 &288335911
 MonoBehaviour:
   m_ObjectHideFlags: 0
