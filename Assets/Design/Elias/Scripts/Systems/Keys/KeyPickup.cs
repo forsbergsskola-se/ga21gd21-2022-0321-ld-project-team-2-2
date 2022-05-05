@@ -6,6 +6,7 @@ using UnityEngine;
 public class KeyPickup : MonoBehaviour
 {
     public KeyManager keyManager;
+    public SoundManager SoundPlayer;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class KeyPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             keyManager.AddKey();
-            //PlaySound
+            SoundPlayer.PlayKeycardPickUpSound();
             Destroy(gameObject);
         }
     }
