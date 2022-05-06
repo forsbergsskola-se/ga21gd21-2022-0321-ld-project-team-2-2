@@ -24,8 +24,8 @@ public class KeyPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            keyManager.AddKey();
             SoundPlayer.PlayKeycardPickUpSound();
+            keyManager.AddKey();
             Destroy(gameObject);
         }
     }

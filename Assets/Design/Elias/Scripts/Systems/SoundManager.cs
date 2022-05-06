@@ -284,7 +284,8 @@ public class SoundManager : MonoBehaviour
     {
         keycardPickUp = FMODUnity.RuntimeManager.CreateInstance(keycardPickUpPlaceEventHere);
         keycardPickUp.start();
-        keycardUse.release();
+        keycardPickUp.release();
+        Debug.Log("played keycard sound");
     }
     public void PlayOpenInventorySound()
     {
