@@ -535,7 +535,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637873586974449422
+  lastModified: 637874335282749587
   FileSizes: []
   Exists: 1
 --- !u!114 &-3833077897003525923
@@ -998,7 +998,6 @@ MonoBehaviour:
   - {fileID: 3934612052753941283}
   - {fileID: -2054388049305667022}
   - {fileID: 4524232527904180124}
-  - {fileID: 1716956804277546839}
   - {fileID: 3919478413920566505}
   - {fileID: 6587882358802093786}
   - {fileID: 105023392822853316}
@@ -1006,6 +1005,7 @@ MonoBehaviour:
   - {fileID: -1847196850057064404}
   - {fileID: 1108643790621318930}
   - {fileID: -9160438231002236577}
+  - {fileID: 3073185051398507924}
   EditorParameters:
   - {fileID: -3833077897003525923}
   - {fileID: 8464545129761389062}
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   - {fileID: -3973300900861439473}
   StringsBanks:
   - {fileID: 1776436100405253887}
-  cacheTime: 637873586974469428
+  cacheTime: 637874335282779504
   cacheVersion: 10
 --- !u!114 &105023392822853316
 MonoBehaviour:
@@ -1175,33 +1175,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1716956804277546839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PickupKeycard
-  m_EditorClassIdentifier: 
-  Path: event:/PickupKeycard
-  Guid:
-    Data1: -2086222342
-    Data2: 1306965827
-    Data3: 425060754
-    Data4: 350483894
-  Banks:
-  - {fileID: -3973300900861439473}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1776436100405253887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1217,10 +1190,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637873586974469428
+  lastModified: 637874335282779504
   FileSizes:
   - Name: 
-    Value: 3378
+    Value: 3382
   Exists: 1
 --- !u!114 &2476937039477096205
 MonoBehaviour:
@@ -1300,6 +1273,33 @@ MonoBehaviour:
   - {fileID: -8840318089336548814}
   - {fileID: -7470155132517732488}
   - {fileID: -3254618436144344091}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3073185051398507924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/PickupKeycard
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/PickupKeycard
+  Guid:
+    Data1: 1323079084
+    Data2: 1338106608
+    Data3: 1215854720
+    Data4: -1814649711
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
