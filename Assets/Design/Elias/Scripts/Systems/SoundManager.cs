@@ -107,6 +107,7 @@ public class SoundManager : MonoBehaviour
 
         //Inventory
         clickInstance = FMODUnity.RuntimeManager.CreateInstance(clickPlaceEventHere);
+        keycardPickUp = FMODUnity.RuntimeManager.CreateInstance(keycardPickUpPlaceEventHere);
     }
     // Update is called once per frame
     void Update()
@@ -285,7 +286,6 @@ public class SoundManager : MonoBehaviour
         keycardPickUp = FMODUnity.RuntimeManager.CreateInstance(keycardPickUpPlaceEventHere);
         keycardPickUp.start();
         keycardPickUp.release();
-        Debug.Log("played keycard sound");
     }
     public void PlayOpenInventorySound()
     {
