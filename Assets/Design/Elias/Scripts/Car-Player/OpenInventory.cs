@@ -7,6 +7,7 @@ public class OpenInventory : MonoBehaviour
     public KeyCode inventoryKey = KeyCode.Tab;
     public SoundManager UISoundManager;
     [SerializeField] private PlayerMovement controller;
+    public Animator animator;
 
     [Header("Cameras")] 
     public GameObject playerCamera;
@@ -45,6 +46,7 @@ public class OpenInventory : MonoBehaviour
                 controller.enabled = false;
                 inventoryCamera.SetActive(true);
                 playerCamera.SetActive(false);
+                animator.SetBool("isWalking", false);
                 //Enable mouse
                 ui.SetActive(true);
                 UISoundManager.PlayOpenInventorySound();
