@@ -535,7 +535,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637876859197398213
+  lastModified: 637877208467213895
   FileSizes: []
   Exists: 1
 --- !u!114 &-3833077897003525923
@@ -589,6 +589,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 677
+--- !u!114 &-3517632683497567084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/GreenSpice
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/GreenSpice
+  Guid:
+    Data1: 1530577901
+    Data2: 1171239481
+    Data3: -1936293241
+    Data4: -590446186
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32400
 --- !u!114 &-3254618436144344091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +640,57 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3086551032001495495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDesert/RPM
+  m_EditorClassIdentifier: 
+  Name: RPM
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 3961408258
+    data2: 4260585334
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2821274822730923782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/BoxMoving
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/BoxMoving
+  Guid:
+    Data1: -913143345
+    Data2: 1299202537
+    Data3: 1983140533
+    Data4: 1093635466
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2452873642552807425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,6 +875,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1776673476928617695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VehicleAcceleration/InCar
+  m_EditorClassIdentifier: 
+  Name: InCar
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 344988026
+    data2: 3347511847
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-1761150888370089485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,7 +920,7 @@ MonoBehaviour:
     data1: 344988026
     data2: 3347511847
   Type: 0
-  IsGlobal: 0
+  IsGlobal: 1
   Labels: []
   Exists: 1
 --- !u!114 &-1594797967686575875
@@ -1006,6 +1108,9 @@ MonoBehaviour:
   - {fileID: 1108643790621318930}
   - {fileID: -9160438231002236577}
   - {fileID: 3073185051398507924}
+  - {fileID: 6884210779762426221}
+  - {fileID: -2821274822730923782}
+  - {fileID: -3517632683497567084}
   EditorParameters:
   - {fileID: -3833077897003525923}
   - {fileID: 8464545129761389062}
@@ -1016,11 +1121,12 @@ MonoBehaviour:
   - {fileID: -7964771746838796826}
   - {fileID: -2253297656438301551}
   - {fileID: 2477938332173601470}
+  - {fileID: 2577839982740246031}
   MasterBanks:
   - {fileID: -3973300900861439473}
   StringsBanks:
   - {fileID: 1776436100405253887}
-  cacheTime: 637876859197398213
+  cacheTime: 637877208467223899
   cacheVersion: 10
 --- !u!114 &105023392822853316
 MonoBehaviour:
@@ -1190,10 +1296,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637874307184527083
+  lastModified: 637877208467223899
   FileSizes:
   - Name: 
-    Value: 3382
+    Value: 3522
   Exists: 1
 --- !u!114 &2476937039477096205
 MonoBehaviour:
@@ -1246,6 +1352,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &2577839982740246031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InCar
+  m_EditorClassIdentifier: 
+  Name: InCar
+  StudioPath: parameter:/InCar
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 344988026
+    data2: 3347511847
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &3023406757556606160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,6 +1403,7 @@ MonoBehaviour:
   - {fileID: -8840318089336548814}
   - {fileID: -7470155132517732488}
   - {fileID: -3254618436144344091}
+  - {fileID: -1776673476928617695}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1569,6 +1700,7 @@ MonoBehaviour:
   - {fileID: -5694168786580164492}
   - {fileID: -4490121595928582993}
   - {fileID: -9108711261717849326}
+  - {fileID: -3086551032001495495}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1622,6 +1754,33 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+  Length: 0
+--- !u!114 &6884210779762426221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/TeleportedPlayer
+  m_EditorClassIdentifier: 
+  Path: event:/Player/TeleportedPlayer
+  Guid:
+    Data1: -1165899148
+    Data2: 1161538432
+    Data3: 1343290518
+    Data4: -1195375016
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 55
   Length: 0
 --- !u!114 &7712433641666352728
 MonoBehaviour:
