@@ -32,6 +32,8 @@ public class CarController : MonoBehaviour
     
     public float alignToGroundTime;
 
+    public bool nitroUnlock = false;
+
     #endregion
     void Start()
     {
@@ -91,7 +93,7 @@ public class CarController : MonoBehaviour
 
     IEnumerator NitroBoost()
     {
-        if (boostCheck)
+        if (boostCheck && nitroUnlock)
         {
             boostCheck = false;
             fwdSpeed = boostSpeed;
