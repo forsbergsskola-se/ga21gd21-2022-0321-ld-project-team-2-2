@@ -148,11 +148,11 @@ public class SoundManager : MonoBehaviour
     }
     public void FadeMusic()
     {
-        musicEvInst.setParameterByName("InCar", 1f);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InCar", 1f);
     }
     public void FadeInMusic()
     {
-        musicEvInst.setParameterByName("InCar", 0);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InCar", 0);
     }
     public void MusicStinger1()
     {
