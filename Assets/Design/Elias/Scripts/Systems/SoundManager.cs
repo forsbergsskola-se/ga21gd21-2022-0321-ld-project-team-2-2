@@ -158,45 +158,32 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InCar", 0);
     }
-    public void MusicStinger1()
+    public void MusicStinger(int stinger)
     {
-        if (!stinger1Played)
+        if (stinger == 1 && !stinger1Played)
         {
             musicEvInst.setParameterByName("Stinger1", 1);
             stinger1Played = true;
         }
-        
-    }
-    public void MusicStinger2()
-    {
-        if (!stinger2Played)
+        else if(stinger == 2 && !stinger2Played)
         {
             musicEvInst.setParameterByName("Stinger2", 1);
             stinger2Played = true;
         }
-    }
-    public void MusicStinger3()
-    {
-        if (!stinger3Played)
+        else if (stinger == 3 && !stinger3Played)
         {
             musicEvInst.setParameterByName("Stinger3", 1);
             stinger3Played = true;
         }
-    }
-    public void MusicStinger4()
-    {
-        if (!stinger4Played)
+        else if (stinger == 4 && !stinger4Played)
         {
             musicEvInst.setParameterByName("Stinger4", 1);
             stinger4Played = true;
         }
-    }
-    public void MusicStinger5()
-    {
-        if (!stinger5Played)
+        else if (stinger == 5 && !stinger5Played)
         {
-            musicEvInst.setParameterByName("Stinger5", 1);
-            stinger5Played = true;
+            musicEvInst.setParameterByName("Stinger2", 1);
+            stinger2Played = true;
         }
     }
     public void SolvedPuzzleStinger()

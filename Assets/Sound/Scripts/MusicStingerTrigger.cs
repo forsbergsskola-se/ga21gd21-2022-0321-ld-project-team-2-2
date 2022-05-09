@@ -5,6 +5,8 @@ using UnityEngine;
 public class MusicStingerTrigger : MonoBehaviour
 {
     public SoundManager MusicTriggers;
+    public EnterExitVehicle VehicleCheck;
+    public int musicalStinger = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +20,9 @@ public class MusicStingerTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
-            MusicTriggers.MusicStinger1();
+            MusicTriggers.MusicStinger(musicalStinger);
         }
     }
 
