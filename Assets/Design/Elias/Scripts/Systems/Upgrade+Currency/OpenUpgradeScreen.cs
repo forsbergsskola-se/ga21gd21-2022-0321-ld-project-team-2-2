@@ -8,13 +8,20 @@ public class OpenUpgradeScreen : MonoBehaviour
     public KeyCode interact = KeyCode.E;
     [SerializeField] private PlayerMovement controller;
     [SerializeField] private Animator animator;
+    [SerializeField] private OpenInventory _inventory;
 
     [Header("Cameras")] 
-    public GameObject playerCamera;
-    public GameObject inventoryCamera;
+    [SerializeField] private GameObject playerCamera;
+    [SerializeField] private GameObject inventoryCamera;
     
     [Header("UI")] 
-    public GameObject ui;
+    [SerializeField] private GameObject ui;
+
+    [SerializeField] private GameObject speed1;
+    [SerializeField] private GameObject speed2;
+    [SerializeField] private GameObject speed3;
+    [SerializeField] private GameObject nitro;
+    
     
     private bool inMenu = false;
     
@@ -32,6 +39,7 @@ public class OpenUpgradeScreen : MonoBehaviour
                 controller.enabled = true;
                 playerCamera.SetActive(true);
                 inventoryCamera.SetActive(false);
+                _inventory.enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
                 
                 ui.SetActive(false);
@@ -42,6 +50,7 @@ public class OpenUpgradeScreen : MonoBehaviour
                 inventoryCamera.SetActive(true);
                 playerCamera.SetActive(false);
                 animator.SetBool("isWalking", false);
+                _inventory.enabled = false;
                 Cursor.lockState = CursorLockMode.Confined;
                 
                 ui.SetActive(true);
@@ -53,5 +62,10 @@ public class OpenUpgradeScreen : MonoBehaviour
     void UIFollow()
     {
         ui.transform.position = transform.position + new Vector3(5, 3, 1);
+    }
+
+    public void Speed1()
+    {
+        
     }
 }
