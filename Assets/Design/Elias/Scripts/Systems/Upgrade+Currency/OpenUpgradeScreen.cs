@@ -7,6 +7,7 @@ public class OpenUpgradeScreen : MonoBehaviour
 {
     public KeyCode interact = KeyCode.E;
     [SerializeField] private PlayerMovement controller;
+    [SerializeField] private Animator animator;
 
     [Header("Cameras")] 
     public GameObject playerCamera;
@@ -31,6 +32,7 @@ public class OpenUpgradeScreen : MonoBehaviour
                 controller.enabled = true;
                 playerCamera.SetActive(true);
                 inventoryCamera.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
                 
                 ui.SetActive(false);
             }
@@ -39,7 +41,8 @@ public class OpenUpgradeScreen : MonoBehaviour
                 controller.enabled = false;
                 inventoryCamera.SetActive(true);
                 playerCamera.SetActive(false);
-                //Enable mouse
+                animator.SetBool("isWalking", false);
+                Cursor.lockState = CursorLockMode.Confined;
                 
                 ui.SetActive(true);
             }
@@ -48,7 +51,7 @@ public class OpenUpgradeScreen : MonoBehaviour
     }
 
     void UIFollow()
-    {      
-        ui.transform.position = new Vector3(1, 2);
+    {
+        ui.transform.position = transform.position + new Vector3(5, 3, 1);
     }
 }

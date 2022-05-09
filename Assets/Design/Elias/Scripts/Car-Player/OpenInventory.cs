@@ -7,7 +7,7 @@ public class OpenInventory : MonoBehaviour
     public KeyCode inventoryKey = KeyCode.Tab;
     public SoundManager UISoundManager;
     [SerializeField] private PlayerMovement controller;
-    public Animator animator;
+    [SerializeField] private Animator animator;
 
     [Header("Cameras")] 
     public GameObject playerCamera;
@@ -38,6 +38,7 @@ public class OpenInventory : MonoBehaviour
                 controller.enabled = true;
                 playerCamera.SetActive(true);
                 inventoryCamera.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
                 ui.SetActive(false);
                 
             }
@@ -48,7 +49,7 @@ public class OpenInventory : MonoBehaviour
                 inventoryCamera.SetActive(true);
                 playerCamera.SetActive(false);
                 animator.SetBool("isWalking", false);
-                //Enable mouse
+                Cursor.lockState = CursorLockMode.Confined;
                 ui.SetActive(true);
             }
             inInventory = !inInventory;
