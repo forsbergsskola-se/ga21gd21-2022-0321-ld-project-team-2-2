@@ -10,14 +10,13 @@ public class Radio : MonoBehaviour
     private bool radioOn = true;//Might have to make public
     int RadioStation = 1;
     private FMOD.Studio.EventInstance instance;
+    bool radioFirstTime = true;
 
     #endregion
 
     void Start()
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio/Radio");
-        instance.start();
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff",0);
+        
     }
 
     // Update is called once per frame
@@ -41,6 +40,14 @@ public class Radio : MonoBehaviour
 
     void TurnOn()
     {
+        if (radioFirstTime)
+        {
+            instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio/Radio");
+            instance.start();
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff", 0);
+            radioFirstTime = false;
+        }
+        
         if (radioOn)
         {
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff", 1);
