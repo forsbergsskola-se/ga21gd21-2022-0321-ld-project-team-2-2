@@ -47,6 +47,7 @@ public class OpenUpgradeScreen : MonoBehaviour
     void Update()
     {
         UIFollow();
+        CheckPurchase();
     }
 
     private void OnTriggerStay(Collider other)
@@ -84,6 +85,29 @@ public class OpenUpgradeScreen : MonoBehaviour
         ui.transform.position = transform.position + new Vector3(5, 3, 1);
     }
 
+    private void CheckPurchase()
+    {
+        if (boughtOne && speed1.activeSelf)
+        {
+            purchase.SetActive(false);
+        }
+        else if (boughtTwo && speed2.activeSelf)
+        {
+            purchase.SetActive(false);
+        }
+        else if (boughtThree && speed3.activeSelf)
+        {
+            purchase.SetActive(false);
+        }
+        else if (boughtFour && nitro.activeSelf)
+        {
+            purchase.SetActive(false);
+        }
+        else
+        {
+            purchase.SetActive(true);
+        }
+    }
     #region Buttons
 
     public void Speed1()
@@ -98,14 +122,6 @@ public class OpenUpgradeScreen : MonoBehaviour
         speed2.SetActive(false);
         speed3.SetActive(false);
         nitro.SetActive(false);
-        if (boughtOne)
-        {
-            purchase.SetActive(false);
-        }
-        else
-        {
-            purchase.SetActive(true);
-        }
     }
     public void Speed2()
     {
@@ -119,14 +135,6 @@ public class OpenUpgradeScreen : MonoBehaviour
         speed2.SetActive(true);
         speed3.SetActive(false);
         nitro.SetActive(false);
-        if (boughtTwo)
-        {
-            purchase.SetActive(false);
-        }
-        else
-        {
-            purchase.SetActive(true);
-        }
     }
     public void Speed3()
     {
@@ -140,14 +148,6 @@ public class OpenUpgradeScreen : MonoBehaviour
         speed2.SetActive(false);
         speed3.SetActive(true);
         nitro.SetActive(false);
-        if (boughtThree)
-        {
-            purchase.SetActive(false);
-        }
-        else
-        {
-            purchase.SetActive(true);
-        }
     }
     public void Nitro()
     {
@@ -161,14 +161,6 @@ public class OpenUpgradeScreen : MonoBehaviour
         speed2.SetActive(false);
         speed3.SetActive(false);
         nitro.SetActive(true);
-        if (boughtFour)
-        {
-            purchase.SetActive(false);
-        }
-        else
-        {
-            purchase.SetActive(true);
-        }
     }
 
 
