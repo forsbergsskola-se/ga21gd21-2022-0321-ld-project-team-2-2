@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         CharacterController = GetComponent<CharacterController>();
         originalStepOffset = CharacterController.stepOffset;
     }
