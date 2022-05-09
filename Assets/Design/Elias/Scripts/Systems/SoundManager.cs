@@ -51,6 +51,10 @@ public class SoundManager : MonoBehaviour
     FMOD.Studio.PARAMETER_ID rpmParam_ID;
     FMOD.Studio.PARAMETER_ID carGroundedParam_ID;
 
+    [Header("Teleport")]
+    public FMODUnity.EventReference teleportedPlayerSoundPlaceEventHere;
+    private FMOD.Studio.EventInstance teleportedPlayerSoundInstance;
+
     [Header("Dialogue")]
     public FMODUnity.EventReference dialogue1PlaceEventHere;
     public FMODUnity.EventReference dialogue2PlaceEventHere;
@@ -296,5 +300,11 @@ public class SoundManager : MonoBehaviour
     {
         inventoryInstance.setParameterByName("InventoryOpen", 0);
         inventoryInstance.release();
+    }
+    public void PlayTeleportedPlayerSound()
+    {
+        teleportedPlayerSoundInstance = FMODUnity.RuntimeManager.CreateInstance(teleportedPlayerSoundPlaceEventHere);
+        teleportedPlayerSoundInstance.start();
+        teleportedPlayerSoundInstance.release();
     }
 }

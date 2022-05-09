@@ -12,18 +12,14 @@ public class Teleport : MonoBehaviour
     [Header("Where to teleport")]
     public Transform tpLoc;
     public Teleporter TeleportSound;
+    public SoundManager TeleportPlayerSound;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(TagFilter))
         {
             objToTp.transform.position = tpLoc.transform.position;
-            TeleportSound.Action();
+            if (TagFilter == "Player") TeleportPlayerSound.PlayTeleportedPlayerSound();
+            else TeleportSound.Action();
         }
-        /*else if (other.gameObject.CompareTag("Player"))
-        {
-            objToTp.transform.position = tpLoc.transform.position;
-            TeleportSound.Action();
-        }*/
-
     }
 }
