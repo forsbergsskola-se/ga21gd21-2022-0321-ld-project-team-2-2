@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.38354, g: 325.1084, b: 430.30957, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24898,7 +24898,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166109768}
-  m_LocalRotation: {x: -0.0022302587, y: 0.9951971, z: -0.09503897, w: -0.023354072}
+  m_LocalRotation: {x: -0.0022302582, y: 0.9951971, z: -0.09503897, w: -0.023354067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -32092,7 +32092,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679431762}
-  m_LocalRotation: {x: -0.0022302594, y: 0.99519706, z: -0.09503899, w: -0.023354067}
+  m_LocalRotation: {x: -0.002230259, y: 0.99519706, z: -0.09503899, w: -0.023354061}
   m_LocalPosition: {x: -12.6402, y: 6.21, z: -15.04431}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34820,23 +34820,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: teleportedPlayerSoundPlaceEventHere.Path
-      value: event:/InteractiveObjects/TeleporterAction
+      value: event:/Player/TeleportedPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: teleportedPlayerSoundPlaceEventHere.Guid.Data1
-      value: -134618877
+      value: -1165899148
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: teleportedPlayerSoundPlaceEventHere.Guid.Data2
-      value: 1094815638
+      value: 1161538432
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: teleportedPlayerSoundPlaceEventHere.Guid.Data3
-      value: 677222791
+      value: 1343290518
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: teleportedPlayerSoundPlaceEventHere.Guid.Data4
-      value: -1391741093
+      value: -1195375016
       objectReference: {fileID: 0}
     - target: {fileID: 2766805036538975002, guid: f675f108c20434444a3b24ac4c3338cb,
         type: 3}
@@ -35608,6 +35608,8 @@ MonoBehaviour:
   controller: {fileID: 1821184609}
   animator: {fileID: 0}
   _inventory: {fileID: 0}
+  _carController: {fileID: 0}
+  _currency: {fileID: 0}
   playerCamera: {fileID: 1836078951}
   inventoryCamera: {fileID: 1301905438}
   ui: {fileID: 788900033}
@@ -35615,6 +35617,7 @@ MonoBehaviour:
   speed2: {fileID: 0}
   speed3: {fileID: 0}
   nitro: {fileID: 0}
+  purchase: {fileID: 0}
 --- !u!65 &1859834931
 BoxCollider:
   m_ObjectHideFlags: 0
