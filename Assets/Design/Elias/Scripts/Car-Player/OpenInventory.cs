@@ -34,22 +34,22 @@ public class OpenInventory : MonoBehaviour
         {
             if (inInventory)
             {
+                UISoundManager.PlayCloseInventorySound();
                 controller.enabled = true;
                 playerCamera.SetActive(true);
                 inventoryCamera.SetActive(false);
                 ui.SetActive(false);
-                UISoundManager.PlayCloseInventorySound();
+                
             }
             else
             {
-                
+                UISoundManager.PlayOpenInventorySound();
                 controller.enabled = false;
                 inventoryCamera.SetActive(true);
                 playerCamera.SetActive(false);
                 animator.SetBool("isWalking", false);
                 //Enable mouse
                 ui.SetActive(true);
-                UISoundManager.PlayOpenInventorySound();
             }
             inInventory = !inInventory;
         }
