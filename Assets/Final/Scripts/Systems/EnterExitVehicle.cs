@@ -60,7 +60,7 @@ public class EnterExitVehicle : MonoBehaviour
         playerCamera.SetActive(true);
         carCamera.SetActive(false);
         SoundStuff.FadeInMusic();
-        SoundStuff.StopCarSound();
+        //SoundStuff.StopCarSound();
         
         _carController.enabled = false;
         _wheel.enabled = false;
