@@ -34,6 +34,10 @@ public class CarController : MonoBehaviour
 
     public bool nitroUnlock = false;
 
+    [SerializeField] private GameObject green;
+    [SerializeField] private GameObject red;
+    
+    
     #endregion
     void Start()
     {
@@ -74,6 +78,8 @@ public class CarController : MonoBehaviour
         
         // Calculate Drag
         sphereRB.drag = isCarGrounded ? normalDrag : modifiedDrag;
+        
+        UIFollow();
     }
 
     private void FixedUpdate()
@@ -89,11 +95,12 @@ public class CarController : MonoBehaviour
         {
             StartCoroutine(NitroBoost());
         }
+        
     }
 
     IEnumerator NitroBoost()
     {
-        if (boostCheck && nitroUnlock)
+        if (boostCheck )
         {
             boostCheck = false;
             fwdSpeed = boostSpeed;
@@ -103,6 +110,20 @@ public class CarController : MonoBehaviour
             gravityDrag = -200f;
             yield return new WaitForSeconds(cooldown);
             boostCheck = true;
+        }
+    }
+
+    private void UIFollow()
+    {
+        if (boostCheck)
+        {
+            green.SetActive(true);
+            red.SetActive(false);
+        }
+        else
+        {
+            red.SetActive(true);
+            green.SetActive(false);
         }
     }
 }
