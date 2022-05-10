@@ -9533,7 +9533,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.9880637, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -10789,7 +10789,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471749390}
-  m_LocalRotation: {x: -0.001941506, y: 0.99526346, z: -0.09504532, w: -0.020330409}
+  m_LocalRotation: {x: -0.0019415058, y: 0.99526346, z: -0.09504532, w: -0.020330409}
   m_LocalPosition: {x: -12.719115, y: 6.21, z: -15.040844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16058,7 +16058,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.9880637, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -19303,7 +19303,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122887585}
-  m_LocalRotation: {x: -0.001572362, y: 0.99682397, z: -0.07697414, w: -0.020362267}
+  m_LocalRotation: {x: -0.0015723648, y: 0.99682397, z: -0.07697414, w: -0.020362303}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19348,7 +19348,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.9880637, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -28579,6 +28579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interact: 101
+  UIAudio: {fileID: 0}
   controller: {fileID: 288335909}
   animator: {fileID: 0}
   _inventory: {fileID: 0}
@@ -29872,7 +29873,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856815862}
-  m_LocalRotation: {x: -0.002310987, y: 0.99336994, z: -0.113132946, w: -0.020291746}
+  m_LocalRotation: {x: -0.0023109866, y: 0.99336994, z: -0.113132924, w: -0.020291746}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -29917,7 +29918,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.9880637, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -35291,6 +35292,10 @@ PrefabInstance:
       value: event:/JumpSound
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: clickPlaceEventHere.Path
+      value: event:/UI/UIClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: placeEventHere.Guid.Data1
       value: 373801292
       objectReference: {fileID: 0}
@@ -35307,8 +35312,16 @@ PrefabInstance:
       value: 843747936
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: upgradePlaceEventHere.Path
+      value: event:/UI/UpgradePurchase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: vehiclePlaceEventHere.Path
-      value: event:/Vehicle/VehicleAcceleration
+      value: event:/Vehicle/Vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Path
+      value: event:/UI/Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: jumpPlaceEventHere.Guid.Data1
@@ -35327,20 +35340,128 @@ PrefabInstance:
       value: 1850159443
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardUsePlaceEventHere.Path
+      value: event:/InteractiveObjects/UseKeycard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: clickPlaceEventHere.Guid.Data1
+      value: 486086370
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: clickPlaceEventHere.Guid.Data2
+      value: 1170471654
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: clickPlaceEventHere.Guid.Data3
+      value: 474907567
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: clickPlaceEventHere.Guid.Data4
+      value: -449327204
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardPickUpPlaceEventHere.Path
+      value: event:/InteractiveObjects/PickupKeycard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: upgradePlaceEventHere.Guid.Data1
+      value: 1381550165
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: upgradePlaceEventHere.Guid.Data2
+      value: 1226831612
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: upgradePlaceEventHere.Guid.Data3
+      value: -505028728
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: upgradePlaceEventHere.Guid.Data4
+      value: -1060550907
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: vehiclePlaceEventHere.Guid.Data1
-      value: 373801292
+      value: 319715488
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: vehiclePlaceEventHere.Guid.Data2
-      value: 1213569678
+      value: 1265363069
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: vehiclePlaceEventHere.Guid.Data3
-      value: 384690609
+      value: -1454035819
       objectReference: {fileID: 0}
     - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
       propertyPath: vehiclePlaceEventHere.Guid.Data4
-      value: 843747936
+      value: 640086014
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Guid.Data1
+      value: 255435067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Guid.Data2
+      value: 1309765136
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Guid.Data3
+      value: -1034924865
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: inventoryPlaceEventHere.Guid.Data4
+      value: -288326428
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardUsePlaceEventHere.Guid.Data1
+      value: -1743531253
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardUsePlaceEventHere.Guid.Data2
+      value: 1095305367
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardUsePlaceEventHere.Guid.Data3
+      value: 486302364
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardUsePlaceEventHere.Guid.Data4
+      value: -901520988
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardPickUpPlaceEventHere.Guid.Data1
+      value: 1323079084
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardPickUpPlaceEventHere.Guid.Data2
+      value: 1338106608
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardPickUpPlaceEventHere.Guid.Data3
+      value: 1215854720
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: keycardPickUpPlaceEventHere.Guid.Data4
+      value: -1814649711
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: teleportedPlayerSoundPlaceEventHere.Path
+      value: event:/Player/TeleportedPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: teleportedPlayerSoundPlaceEventHere.Guid.Data1
+      value: -1165899148
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: teleportedPlayerSoundPlaceEventHere.Guid.Data2
+      value: 1161538432
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: teleportedPlayerSoundPlaceEventHere.Guid.Data3
+      value: 1343290518
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055933983, guid: f675f108c20434444a3b24ac4c3338cb, type: 3}
+      propertyPath: teleportedPlayerSoundPlaceEventHere.Guid.Data4
+      value: -1195375016
       objectReference: {fileID: 0}
     - target: {fileID: 2766805036538975002, guid: f675f108c20434444a3b24ac4c3338cb,
         type: 3}

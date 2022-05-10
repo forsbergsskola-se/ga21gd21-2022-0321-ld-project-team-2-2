@@ -66,8 +66,10 @@ public class SoundManager : MonoBehaviour
     [Header("Inventory sounds")]
     public FMODUnity.EventReference inventoryPlaceEventHere;
     public FMODUnity.EventReference clickPlaceEventHere;
+    public FMODUnity.EventReference upgradePlaceEventHere;
     private FMOD.Studio.EventInstance inventoryInstance;
     private FMOD.Studio.EventInstance clickInstance;
+    private FMOD.Studio.EventInstance upgradeInstance;
 
     bool dialogue1HasBeenPlayed = false;
     bool dialogue2HasBeenPlayed = false;
@@ -293,5 +295,19 @@ public class SoundManager : MonoBehaviour
         teleportedPlayerSoundInstance = FMODUnity.RuntimeManager.CreateInstance(teleportedPlayerSoundPlaceEventHere);
         teleportedPlayerSoundInstance.start();
         teleportedPlayerSoundInstance.release();
+    }
+    public void PlayUpgradeSound(bool sufficientFunds)
+    {
+        upgradeInstance = FMODUnity.RuntimeManager.CreateInstance(upgradePlaceEventHere);
+        if (sufficientFunds) upgradeInstance.setParameterByName("Success", 1);
+        else upgradeInstance.setParameterByName("Success", 0);
+        upgradeInstance.start();
+        upgradeInstance.release();
+    }
+    public void PlayUIClickSound()
+    {
+        clickInstance = FMODUnity.RuntimeManager.CreateInstance(clickPlaceEventHere);
+        clickInstance.start();
+        clickInstance.release();
     }
 }

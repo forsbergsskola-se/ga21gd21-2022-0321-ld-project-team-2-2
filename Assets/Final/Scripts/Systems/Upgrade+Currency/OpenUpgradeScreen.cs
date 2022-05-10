@@ -8,6 +8,7 @@ public class OpenUpgradeScreen : MonoBehaviour
     #region Variables
 
     public KeyCode interact = KeyCode.E;
+    public SoundManager UIAudio;
     
     [Header("Components")]
     [SerializeField] private PlayerMovement controller;
@@ -112,7 +113,7 @@ public class OpenUpgradeScreen : MonoBehaviour
 
     public void Speed1()
     {
-        //Press button sound
+        UIAudio.PlayUIClickSound();
         one = true;
         two = false;
         three = false;
@@ -125,7 +126,7 @@ public class OpenUpgradeScreen : MonoBehaviour
     }
     public void Speed2()
     {
-        //Press button sound
+        UIAudio.PlayUIClickSound();
         one = false;
         two = true;
         three = false;
@@ -138,7 +139,7 @@ public class OpenUpgradeScreen : MonoBehaviour
     }
     public void Speed3()
     {
-        //Press button sound
+        UIAudio.PlayUIClickSound();
         one = false;
         two = false;
         three = true;
@@ -151,7 +152,7 @@ public class OpenUpgradeScreen : MonoBehaviour
     }
     public void Nitro()
     {
-        //Press button sound
+        UIAudio.PlayUIClickSound();
         one = false;
         two = false;
         three = false;
@@ -176,10 +177,12 @@ public class OpenUpgradeScreen : MonoBehaviour
                 _currency.currencyCollected -= 100;
                 boughtOne = true;
                 //Do good sound
+                UIAudio.PlayUpgradeSound(true);
             }
             else
             {
                 //Do bad sound
+                UIAudio.PlayUpgradeSound(false);
             }
         }
         else if (two)
@@ -190,10 +193,12 @@ public class OpenUpgradeScreen : MonoBehaviour
                 _currency.currencyCollected -= 250;
                 boughtTwo = true;
                 //Do good sound
+                UIAudio.PlayUpgradeSound(true);
             }
             else
             {
                 //Do bad sound
+                UIAudio.PlayUpgradeSound(false);
             }
         }
         else if (three)
@@ -204,10 +209,12 @@ public class OpenUpgradeScreen : MonoBehaviour
                 _currency.currencyCollected -= 500;
                 boughtThree = true;
                 //Do good sound
+                UIAudio.PlayUpgradeSound(true);
             }
             else
             {
                 //Do bad sound
+                UIAudio.PlayUpgradeSound(false);
             }
         }
         else if (four)
@@ -217,11 +224,12 @@ public class OpenUpgradeScreen : MonoBehaviour
                 _carController.nitroUnlock = true;
                 _currency.currencyCollected -= 500;
                 boughtFour = true;
-                //Do good sound
+                UIAudio.PlayUpgradeSound(true);
             }
             else
             {
                 //Do bad sound
+                UIAudio.PlayUpgradeSound(false);
             }
         }
     }
