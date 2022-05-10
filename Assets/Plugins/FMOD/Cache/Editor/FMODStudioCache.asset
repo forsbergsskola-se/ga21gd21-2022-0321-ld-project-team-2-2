@@ -126,6 +126,37 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7669588734924695959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicle/Vehicle
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicle/Vehicle
+  Guid:
+    Data1: 319715488
+    Data2: 1265363069
+    Data3: -1454035819
+    Data4: 640086014
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7720000905001509635}
+  - {fileID: -7558861839513077597}
+  - {fileID: 3854474897950508460}
+  - {fileID: 7376328016571321109}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5120
 --- !u!114 &-7579210149675042183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +179,30 @@ MonoBehaviour:
     data2: 2035758206
   Type: 0
   IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-7558861839513077597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Vehicle/RPM
+  m_EditorClassIdentifier: 
+  Name: RPM
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 3961408258
+    data2: 4260585334
+  Type: 0
+  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &-7509893336221495878
@@ -535,7 +590,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637877910477930552
+  lastModified: 637877951997286063
   FileSizes: []
   Exists: 1
 --- !u!114 &-3833077897003525923
@@ -1111,6 +1166,7 @@ MonoBehaviour:
   - {fileID: 6884210779762426221}
   - {fileID: -2821274822730923782}
   - {fileID: -3517632683497567084}
+  - {fileID: -7669588734924695959}
   EditorParameters:
   - {fileID: -3833077897003525923}
   - {fileID: 8464545129761389062}
@@ -1126,7 +1182,7 @@ MonoBehaviour:
   - {fileID: -3973300900861439473}
   StringsBanks:
   - {fileID: 1776436100405253887}
-  cacheTime: 637877910477930552
+  cacheTime: 637877951997336079
   cacheVersion: 10
 --- !u!114 &105023392822853316
 MonoBehaviour:
@@ -1296,10 +1352,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637877236281876073
+  lastModified: 637877951997336079
   FileSizes:
   - Name: 
-    Value: 3522
+    Value: 3552
   Exists: 1
 --- !u!114 &2476937039477096205
 MonoBehaviour:
@@ -1560,6 +1616,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3854474897950508460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Vehicle/CarGrounded
+  m_EditorClassIdentifier: 
+  Name: CarGrounded
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4087577559
+    data2: 4183276051
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3919478413920566505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1782,6 +1862,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 55
   Length: 0
+--- !u!114 &7376328016571321109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Vehicle/InCar
+  m_EditorClassIdentifier: 
+  Name: InCar
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 344988026
+    data2: 3347511847
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7712433641666352728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,6 +1907,30 @@ MonoBehaviour:
     data1: 506215588
     data2: 1930925122
   Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7720000905001509635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Vehicle/CarLevel
+  m_EditorClassIdentifier: 
+  Name: CarLevel
+  StudioPath: 
+  Min: 1
+  Max: 3
+  Default: 1
+  ID:
+    data1: 31671230
+    data2: 2226261378
+  Type: 1
   IsGlobal: 0
   Labels: []
   Exists: 1
