@@ -100,7 +100,7 @@ public class CarController : MonoBehaviour
 
     IEnumerator NitroBoost()
     {
-        if (boostCheck )
+        if (boostCheck && nitroUnlock)
         {
             boostCheck = false;
             fwdSpeed = boostSpeed;
