@@ -1555,6 +1555,7 @@ GameObject:
   - component: {fileID: 288335908}
   - component: {fileID: 288335913}
   - component: {fileID: 288335911}
+  - component: {fileID: 3755492556150051346}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2164,6 +2165,7 @@ MonoBehaviour:
   inventoryKey: 9
   UISoundManager: {fileID: 0}
   controller: {fileID: 610789832747327017}
+  animator: {fileID: 0}
   playerCamera: {fileID: 0}
   inventoryCamera: {fileID: 0}
   ui: {fileID: 0}
@@ -2182,6 +2184,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceMagnitude: 5
   _Player: {fileID: 610789832747327017}
+--- !u!65 &3755492556150051346
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5504163639189090930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.037109375, z: 1}
+  m_Center: {x: 0, y: -0.9850769, z: 0}
 --- !u!1 &5650980740893909416
 GameObject:
   m_ObjectHideFlags: 0
