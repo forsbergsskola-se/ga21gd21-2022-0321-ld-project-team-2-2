@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 281653844108223176}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Box
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1143186311288392157}
   - component: {fileID: 2879352165173332172}
   - component: {fileID: 621020575693512643}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1707,6 +1707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Box (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387995872979791916, guid: 0dbf497418eeea74dbdf9a4e53711296,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1387995872979791916, guid: 0dbf497418eeea74dbdf9a4e53711296,
         type: 3}
