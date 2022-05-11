@@ -404,6 +404,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6300920859271906430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cube/Velocity
+  m_EditorClassIdentifier: 
+  Name: Velocity
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 3127352223
+    data2: 1248997511
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6131722352836453304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,7 +697,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637878648991107556
+  lastModified: 637878713951153352
   FileSizes: []
   Exists: 1
 --- !u!114 &-3833077897003525923
@@ -726,7 +750,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 677
+  Length: 507
 --- !u!114 &-3517632683497567084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,6 +1324,7 @@ MonoBehaviour:
   - {fileID: -8037538979927780334}
   - {fileID: -4431446863776728649}
   - {fileID: -4850921417979984207}
+  - {fileID: 6561540839631702512}
   EditorParameters:
   - {fileID: -3833077897003525923}
   - {fileID: 8464545129761389062}
@@ -1315,7 +1340,7 @@ MonoBehaviour:
   - {fileID: -3973300900861439473}
   StringsBanks:
   - {fileID: 1776436100405253887}
-  cacheTime: 637878648991107556
+  cacheTime: 637878713951283008
   cacheVersion: 10
 --- !u!114 &105023392822853316
 MonoBehaviour:
@@ -1485,10 +1510,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637878591808121058
+  lastModified: 637878713951283008
   FileSizes:
   - Name: 
-    Value: 3672
+    Value: 3752
   Exists: 1
 --- !u!114 &2476937039477096205
 MonoBehaviour:
@@ -1917,6 +1942,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5144930322778514102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cube/InDesert
+  m_EditorClassIdentifier: 
+  Name: InDesert
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4291619429
+    data2: 3093050495
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6335836030534430256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,6 +1990,36 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &6561540839631702512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/Cubes/Cube
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/Cubes/Cube
+  Guid:
+    Data1: -495104728
+    Data2: 1212170894
+    Data3: 970301850
+    Data4: 2014747314
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8775321109912931247}
+  - {fileID: -6300920859271906430}
+  - {fileID: 5144930322778514102}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6587882358802093786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2168,6 +2247,30 @@ MonoBehaviour:
     data1: 1952498156
     data2: 2203410457
   Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8775321109912931247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cube/InStartingArea
+  m_EditorClassIdentifier: 
+  Name: InStartingArea
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2426099296
+    data2: 1862168771
+  Type: 0
   IsGlobal: 1
   Labels: []
   Exists: 1
