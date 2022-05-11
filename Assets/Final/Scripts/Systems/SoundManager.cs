@@ -26,6 +26,10 @@ public class SoundManager : MonoBehaviour
     public FMODUnity.EventReference jumpPlaceEventHere;
     private FMOD.Studio.EventInstance jumpingInstance;
 
+    [Header("Player Impact")]
+    public FMODUnity.EventReference playerImpactPlaceEventHere;
+    private FMOD.Studio.EventInstance playerImpactInstance;
+
     [Header("Music")]
     public FMODUnity.EventReference musicEvRef;
     private FMOD.Studio.EventInstance musicEvInst;
@@ -309,5 +313,12 @@ public class SoundManager : MonoBehaviour
         clickInstance = FMODUnity.RuntimeManager.CreateInstance(clickPlaceEventHere);
         clickInstance.start();
         clickInstance.release();
+    }
+    //Landing from a higher altitude:
+    public void PlayerImpact(float velocity)
+    {
+        playerImpactInstance = FMODUnity.RuntimeManager.CreateInstance(playerImpactPlaceEventHere);
+        playerImpactInstance.setParameterByName("Velocity", velocity);
+        playerImpactInstance.release();
     }
 }
