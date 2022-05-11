@@ -66,4 +66,14 @@ public class OpenInventory : MonoBehaviour
         ui.transform.LookAt(inventoryCamera.transform);
         ui.transform.Rotate(0, 180, 0);
     }
+
+    public void CloseUI()
+    {
+        UISoundManager.PlayCloseInventorySound();
+        controller.enabled = true;
+        playerCamera.SetActive(true);
+        inventoryCamera.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        ui.SetActive(false);
+    }
 }
