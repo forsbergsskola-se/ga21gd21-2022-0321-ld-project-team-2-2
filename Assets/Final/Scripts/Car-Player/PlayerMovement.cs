@@ -112,4 +112,13 @@ public class PlayerMovement : MonoBehaviour
         FMOD.Studio.EventInstance landingInstance = FMODUnity.RuntimeManager.CreateInstance(path);
         landingInstance.start();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ground"))
+        {
+            FMOD.Studio.EventInstance landingInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Player/Landing");
+            landingInstance.start();
+        }
+    }
 }
