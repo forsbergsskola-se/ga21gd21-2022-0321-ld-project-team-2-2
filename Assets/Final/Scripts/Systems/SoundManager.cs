@@ -156,11 +156,11 @@ public class SoundManager : MonoBehaviour
     {
         myInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
-    public void FadeMusic()
+    public void SetPlayerStateToInCar()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InCar", 1f);
     }
-    public void FadeInMusic()
+    public void SetPlayerStateToOutsideCar()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InCar", 0);
     }
@@ -218,11 +218,6 @@ public class SoundManager : MonoBehaviour
     {
         PlayEnterVehicleSound();
         vehicleAccelerationInstance.start();
-    }
-    public void StopCarSound()
-    {
-        vehicleAccelerationInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        PlayExitVehicleSound();
     }
     public void PlayDialogue(int dialogueNumber)
     {
