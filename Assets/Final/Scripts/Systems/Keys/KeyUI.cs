@@ -22,30 +22,33 @@ public class KeyUI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (keyValley)
+        if (other.CompareTag("Player"))
         {
-            textOne.SetActive(false);
-            textOneDone.SetActive(true);
-        }
-        else if (keyMountain)
-        {
-            textTwo.SetActive(false);
-            textTwoDone.SetActive(true);
-        }
-        else if (keyRuins)
-        {
-            textThree.SetActive(false);
-            textThreeDone.SetActive(true);
-        }
-        else if (keyCrevice)
-        {
-            textFour.SetActive(false);
-            textFourDone.SetActive(true);
-        }
-        else if (keyToe)
-        {
-            textFive.SetActive(false);
-            textFiveDone.SetActive(true);
+            if (keyValley)
+            {
+                textOne.SetActive(false);
+                textOneDone.SetActive(true);
+            }
+            else if (keyMountain)
+            {
+                textTwo.SetActive(false);
+                textTwoDone.SetActive(true);
+            }
+            else if (keyRuins)
+            {
+                textThree.SetActive(false);
+                textThreeDone.SetActive(true);
+            }
+            else if (keyCrevice)
+            {
+                textFour.SetActive(false);
+                textFourDone.SetActive(true);
+            }
+            else if (keyToe)
+            {
+                textFive.SetActive(false);
+                textFiveDone.SetActive(true);
+            }
         }
     }
 }
