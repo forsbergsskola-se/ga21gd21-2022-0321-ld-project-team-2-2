@@ -27,7 +27,7 @@ public class AmbienceZone : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
+            if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
             SoundBuddy.SetAmbienceZone(ambienceZone);
         }
