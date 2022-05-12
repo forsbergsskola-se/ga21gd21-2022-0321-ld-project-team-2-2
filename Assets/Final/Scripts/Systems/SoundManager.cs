@@ -198,7 +198,7 @@ public class SoundManager : MonoBehaviour
     }
     public void StartCarSound()
     {
-        vehicleAccelerationInstance.release();
+        
         vehicleAccelerationInstance = FMODUnity.RuntimeManager.CreateInstance(vehiclePlaceEventHere);
         FMOD.Studio.EventDescription rpmParam_EventDescription;
         FMOD.Studio.EventDescription carGroundedParam_EventDescription;
@@ -212,6 +212,12 @@ public class SoundManager : MonoBehaviour
         carGroundedParam_ID = carGroundedParam_ParameterDescription.id;
         vehicleAccelerationInstance.start();
     }
+
+    public void StopCarSound()
+    {
+        vehicleAccelerationInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
     public void PlayDialogue(int dialogueNumber)
     {
         if (dialogueNumber == 1 && !dialogue1HasBeenPlayed)
