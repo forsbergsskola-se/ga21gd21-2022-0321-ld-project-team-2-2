@@ -537,6 +537,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-6053499284189886332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CubeSlide/CubeSpeed
+  m_EditorClassIdentifier: 
+  Name: CubeSpeed
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1923919223
+    data2: 1494290844
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5727322629929494923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,7 +830,11 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
+<<<<<<< Updated upstream
   lastModified: 637879624878477805
+=======
+  lastModified: 637879631845578735
+>>>>>>> Stashed changes
   FileSizes: []
   Exists: 1
 --- !u!114 &-3833077897003525923
@@ -932,6 +960,34 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2557162715630838683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InteractiveObjects/Cubes/CubeSlide
+  m_EditorClassIdentifier: 
+  Path: event:/InteractiveObjects/Cubes/CubeSlide
+  Guid:
+    Data1: 1225693270
+    Data2: 1267778637
+    Data3: 1671600822
+    Data4: -515900645
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6053499284189886332}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1434,8 +1490,13 @@ MonoBehaviour:
   - {fileID: -4850921417979984207}
   - {fileID: -8677172410925452615}
   - {fileID: -1096156948204160558}
+<<<<<<< Updated upstream
   - {fileID: -6960300055858931022}
   - {fileID: -8009511766243555470}
+=======
+  - {fileID: -2557162715630838683}
+  - {fileID: 3430223007675107323}
+>>>>>>> Stashed changes
   EditorParameters:
   - {fileID: -3833077897003525923}
   - {fileID: 8464545129761389062}
@@ -1452,7 +1513,11 @@ MonoBehaviour:
   - {fileID: -3973300900861439473}
   StringsBanks:
   - {fileID: 1776436100405253887}
+<<<<<<< Updated upstream
   cacheTime: 637879624878617087
+=======
+  cacheTime: 637879631845648757
+>>>>>>> Stashed changes
   cacheVersion: 10
 --- !u!114 &105023392822853316
 MonoBehaviour:
@@ -1622,7 +1687,11 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< Updated upstream
   lastModified: 637879624878617087
+=======
+  lastModified: 637879631845648757
+>>>>>>> Stashed changes
   FileSizes:
   - Name: 
     Value: 3952
@@ -1835,6 +1904,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3430223007675107323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Object Ambiences/FireLoop
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Object Ambiences/FireLoop
+  Guid:
+    Data1: 1723254360
+    Data2: 1188656962
+    Data3: 1347843729
+    Data4: 793574180
+  Banks:
+  - {fileID: -3973300900861439473}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3617238476895004672
 MonoBehaviour:
   m_ObjectHideFlags: 0
