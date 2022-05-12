@@ -37,8 +37,16 @@ public class FallingImpact : MonoBehaviour
         {
             Debug.Log("Play Impact Sound " + collision.relativeVelocity.magnitude);
             impactInstance = FMODUnity.RuntimeManager.CreateInstance(impactPlaceEventHere);
-            impactInstance.setParameterByName("Velocity", collision.relativeVelocity.magnitude);
-            if (impactIs3D) impactInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+            
+            if (impactIs3D)
+            {
+                impactInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                impactInstance.setParameterByName("Velocity", collision.relativeVelocity.magnitude);
+            }
+            else
+            {
+                impactInstance.setParameterByName("PlayerVelocity", collision.relativeVelocity.magnitude);
+            }
             impactInstance.start();
             impactInstance.release();
         }
