@@ -91,18 +91,6 @@ public class SoundManager : MonoBehaviour
         myInstance = FMODUnity.RuntimeManager.CreateInstance(footPlaceEventHere);
         if (footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
-        //RPM and groundcheck Vehicle
-        FMOD.Studio.EventDescription rpmParam_EventDescription;
-        FMOD.Studio.EventDescription carGroundedParam_EventDescription;
-        vehicleAccelerationInstance.getDescription(out rpmParam_EventDescription);
-        vehicleAccelerationInstance.getDescription(out carGroundedParam_EventDescription);
-        FMOD.Studio.PARAMETER_DESCRIPTION rpmParam_ParameterDescription;
-        FMOD.Studio.PARAMETER_DESCRIPTION carGroundedParam_ParameterDescription;
-        rpmParam_EventDescription.getParameterDescriptionByName("RPM", out rpmParam_ParameterDescription);
-        carGroundedParam_EventDescription.getParameterDescriptionByName("CarGrounded", out carGroundedParam_ParameterDescription);
-        rpmParam_ID = rpmParam_ParameterDescription.id;
-        carGroundedParam_ID = carGroundedParam_ParameterDescription.id;
-
         //jumping sound
         jumpingInstance = FMODUnity.RuntimeManager.CreateInstance(jumpPlaceEventHere);
 
@@ -156,7 +144,6 @@ public class SoundManager : MonoBehaviour
     public void SetPlayerStateToOutsideCar()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InCar", 0);
-        vehicleAccelerationInstance.release();
     }
     public void MusicStinger(int stinger)
     {
@@ -210,7 +197,18 @@ public class SoundManager : MonoBehaviour
     }
     public void StartCarSound()
     {
+        vehicleAccelerationInstance.release();
         vehicleAccelerationInstance = FMODUnity.RuntimeManager.CreateInstance(vehiclePlaceEventHere);
+        FMOD.Studio.EventDescription rpmParam_EventDescription;
+        FMOD.Studio.EventDescription carGroundedParam_EventDescription;
+        vehicleAccelerationInstance.getDescription(out rpmParam_EventDescription);
+        vehicleAccelerationInstance.getDescription(out carGroundedParam_EventDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION rpmParam_ParameterDescription;
+        FMOD.Studio.PARAMETER_DESCRIPTION carGroundedParam_ParameterDescription;
+        rpmParam_EventDescription.getParameterDescriptionByName("RPM", out rpmParam_ParameterDescription);
+        carGroundedParam_EventDescription.getParameterDescriptionByName("CarGrounded", out carGroundedParam_ParameterDescription);
+        rpmParam_ID = rpmParam_ParameterDescription.id;
+        carGroundedParam_ID = carGroundedParam_ParameterDescription.id;
         vehicleAccelerationInstance.start();
     }
     public void PlayDialogue(int dialogueNumber)

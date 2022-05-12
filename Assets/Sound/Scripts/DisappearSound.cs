@@ -5,6 +5,7 @@ using UnityEngine;
 public class DisappearSound : MonoBehaviour
 {
     public EnterExitVehicle VehicleCheck;
+    public PlatFormEngineSound PlatformEngine;
     public FMODUnity.EventReference disappearSoundPlaceEventHere;
     private FMOD.Studio.EventInstance disappearSoundInstance;
     public FMODUnity.EventReference appearSoundPlaceEventHere;
@@ -40,9 +41,11 @@ public class DisappearSound : MonoBehaviour
     public void PlayAppearingSound()
     {
         disappearSoundInstance.start();
+        PlatformEngine.EnablePlatformAudio();
     }
     public void PlayDisappearingSound()
     {
         appearSoundInstance.start();
+        PlatformEngine.DisablePlatformAudio();
     }
 }
