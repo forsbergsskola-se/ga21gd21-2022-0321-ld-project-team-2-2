@@ -10,8 +10,11 @@ public class DisappearPlatform : MonoBehaviour
     [SerializeField] private GameObject platform3;
     [SerializeField] private GameObject platform4;
     [SerializeField] private int timer;
-    public DisappearSound PlayAudio;
-    
+    public DisappearSound PlayAudio1;
+    public DisappearSound PlayAudio2;
+    public DisappearSound PlayAudio3;
+    public DisappearSound PlayAudio4;
+
     void Start()
     {
         StartCoroutine(section1());
@@ -22,21 +25,22 @@ public class DisappearPlatform : MonoBehaviour
         while (true)
         {
             platform1.SetActive(false);
-            PlayAudio.PlayDisappearingSound();
+            PlayAudio1.PlayDisappearingSound();
             platform2.SetActive(true);
-            PlayAudio.PlayAppearingSound();
+            PlayAudio2.PlayAppearingSound();
             platform3.SetActive(false);
-            PlayAudio.PlayDisappearingSound();
+            PlayAudio3.PlayDisappearingSound();
             platform4.SetActive(true);
-            PlayAudio.PlayAppearingSound();
+            PlayAudio4.PlayAppearingSound();
             yield return new WaitForSeconds(timer);
             platform1.SetActive(true);
-            PlayAudio.PlayAppearingSound();
+            PlayAudio1.PlayAppearingSound();
             platform2.SetActive(false);
-            PlayAudio.PlayDisappearingSound();
+            PlayAudio2.PlayDisappearingSound();
             platform3.SetActive(true);
-            PlayAudio.PlayAppearingSound();
+            PlayAudio3.PlayAppearingSound();
             platform4.SetActive(false);
+            PlayAudio4.PlayDisappearingSound();
             yield return new WaitForSeconds(timer);
         }
     }

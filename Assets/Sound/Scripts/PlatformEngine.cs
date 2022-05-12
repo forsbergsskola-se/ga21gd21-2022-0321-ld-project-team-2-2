@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatFormEngineSound : MonoBehaviour
+public class PlatformEngine : MonoBehaviour
 {
     public FMODUnity.EventReference platformEnginePlaceEventHere;
     private FMOD.Studio.EventInstance platformEngineInstance;
