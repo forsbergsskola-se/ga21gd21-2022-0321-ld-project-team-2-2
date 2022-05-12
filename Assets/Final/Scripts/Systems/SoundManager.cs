@@ -92,7 +92,6 @@ public class SoundManager : MonoBehaviour
         if (footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
         //RPM and groundcheck Vehicle
-        vehicleAccelerationInstance = FMODUnity.RuntimeManager.CreateInstance(vehiclePlaceEventHere);
         FMOD.Studio.EventDescription rpmParam_EventDescription;
         FMOD.Studio.EventDescription carGroundedParam_EventDescription;
         vehicleAccelerationInstance.getDescription(out rpmParam_EventDescription);
@@ -157,6 +156,7 @@ public class SoundManager : MonoBehaviour
     public void SetPlayerStateToOutsideCar()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("InCar", 0);
+        vehicleAccelerationInstance.release();
     }
     public void MusicStinger(int stinger)
     {
@@ -210,6 +210,7 @@ public class SoundManager : MonoBehaviour
     }
     public void StartCarSound()
     {
+        vehicleAccelerationInstance = FMODUnity.RuntimeManager.CreateInstance(vehiclePlaceEventHere);
         vehicleAccelerationInstance.start();
     }
     public void PlayDialogue(int dialogueNumber)
