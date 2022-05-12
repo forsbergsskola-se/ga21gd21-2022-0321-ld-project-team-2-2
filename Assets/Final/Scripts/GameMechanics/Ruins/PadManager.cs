@@ -9,6 +9,7 @@ public class PadManager : MonoBehaviour
     public bool three;
 
     public GameObject key;
+    public GameObject teleport;
 
     // Update is called once per frame
     void Update()
@@ -16,6 +17,7 @@ public class PadManager : MonoBehaviour
         if (one && two && three)
         {
             key.SetActive(true);
+            teleport.SetActive(true);
         }
     }
 }
