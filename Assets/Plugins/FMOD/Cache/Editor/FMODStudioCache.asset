@@ -253,6 +253,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7358990347566675409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Footsteps
+  Guid:
+    Data1: 278219883
+    Data2: 1256031751
+    Data3: 1214695560
+    Data4: 684644319
+  Banks:
+  - {fileID: 885093418605509841}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7098266404984716077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +473,7 @@ MonoBehaviour:
   StudioPath: parameter:/InStartingArea
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -544,6 +571,34 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 8066950891516410261}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4260967049348755739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Impact
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Impact
+  Guid:
+    Data1: -716718537
+    Data2: 1187078147
+    Data3: -2031902300
+    Data4: 765482516
+  Banks:
+  - {fileID: 885093418605509841}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1383053069658485205}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -798,7 +853,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -822,7 +877,7 @@ MonoBehaviour:
   StudioPath: parameter:/InDesert
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 4291619429
     data2: 3093050495
@@ -846,7 +901,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 4291619429
     data2: 3093050495
@@ -933,6 +988,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 55
   Length: 0
+--- !u!114 &-1383053069658485205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Impact/PlayerVelocity
+  m_EditorClassIdentifier: 
+  Name: PlayerVelocity
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 2213446881
+    data2: 2441624175
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-1094213757913968384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,7 +1185,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -1193,6 +1272,8 @@ MonoBehaviour:
   - {fileID: -2979500585537773651}
   - {fileID: 8836109759536525644}
   - {fileID: 2842888169566068204}
+  - {fileID: -4260967049348755739}
+  - {fileID: -7358990347566675409}
   EditorParameters:
   - {fileID: -5570943117727470669}
   - {fileID: 4100781891290128898}
@@ -1209,7 +1290,7 @@ MonoBehaviour:
   - {fileID: 885093418605509841}
   StringsBanks:
   - {fileID: 3099895856429051105}
-  cacheTime: 637879718043281171
+  cacheTime: 637879800310185186
   cacheVersion: 10
 --- !u!114 &149239734306917339
 MonoBehaviour:
@@ -1274,7 +1355,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637879718043281171
+  lastModified: 637879800310125672
   FileSizes: []
   Exists: 1
 --- !u!114 &942026349357373227
@@ -1317,7 +1398,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 4291619429
     data2: 3093050495
@@ -1547,10 +1628,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637879692601025325
+  lastModified: 637879800310185186
   FileSizes:
   - Name: 
-    Value: 3826
+    Value: 3916
   Exists: 1
 --- !u!114 &3201717577604220739
 MonoBehaviour:
@@ -1664,7 +1745,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -2206,7 +2287,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 4291619429
     data2: 3093050495
