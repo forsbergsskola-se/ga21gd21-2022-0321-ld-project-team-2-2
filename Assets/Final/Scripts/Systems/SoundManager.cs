@@ -47,10 +47,6 @@ public class SoundManager : MonoBehaviour
 
     [Header("Vehicle")]
     public FMODUnity.EventReference vehiclePlaceEventHere;
-    public FMODUnity.EventReference enterVehiclePlaceEventHere;
-    public FMODUnity.EventReference exitVehiclePlaceEventHere;
-    private FMOD.Studio.EventInstance enterVehicle;
-    private FMOD.Studio.EventInstance exitVehicle;
     private FMOD.Studio.EventInstance vehicleAccelerationInstance;
     FMOD.Studio.PARAMETER_ID rpmParam_ID;
     FMOD.Studio.PARAMETER_ID carGroundedParam_ID;
@@ -112,8 +108,6 @@ public class SoundManager : MonoBehaviour
         jumpingInstance = FMODUnity.RuntimeManager.CreateInstance(jumpPlaceEventHere);
 
         //entering or exiting cars
-        enterVehicle = FMODUnity.RuntimeManager.CreateInstance(enterVehiclePlaceEventHere);
-        exitVehicle = FMODUnity.RuntimeManager.CreateInstance(exitVehiclePlaceEventHere);
 
         //Inventory
         clickInstance = FMODUnity.RuntimeManager.CreateInstance(clickPlaceEventHere);
@@ -216,7 +210,6 @@ public class SoundManager : MonoBehaviour
     }
     public void StartCarSound()
     {
-        PlayEnterVehicleSound();
         vehicleAccelerationInstance.start();
     }
     public void PlayDialogue(int dialogueNumber)
@@ -256,14 +249,6 @@ public class SoundManager : MonoBehaviour
     public void ResumeDialoguePlayback()
     {
         dialogueInstance.setPaused(false);
-    }
-    public void PlayEnterVehicleSound()
-    {
-        enterVehicle.start();
-    }
-    public void PlayExitVehicleSound()
-    {
-        exitVehicle.start();
     }
     public void PlayKeycardUseSound(bool doorUnlocked)
     {

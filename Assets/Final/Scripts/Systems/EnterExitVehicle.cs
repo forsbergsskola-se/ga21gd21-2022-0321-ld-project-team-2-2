@@ -60,7 +60,6 @@ public class EnterExitVehicle : MonoBehaviour
         playerCamera.SetActive(true);
         carCamera.SetActive(false);
         SoundStuff.SetPlayerStateToOutsideCar();
-        //SoundStuff.StopCarSound();
         
         _carController.enabled = false;
         _wheel.enabled = false;
