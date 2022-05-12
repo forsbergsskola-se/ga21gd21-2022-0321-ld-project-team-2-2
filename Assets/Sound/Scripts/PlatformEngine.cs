@@ -20,7 +20,17 @@ public class PlatFormEngineSound : MonoBehaviour
     {
         if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
+            platformEngineInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             platformEngineInstance.release();
         }
+        platformEngineInstance.setParameterByName("Active", 1);
+    }
+    public void EnablePlatformAudio()
+    {
+        platformEngineInstance.setParameterByName("Active", 1);
+    }
+    public void DisablePlatformAudio()
+    {
+        platformEngineInstance.setParameterByName("Active", 0);
     }
 }
