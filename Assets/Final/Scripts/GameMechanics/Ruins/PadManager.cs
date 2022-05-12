@@ -16,6 +16,7 @@ public class PadManager : MonoBehaviour
         if (one && two && three)
         {
             key.SetActive(true);
+            this.enabled = false;
         }
     }
 }
