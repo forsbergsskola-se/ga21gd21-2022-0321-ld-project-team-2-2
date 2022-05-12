@@ -1,28 +1,24 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public Animator door;
+    public GameObject door;
     public PressurePlateAudio PlayAudio;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Box"))
+        if (other.CompareTag("Box"))
         {
-            door.SetBool("openDoor", true);
+            door.SetActive(false);
             PlayAudio.PressurePlateDown();           
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Box"))
+        if (other.CompareTag("Box"))
         {
-            door.SetBool("openDoor", false);
+            door.SetActive(true);
             PlayAudio.PressurePlateUp();            
         }
     }
-
 }
