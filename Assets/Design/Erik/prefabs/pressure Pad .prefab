@@ -4799,7 +4799,7 @@ PrefabInstance:
     - target: {fileID: -984229223221289957, guid: 5e631cf0726d0f54a87943487dad424e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 200
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: -984229223221289957, guid: 5e631cf0726d0f54a87943487dad424e,
         type: 3}
@@ -4856,6 +4856,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate
       objectReference: {fileID: 0}
+    - target: {fileID: 3981712140555221717, guid: c48a698217082064fb6afbad59620c0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 608f8779b6e85d7429dca2b7b3970277, type: 2}
     - target: {fileID: 7006140826563039108, guid: c48a698217082064fb6afbad59620c0b,
         type: 3}
       propertyPath: m_RootOrder
