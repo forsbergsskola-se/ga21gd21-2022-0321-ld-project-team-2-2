@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2055933983}
   - component: {fileID: 1296933899}
   - component: {fileID: 2040139246}
+  - component: {fileID: 412835435895399320}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -89,6 +90,7 @@ MonoBehaviour:
   _checkInRange: {fileID: 0}
   car: {fileID: 0}
   _carController: {fileID: 0}
+  _wheel: {fileID: 0}
   carAnimator: {fileID: 0}
   playerCamera: {fileID: 0}
   carCamera: {fileID: 0}
@@ -159,6 +161,13 @@ MonoBehaviour:
       Data3: 354458558
       Data4: 1850159443
     Path: event:/JumpSound
+  playerImpactPlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   musicEvRef:
     Guid:
       Data1: -178951052
@@ -166,6 +175,20 @@ MonoBehaviour:
       Data3: 1167548815
       Data4: 1709956643
     Path: event:/Music/Music
+  keycardPickUpPlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  keycardUsePlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   vehiclePlaceEventHere:
     Guid:
       Data1: 373801292
@@ -173,6 +196,139 @@ MonoBehaviour:
       Data3: 384690609
       Data4: 843747936
     Path: event:/Vehicle/VehicleAcceleration
+  teleportedPlayerSoundPlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue1PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue2PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue3PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue4PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue5PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue6PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue7PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue8PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue9PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue10PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue11PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue12PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue13PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue14PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dialogue15PlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  inventoryPlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  clickPlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  upgradePlaceEventHere:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &1296933899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,4 +358,20 @@ MonoBehaviour:
   car: {fileID: 0}
   VehicleSound: {fileID: 2055933983}
   EnterExit: {fileID: 2766805036538975004}
+  CarController: {fileID: 0}
   speed: 0
+--- !u!114 &412835435895399320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766805036538975002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e215919a2c56a964588b66891f38f0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  act1Finished: 0
+  poddyFound: 0
+  playerHasEnteredVehicle: 0

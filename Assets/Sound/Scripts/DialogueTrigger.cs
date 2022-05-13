@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public SoundManager DialogueManager;
+    public SoundManager DialoguePlayer;
+    public DialogueManager DialogueVarManager;
     public int dialogueEvent;
     public EnterExitVehicle VehicleCheck;
+    
+
     // Start is called before the first frame update
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }
@@ -22,9 +19,9 @@ public class DialogueTrigger : MonoBehaviour
     {
         if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
-            DialogueManager.PlayDialogue(dialogueEvent);
+            if (dialogueEvent >= 2 && dialogueEvent <= 4) DialoguePlayer.PlayDialogue(dialogueEvent);
+            else if (dialogueEvent == 5 && DialogueVarManager.poddyFound) DialoguePlayer.PlayDialogue(dialogueEvent);
+            else if ((dialogueEvent >= 7) || (dialogueEvent <= 9) && DialogueVarManager.act1Finished) DialoguePlayer.PlayDialogue(dialogueEvent);
         }
-       
-
     }
 }
