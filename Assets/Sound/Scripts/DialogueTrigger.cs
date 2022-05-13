@@ -6,6 +6,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     public SoundManager DialogueManager;
     public int dialogueEvent;
+    public EnterExitVehicle VehicleCheck;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +20,11 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       if (other.tag == "Player")
-       {
-            DialogueManager.PlayDialogue(dialogueEvent);
-       }
-       else if (other.tag == "Vehicle")
+        if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
             DialogueManager.PlayDialogue(dialogueEvent);
         }
+       
 
     }
 }
