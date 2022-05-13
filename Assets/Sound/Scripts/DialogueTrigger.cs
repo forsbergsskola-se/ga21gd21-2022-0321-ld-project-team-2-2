@@ -21,7 +21,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (dialogueEvent >= 2 && dialogueEvent <= 4) DialoguePlayer.PlayDialogue(dialogueEvent);
             else if (dialogueEvent == 5 && DialogueVarManager.poddyFound) DialoguePlayer.PlayDialogue(dialogueEvent);
-            else if ((dialogueEvent >= 7) || (dialogueEvent <= 9) && DialogueVarManager.act1Finished) DialoguePlayer.PlayDialogue(dialogueEvent);
+            else if ((dialogueEvent == 8) || (dialogueEvent == 9) && DialogueVarManager.act1Finished) DialoguePlayer.PlayDialogue(dialogueEvent);
         }
     }
 }

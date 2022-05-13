@@ -23,6 +23,7 @@ public class EnterExitVehicle : MonoBehaviour
 
     [Header("Music and sound")]
     public SoundManager SoundStuff;
+    public DialogueManager DialogueVarManager;
 
     public bool inCar = false;
     public Rigidbody carCol;
@@ -70,6 +71,8 @@ public class EnterExitVehicle : MonoBehaviour
     void GetIntoCar()
     {
         inCar = true;
+        if (DialogueVarManager.playerHasEnteredVehicle == false) SoundStuff.PlayDialogue(6);
+        DialogueVarManager.playerHasEnteredVehicle = true;
         
         human.SetActive(false);
 
