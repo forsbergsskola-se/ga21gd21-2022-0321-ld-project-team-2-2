@@ -24,9 +24,9 @@ public class EnterExitVehicle : MonoBehaviour
     [Header("Music and sound")]
     public SoundManager SoundStuff;
     public DialogueManager DialogueVarManager;
-
     public bool inCar = false;
     public Rigidbody carCol;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,6 @@ public class EnterExitVehicle : MonoBehaviour
             {
                 GetIntoCar();
             }
-
         }
     }
 

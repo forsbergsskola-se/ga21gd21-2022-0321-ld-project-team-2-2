@@ -56,22 +56,43 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance teleportedPlayerSoundInstance;
 
     [Header("Dialogue")]
-    public FMODUnity.EventReference dialogue1PlaceEventHere;
-    public FMODUnity.EventReference dialogue2PlaceEventHere;
-    public FMODUnity.EventReference dialogue3PlaceEventHere;
-    public FMODUnity.EventReference dialogue4PlaceEventHere;
-    public FMODUnity.EventReference dialogue5PlaceEventHere;
-    public FMODUnity.EventReference dialogue6PlaceEventHere;
-    public FMODUnity.EventReference dialogue7PlaceEventHere;
-    public FMODUnity.EventReference dialogue8PlaceEventHere;
-    public FMODUnity.EventReference dialogue9PlaceEventHere;
-    public FMODUnity.EventReference dialogue10PlaceEventHere;
-    public FMODUnity.EventReference dialogue11PlaceEventHere;
-    public FMODUnity.EventReference dialogue12PlaceEventHere;
-    public FMODUnity.EventReference dialogue13PlaceEventHere;
-    public FMODUnity.EventReference dialogue14PlaceEventHere;
-    public FMODUnity.EventReference dialogue15PlaceEventHere;
+    /* public FMODUnity.EventReference dialogue1PlaceEventHere;
+     public FMODUnity.EventReference dialogue2PlaceEventHere;
+     public FMODUnity.EventReference dialogue3PlaceEventHere;
+     public FMODUnity.EventReference dialogue4PlaceEventHere;
+     public FMODUnity.EventReference dialogue5PlaceEventHere;
+     public FMODUnity.EventReference dialogue6PlaceEventHere;
+     public FMODUnity.EventReference dialogue7PlaceEventHere;
+     public FMODUnity.EventReference dialogue8PlaceEventHere;
+     public FMODUnity.EventReference dialogue9PlaceEventHere;
+     public FMODUnity.EventReference dialogue10PlaceEventHere;
+     public FMODUnity.EventReference dialogue11PlaceEventHere;
+     public FMODUnity.EventReference dialogue12PlaceEventHere;
+     public FMODUnity.EventReference dialogue13PlaceEventHere;
+     public FMODUnity.EventReference dialogue14PlaceEventHere;
+     public FMODUnity.EventReference dialogue15PlaceEventHere;
+
+     bool dialogue1HasBeenPlayed = false;
+     bool dialogue2HasBeenPlayed = false;
+     bool dialogue3HasBeenPlayed = false;
+     bool dialogue4HasBeenPlayed = false;
+     bool dialogue5HasBeenPlayed = false;
+     bool dialogue6HasBeenPlayed = false;
+     bool dialogue7HasBeenPlayed = false;
+     bool dialogue8HasBeenPlayed = false;
+     bool dialogue9HasBeenPlayed = false;
+     bool dialogue10HasBeenPlayed = false;
+     bool dialogue11HasBeenPlayed = false;
+     bool dialogue12HasBeenPlayed = false;
+     bool dialogue13HasBeenPlayed = false;
+     bool dialogue14HasBeenPlayed = false;
+     bool dialogue15HasBeenPlayed = false;
+     */
+    public FMODUnity.EventReference[] dialoguePlaceEventHere;
+
     private FMOD.Studio.EventInstance dialogueInstance;
+
+    public List<int> thisDialogueHasBeenPlayed = new();
 
     [Header("Inventory sounds")]
     public FMODUnity.EventReference inventoryPlaceEventHere;
@@ -81,21 +102,7 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance clickInstance;
     private FMOD.Studio.EventInstance upgradeInstance;
 
-    bool dialogue1HasBeenPlayed = false;
-    bool dialogue2HasBeenPlayed = false;
-    bool dialogue3HasBeenPlayed = false;
-    bool dialogue4HasBeenPlayed = false;
-    bool dialogue5HasBeenPlayed = false;
-    bool dialogue6HasBeenPlayed = false;
-    bool dialogue7HasBeenPlayed = false;
-    bool dialogue8HasBeenPlayed = false;
-    bool dialogue9HasBeenPlayed = false;
-    bool dialogue10HasBeenPlayed = false;
-    bool dialogue11HasBeenPlayed = false;
-    bool dialogue12HasBeenPlayed = false;
-    bool dialogue13HasBeenPlayed = false;
-    bool dialogue14HasBeenPlayed = false;
-    bool dialogue15HasBeenPlayed = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -240,6 +247,19 @@ public class SoundManager : MonoBehaviour
 
     public void PlayDialogue(int dialogueNumber)
     {
+        if (!thisDialogueHasBeenPlayed.Contains(dialogueNumber))
+        {
+            thisDialogueHasBeenPlayed.Add(dialogueNumber);
+            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialoguePlaceEventHere[dialogueNumber - 1]);
+        }
+        Debug.Log("Trying to play event number " + dialogueNumber);
+
+        dialogueInstance.start();
+        dialogueInstance.release();
+    }
+
+    /*public void PlayDialogue(int dialogueNumber)
+    {
         if (dialogueNumber == 1 && !dialogue1HasBeenPlayed)
         {
             dialogue1HasBeenPlayed = true;
@@ -318,7 +338,7 @@ public class SoundManager : MonoBehaviour
 
         dialogueInstance.start();
         dialogueInstance.release();
-    }
+    }*/
     public void PauseDialoguePlayback()
     {
         dialogueInstance.setPaused(true);
