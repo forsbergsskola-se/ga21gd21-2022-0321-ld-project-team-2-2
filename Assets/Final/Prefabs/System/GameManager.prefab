@@ -96,6 +96,7 @@ MonoBehaviour:
   carCamera: {fileID: 0}
   enterExitKey: 101
   SoundStuff: {fileID: 2055933983}
+  DialogueVarManager: {fileID: 0}
   inCar: 0
   carCol: {fileID: 0}
 --- !u!114 &4115937512979129772
@@ -203,111 +204,98 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  dialogue1PlaceEventHere:
-    Guid:
+  dialoguePlaceEventHere:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue2PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue3PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue4PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue5PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue6PlaceEventHere:
-    Guid:
+  - Guid:
+      Data1: -697755403
+      Data2: 1127084418
+      Data3: 306466486
+      Data4: -655248522
+    Path: event:/InteractiveObjects/Teleporter
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue7PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue8PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue9PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue10PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue11PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue12PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue13PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue14PlaceEventHere:
-    Guid:
+  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  dialogue15PlaceEventHere:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+  thisDialogueHasBeenPlayed: 
   inventoryPlaceEventHere:
     Guid:
       Data1: 0

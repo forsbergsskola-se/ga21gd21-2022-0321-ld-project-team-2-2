@@ -251,11 +251,11 @@ public class SoundManager : MonoBehaviour
         {
             thisDialogueHasBeenPlayed.Add(dialogueNumber);
             dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialoguePlaceEventHere[dialogueNumber - 1]);
+            Debug.Log("Trying to play event number " + dialogueNumber);
+            dialogueInstance.start();
+            dialogueInstance.release();
         }
-        Debug.Log("Trying to play event number " + dialogueNumber);
-
-        dialogueInstance.start();
-        dialogueInstance.release();
+        
     }
 
     /*public void PlayDialogue(int dialogueNumber)

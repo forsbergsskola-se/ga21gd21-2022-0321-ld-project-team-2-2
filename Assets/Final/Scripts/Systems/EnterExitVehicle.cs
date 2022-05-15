@@ -70,14 +70,17 @@ public class EnterExitVehicle : MonoBehaviour
     void GetIntoCar()
     {
         inCar = true;
-        if (DialogueVarManager.playerHasEnteredVehicle == false) SoundStuff.PlayDialogue(6);
-        DialogueVarManager.playerHasEnteredVehicle = true;
         
         human.SetActive(false);
 
         carAnimator.enabled = true;
         playerCamera.SetActive(false);
         carCamera.SetActive(true);
+        if (DialogueVarManager.playerHasEnteredVehicle == false)
+        {
+            SoundStuff.PlayDialogue(6);
+            DialogueVarManager.playerHasEnteredVehicle = true;
+        }
         SoundStuff.SetPlayerStateToInCar();
         SoundStuff.StartCarSound();
         
