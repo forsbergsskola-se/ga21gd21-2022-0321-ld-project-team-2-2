@@ -36,10 +36,10 @@ public class OpenUpgradeScreen : MonoBehaviour
     private bool four;
     
     //Bought
-    private bool boughtOne;
-    private bool boughtTwo;
-    private bool boughtThree;
-    private bool boughtFour;
+    public bool boughtOne;
+    public bool boughtTwo;
+    public bool boughtThree;
+    public bool boughtFour;
 
     private bool inMenu = false;
 
@@ -83,7 +83,7 @@ public class OpenUpgradeScreen : MonoBehaviour
 
     void UIFollow()
     {
-        ui.transform.position = transform.position + new Vector3(5, 3, 1);
+        ui.transform.position = transform.position + new Vector3(5, 3, 4);
     }
 
     private void CheckPurchase()
@@ -219,10 +219,10 @@ public class OpenUpgradeScreen : MonoBehaviour
         }
         else if (four)
         {
-            if (_currency.currencyCollected >= 500)
+            if (_currency.currencyCollected >= 250)
             {
                 _carController.nitroUnlock = true;
-                _currency.currencyCollected -= 500;
+                _currency.currencyCollected -= 250;
                 boughtFour = true;
                 UIAudio.PlayUpgradeSound(true);
             }

@@ -14,7 +14,6 @@ public class CarController : MonoBehaviour
     public float revSpeed;
     public float turnSpeed;
     public LayerMask groundLayer;
-    private float originalSpeed;
     public float gravityDrag = -200f;
     
     [Header("Boost")]
@@ -36,6 +35,7 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private GameObject green;
     [SerializeField] private GameObject red;
+    [SerializeField] private OpenUpgradeScreen upgrade;
     
     
     #endregion
@@ -46,8 +46,6 @@ public class CarController : MonoBehaviour
         carRB.transform.parent = null;
 
         normalDrag = sphereRB.drag;
-
-        originalSpeed = fwdSpeed;
     }
     
     void Update()
@@ -105,8 +103,22 @@ public class CarController : MonoBehaviour
             boostCheck = false;
             fwdSpeed = boostSpeed;
             gravityDrag = newGravity;
-            yield return new WaitForSeconds(2);
-            fwdSpeed = originalSpeed;
+            yield return new WaitForSeconds(3);
+            fwdSpeed = 150f;
+            if (upgrade.boughtOne)
+            {
+                fwdSpeed = 200f;
+            }
+
+            if (upgrade.boughtTwo)
+            {
+                fwdSpeed = 250f;
+            }
+
+            if (upgrade.boughtThree)
+            {
+                fwdSpeed = 300f;
+            }
             gravityDrag = -200f;
             yield return new WaitForSeconds(cooldown);
             boostCheck = true;
