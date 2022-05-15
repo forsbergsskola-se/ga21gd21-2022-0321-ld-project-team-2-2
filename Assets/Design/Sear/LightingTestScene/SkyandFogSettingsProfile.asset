@@ -148,23 +148,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   quality:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0
   enabled:
     m_OverrideState: 1
     m_Value: 1
   colorMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   color:
     m_OverrideState: 0
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.9528302, g: 0.07209708, b: 0, a: 1}
+    m_Value: {r: 1, g: 0.8301325, b: 0, a: 1}
   maxFogDistance:
     m_OverrideState: 1
-    m_Value: 300
+    m_Value: 20000
   mipFogMaxMip:
     m_OverrideState: 0
     m_Value: 0.5
@@ -182,16 +182,16 @@ MonoBehaviour:
     m_Value: 100000000
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 100000
+    m_Value: 18600
   enableVolumetricFog:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.7735849, b: 0.077297, a: 1}
+    m_Value: {r: 1, g: 0.79818785, b: 0, a: 1}
   globalLightProbeDimmer:
-    m_OverrideState: 1
-    m_Value: 1
+    m_OverrideState: 0
+    m_Value: 0.102
   depthExtent:
     m_OverrideState: 0
     m_Value: 64
@@ -205,7 +205,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0.75
   m_FogControlMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   screenResolutionPercentage:
     m_OverrideState: 0
@@ -214,10 +214,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 64
   m_VolumetricFogBudget:
-    m_OverrideState: 0
-    m_Value: 0.333
+    m_OverrideState: 1
+    m_Value: 0.166
   m_ResolutionDepthRatio:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
   directionalLightsOnly:
     m_OverrideState: 0
@@ -452,10 +452,10 @@ MonoBehaviour:
     m_Value: 0
   limitMin:
     m_OverrideState: 1
-    m_Value: 3.5899682
+    m_Value: 15
   limitMax:
     m_OverrideState: 1
-    m_Value: 13.203145
+    m_Value: 3.8422139
   curveMap:
     m_OverrideState: 0
     m_Value:
