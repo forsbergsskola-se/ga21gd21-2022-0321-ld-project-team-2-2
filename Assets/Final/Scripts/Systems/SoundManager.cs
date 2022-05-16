@@ -56,6 +56,12 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance teleportedPlayerSoundInstance;
 
     [Header("Dialogue")]
+    
+    public FMODUnity.EventReference[] dialoguePlaceEventHere;
+    public DialogueManager DialogueVarManager;
+    private FMOD.Studio.EventInstance dialogueInstance;
+    public List<int> thisDialogueHasBeenPlayed = new();
+
     /* public FMODUnity.EventReference dialogue1PlaceEventHere;
      public FMODUnity.EventReference dialogue2PlaceEventHere;
      public FMODUnity.EventReference dialogue3PlaceEventHere;
@@ -88,11 +94,6 @@ public class SoundManager : MonoBehaviour
      bool dialogue14HasBeenPlayed = false;
      bool dialogue15HasBeenPlayed = false;
      */
-    public FMODUnity.EventReference[] dialoguePlaceEventHere;
-
-    private FMOD.Studio.EventInstance dialogueInstance;
-
-    public List<int> thisDialogueHasBeenPlayed = new();
 
     [Header("Inventory sounds")]
     public FMODUnity.EventReference inventoryPlaceEventHere;
@@ -251,9 +252,20 @@ public class SoundManager : MonoBehaviour
         {
             thisDialogueHasBeenPlayed.Add(dialogueNumber);
             dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialoguePlaceEventHere[dialogueNumber - 1]);
-            Debug.Log("Trying to play event number " + dialogueNumber);
             dialogueInstance.start();
             dialogueInstance.release();
+            int actOneDialoguesPlayed = 0;
+            for (int i = 1; i < 7; i++)
+            {
+                if (thisDialogueHasBeenPlayed.Contains(i))
+                {
+                    actOneDialoguesPlayed++;
+                }
+            }
+            if (actOneDialoguesPlayed == 7)
+            {
+                DialogueVarManager.act1Finished = true;
+            }
         }
         
     }
