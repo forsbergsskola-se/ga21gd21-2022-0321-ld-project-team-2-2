@@ -257,12 +257,9 @@ public class SoundManager : MonoBehaviour
             int actOneDialoguesPlayed = 0;
             for (int i = 1; i < 7; i++)
             {
-                if (thisDialogueHasBeenPlayed.Contains(i))
-                {
-                    actOneDialoguesPlayed++;
-                }
+                if (thisDialogueHasBeenPlayed.Contains(i)) actOneDialoguesPlayed++;
             }
-            if (actOneDialoguesPlayed == 7)
+            if (actOneDialoguesPlayed == 6)
             {
                 DialogueVarManager.act1Finished = true;
             }
