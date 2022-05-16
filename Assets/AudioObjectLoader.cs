@@ -31,8 +31,12 @@ public class AudioObjectLoader : MonoBehaviour
     {
         if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
-            audioObjectInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            audioObjectInstance.release();
+            StopPlaying();
         }
+    }
+    public void StopPlaying()
+    {
+        audioObjectInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        audioObjectInstance.release();
     }
 }
