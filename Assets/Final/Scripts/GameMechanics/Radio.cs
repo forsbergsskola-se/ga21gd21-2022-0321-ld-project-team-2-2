@@ -7,10 +7,12 @@ public class Radio : MonoBehaviour
     #region Variables
 
     public EnterExitVehicle _EnterExit;
+    public SoundManager DialogueManager;
     private bool radioOn = true;//Might have to make public
     int RadioStation = 1;
     private FMOD.Studio.EventInstance instance;
     bool radioFirstTime = true;
+    public int secondsBeforeRadioStartsFirstTime = 3;
 
     #endregion
 
@@ -42,6 +44,8 @@ public class Radio : MonoBehaviour
     {
         if (radioFirstTime)
         {
+            DialogueManager.PlayDialogue(6);
+            // Script för att vänta i typ 3 sekunder
             instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio/Radio");
             instance.start();
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff", 0);
@@ -86,4 +90,5 @@ public class Radio : MonoBehaviour
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SwitchChannel", RadioStation);
         }
     }
+    
 }

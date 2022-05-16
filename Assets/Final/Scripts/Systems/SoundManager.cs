@@ -56,7 +56,7 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance teleportedPlayerSoundInstance;
 
     [Header("Dialogue")]
-    
+
     public FMODUnity.EventReference[] dialoguePlaceEventHere;
     public DialogueManager DialogueVarManager;
     private FMOD.Studio.EventInstance dialogueInstance;
