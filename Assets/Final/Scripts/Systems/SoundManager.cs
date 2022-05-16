@@ -127,6 +127,8 @@ public class SoundManager : MonoBehaviour
         //Inventory
         clickInstance = FMODUnity.RuntimeManager.CreateInstance(clickPlaceEventHere);
         keycardPickUp = FMODUnity.RuntimeManager.CreateInstance(keycardPickUpPlaceEventHere);
+
+        StartCoroutine(Waiter(1));
     }
     // Update is called once per frame
     void Update()
@@ -254,6 +256,7 @@ public class SoundManager : MonoBehaviour
             {
                 dialogueInstance.release();
                 thisDialogueHasBeenPlayed.Add(dialogueNumber);
+                if (dialogueNumber == 4) DialogueVarManager.poddyFound = true;
                 dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialoguePlaceEventHere[dialogueNumber - 1]);
                 dialogueInstance.start();
                 int actOneDialoguesPlayed = 0;
@@ -265,6 +268,9 @@ public class SoundManager : MonoBehaviour
                 {
                     DialogueVarManager.act1Finished = true;
                 }
+                Debug.Log("Poddy is found: " + DialogueVarManager.poddyFound);
+                Debug.Log("Act 1 dialogues have been played: " + DialogueVarManager.act1Finished);
+                Debug.Log("Player has entered vehicle: " + DialogueVarManager.playerHasEnteredVehicle);
             }
             else
             {
