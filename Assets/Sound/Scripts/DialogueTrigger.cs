@@ -19,7 +19,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
-            if (dialogueEvent >= 2 && dialogueEvent <= 3) DialoguePlayer.PlayDialogue(dialogueEvent);
+            if (dialogueEvent >= 2 && dialogueEvent <= 4) DialoguePlayer.PlayDialogue(dialogueEvent);
             else if (dialogueEvent == 5 && DialogueVarManager.poddyFound) DialoguePlayer.PlayDialogue(dialogueEvent);
             else if ((dialogueEvent == 8) || (dialogueEvent == 9) && DialogueVarManager.act1Finished) DialoguePlayer.PlayDialogue(dialogueEvent);
         }

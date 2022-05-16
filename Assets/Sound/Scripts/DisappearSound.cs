@@ -28,10 +28,6 @@ public class DisappearSound : MonoBehaviour
         {
             platformEngineInstance = FMODUnity.RuntimeManager.CreateInstance(platformEnginePlaceEventHere);
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(platformEngineInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
-            appearSoundInstance = FMODUnity.RuntimeManager.CreateInstance(appearSoundPlaceEventHere);
-            disappearSoundInstance = FMODUnity.RuntimeManager.CreateInstance(disappearSoundPlaceEventHere);
-            FMODUnity.RuntimeManager.AttachInstanceToGameObject(disappearSoundInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
-            FMODUnity.RuntimeManager.AttachInstanceToGameObject(appearSoundInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
             platformEngineInstance.start();
         }
     }
@@ -44,12 +40,16 @@ public class DisappearSound : MonoBehaviour
     }
     public void PlayAppearingSound()
     {
+        appearSoundInstance = FMODUnity.RuntimeManager.CreateInstance(appearSoundPlaceEventHere);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(appearSoundInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         appearSoundInstance.start();
         platformEngineInstance.setParameterByName("Active", 1);
         appearSoundInstance.release();
     }
     public void PlayDisappearingSound()
     {
+        disappearSoundInstance = FMODUnity.RuntimeManager.CreateInstance(disappearSoundPlaceEventHere);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(disappearSoundInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         disappearSoundInstance.start();
         platformEngineInstance.setParameterByName("Active", 0);
         disappearSoundInstance.release();
