@@ -180,6 +180,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-8255156367467928959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Dialogue10
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Dialogue10
+  Guid:
+    Data1: -1225806236
+    Data2: 1297435153
+    Data3: -1487768953
+    Data4: 292028199
+  Banks:
+  - {fileID: 7169555627834706478}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7519727454447926966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +992,11 @@ MonoBehaviour:
   - {fileID: -8327073892893399715}
   - {fileID: 8528889028621819240}
   - {fileID: -8740542022196376488}
+  - {fileID: -8255156367467928959}
+  - {fileID: 5909411018274304796}
+  - {fileID: 1276595659031022102}
+  - {fileID: 5900083842356625076}
+  - {fileID: 8655626221629665118}
   EditorParameters:
   - {fileID: 9209889745470794689}
   - {fileID: 1937134625190273696}
@@ -981,7 +1013,7 @@ MonoBehaviour:
   - {fileID: 7169555627834706478}
   StringsBanks:
   - {fileID: 5129207736604290975}
-  cacheTime: 637883084802480211
+  cacheTime: 637883138683214942
   cacheVersion: 10
 --- !u!114 &30455482789983045
 MonoBehaviour:
@@ -1060,6 +1092,33 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+  Length: 0
+--- !u!114 &1276595659031022102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Dialogue7
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Dialogue7
+  Guid:
+    Data1: 1903124893
+    Data2: 1157070680
+    Data3: 1925353391
+    Data4: 661745352
+  Banks:
+  - {fileID: 7169555627834706478}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
 --- !u!114 &1370919070934730114
 MonoBehaviour:
@@ -1548,10 +1607,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637883084802480211
+  lastModified: 637883138683214942
   FileSizes:
   - Name: 
-    Value: 4018
+    Value: 4188
   Exists: 1
 --- !u!114 &5150981309024098315
 MonoBehaviour:
@@ -1704,6 +1763,60 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5900083842356625076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Dialogue6
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Dialogue6
+  Guid:
+    Data1: -1931376204
+    Data2: 1249279479
+    Data3: 1187206328
+    Data4: 1907376437
+  Banks:
+  - {fileID: 7169555627834706478}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5909411018274304796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Dialogue9
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Dialogue9
+  Guid:
+    Data1: 550168440
+    Data2: 1327387425
+    Data3: 2070815643
+    Data4: -1600368885
+  Banks:
+  - {fileID: 7169555627834706478}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6134752656702079626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1988,7 +2101,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637883084802460241
+  lastModified: 637883138683194989
   FileSizes: []
   Exists: 1
 --- !u!114 &7191742326758953476
@@ -2351,6 +2464,33 @@ MonoBehaviour:
   Banks:
   - {fileID: 7169555627834706478}
   IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8655626221629665118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Dialogue8
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Dialogue8
+  Guid:
+    Data1: 215487951
+    Data2: 1207876944
+    Data3: -1981076804
+    Data4: -1974989063
+  Banks:
+  - {fileID: 7169555627834706478}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
