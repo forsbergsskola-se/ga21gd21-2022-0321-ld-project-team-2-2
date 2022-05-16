@@ -13,6 +13,7 @@ public class Radio : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
     bool radioFirstTime = true;
     public int secondsBeforeRadioStartsFirstTime = 3;
+    [SerializeField] private float radioWait = 3;
 
     #endregion
 
@@ -44,12 +45,7 @@ public class Radio : MonoBehaviour
     {
         if (radioFirstTime)
         {
-            DialogueManager.PlayDialogue(6);
-            // Script för att vänta i typ 3 sekunder
-            instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio/Radio");
-            instance.start();
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff", 0);
-            radioFirstTime = false;
+            StartCoroutine(RadioFirstTime());
         }
         
         if (radioOn)
@@ -90,5 +86,14 @@ public class Radio : MonoBehaviour
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SwitchChannel", RadioStation);
         }
     }
-    
+
+    IEnumerator RadioFirstTime()
+    {
+        DialogueManager.PlayDialogue(6);
+        yield return new WaitForSeconds(radioWait);
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio/Radio");
+        instance.start();
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RadioOnOff", 0);
+        radioFirstTime = false;
+    }    
 }
