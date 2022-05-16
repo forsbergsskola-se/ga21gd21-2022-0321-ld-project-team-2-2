@@ -267,6 +267,8 @@ public class SoundManager : MonoBehaviour
         
     }
 
+    //test
+
     /*public void PlayDialogue(int dialogueNumber)
     {
         if (dialogueNumber == 1 && !dialogue1HasBeenPlayed)
