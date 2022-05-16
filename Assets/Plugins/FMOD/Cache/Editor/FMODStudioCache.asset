@@ -876,7 +876,7 @@ MonoBehaviour:
     Data4: -1030098233
   Banks:
   - {fileID: 7169555627834706478}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -936,6 +936,7 @@ MonoBehaviour:
   - {fileID: 6995959775968649444}
   - {fileID: 7000011133281166732}
   - {fileID: -8327073892893399715}
+  - {fileID: 8528889028621819240}
   EditorParameters:
   - {fileID: 9209889745470794689}
   - {fileID: 1937134625190273696}
@@ -952,7 +953,7 @@ MonoBehaviour:
   - {fileID: 7169555627834706478}
   StringsBanks:
   - {fileID: 5129207736604290975}
-  cacheTime: 637882990386664110
+  cacheTime: 637883025833675657
   cacheVersion: 10
 --- !u!114 &30455482789983045
 MonoBehaviour:
@@ -1519,10 +1520,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637880307907944302
+  lastModified: 637883025833675657
   FileSizes:
   - Name: 
-    Value: 3916
+    Value: 3970
   Exists: 1
 --- !u!114 &5150981309024098315
 MonoBehaviour:
@@ -1932,7 +1933,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637882990386664110
+  lastModified: 637883025833511413
   FileSizes: []
   Exists: 1
 --- !u!114 &7191742326758953476
@@ -1985,7 +1986,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 14000
 --- !u!114 &7516073026037125032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2268,6 +2269,33 @@ MonoBehaviour:
   Banks:
   - {fileID: 7169555627834706478}
   IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8528889028621819240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/DistressSignal
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/DistressSignal
+  Guid:
+    Data1: -417470897
+    Data2: 1101549376
+    Data3: 1872940466
+    Data4: -820820687
+  Banks:
+  - {fileID: 7169555627834706478}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
