@@ -999,6 +999,7 @@ MonoBehaviour:
   - {fileID: 8655626221629665118}
   - {fileID: 328898152888493447}
   - {fileID: 2932075037058511097}
+  - {fileID: 509201906499460583}
   EditorParameters:
   - {fileID: 9209889745470794689}
   - {fileID: 1937134625190273696}
@@ -1015,7 +1016,7 @@ MonoBehaviour:
   - {fileID: 7169555627834706478}
   StringsBanks:
   - {fileID: 5129207736604290975}
-  cacheTime: 637883768387172127
+  cacheTime: 637883817775794664
   cacheVersion: 10
 --- !u!114 &30455482789983045
 MonoBehaviour:
@@ -1071,6 +1072,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 12187
+--- !u!114 &509201906499460583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/MuteMusic
+  m_EditorClassIdentifier: 
+  Path: snapshot:/MuteMusic
+  Guid:
+    Data1: -1047212040
+    Data2: 1228852521
+    Data3: 1540552356
+    Data4: -902352784
+  Banks:
+  - {fileID: 7169555627834706478}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1132246334606315341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,10 +1691,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637883392235857502
+  lastModified: 637883817775794664
   FileSizes:
   - Name: 
-    Value: 4306
+    Value: 4346
   Exists: 1
 --- !u!114 &5150981309024098315
 MonoBehaviour:
@@ -2157,7 +2185,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637883768387172127
+  lastModified: 637883817775724653
   FileSizes: []
   Exists: 1
 --- !u!114 &7191742326758953476
