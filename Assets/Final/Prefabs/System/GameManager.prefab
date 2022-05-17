@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 1296933899}
   - component: {fileID: 2040139246}
   - component: {fileID: 412835435895399320}
+  - component: {fileID: 2032878682}
+  - component: {fileID: 7092233341152458076}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -96,7 +98,7 @@ MonoBehaviour:
   carCamera: {fileID: 0}
   enterExitKey: 101
   SoundStuff: {fileID: 2055933983}
-  DialogueVarManager: {fileID: 0}
+  DialogueVarManager: {fileID: 412835435895399320}
   inCar: 0
   carCol: {fileID: 0}
 --- !u!114 &4115937512979129772
@@ -125,6 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _EnterExit: {fileID: 2766805036538975004}
+  DialogueManager: {fileID: 2055933983}
+  secondsBeforeRadioStartsFirstTime: 3
+  radioWait: 3
 --- !u!114 &2055933983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   car: {fileID: 0}
-  WindHeightController: {fileID: 0}
+  WindHeightController: {fileID: 7092233341152458076}
   _EnterExit: {fileID: 2766805036538975004}
   scrapPlaceEventHere:
     Guid:
@@ -150,11 +155,11 @@ MonoBehaviour:
     Path: event:/PickupScrapMetal
   footPlaceEventHere:
     Guid:
-      Data1: -916841083
-      Data2: 1122179445
-      Data3: 307529400
-      Data4: -924399008
-    Path: event:/Footstep
+      Data1: 278219883
+      Data2: 1256031751
+      Data3: 1214695560
+      Data4: 684644319
+    Path: event:/Player/Footsteps
   jumpPlaceEventHere:
     Guid:
       Data1: 66578862
@@ -164,11 +169,11 @@ MonoBehaviour:
     Path: event:/JumpSound
   playerImpactPlaceEventHere:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -716718537
+      Data2: 1187078147
+      Data3: -2031902300
+      Data4: 765482516
+    Path: event:/Player/Impact
   musicEvRef:
     Guid:
       Data1: -178951052
@@ -178,39 +183,93 @@ MonoBehaviour:
     Path: event:/Music/Music
   keycardPickUpPlaceEventHere:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1323079084
+      Data2: 1338106608
+      Data3: 1215854720
+      Data4: -1814649711
+    Path: event:/InteractiveObjects/PickupKeycard
   keycardUsePlaceEventHere:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1743531253
+      Data2: 1095305367
+      Data3: 486302364
+      Data4: -901520988
+    Path: event:/InteractiveObjects/UseKeycard
   vehiclePlaceEventHere:
     Guid:
-      Data1: 373801292
-      Data2: 1213569678
-      Data3: 384690609
-      Data4: 843747936
-    Path: event:/Vehicle/VehicleAcceleration
+      Data1: 319715488
+      Data2: 1265363069
+      Data3: -1454035819
+      Data4: 640086014
+    Path: event:/Vehicle/Vehicle
   teleportedPlayerSoundPlaceEventHere:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -134618877
+      Data2: 1094815638
+      Data3: 677222791
+      Data4: -1391741093
+    Path: event:/InteractiveObjects/TeleporterAction
   dialoguePlaceEventHere:
   - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1298338941
+      Data2: 1328369362
+      Data3: -155869523
+      Data4: -1030098233
+    Path: event:/Dialogue/Dialogue1
+  - Guid:
+      Data1: -989288624
+      Data2: 1232647006
+      Data3: 1428297662
+      Data4: 854827230
+    Path: event:/Dialogue/Dialogue2
+  - Guid:
+      Data1: 284670248
+      Data2: 1232960281
+      Data3: -556089717
+      Data4: 977950003
+    Path: event:/Dialogue/Dialogue3
+  - Guid:
+      Data1: 48475465
+      Data2: 1308499327
+      Data3: 1631233173
+      Data4: -598093397
+    Path: event:/Dialogue/Dialogue4
+  - Guid:
+      Data1: -2057306709
+      Data2: 1115847279
+      Data3: 1948843147
+      Data4: -865839860
+    Path: event:/Dialogue/Dialogue5
+  - Guid:
+      Data1: -1931376204
+      Data2: 1249279479
+      Data3: 1187206328
+      Data4: 1907376437
+    Path: event:/Dialogue/Dialogue6
+  - Guid:
+      Data1: 1903124893
+      Data2: 1157070680
+      Data3: 1925353391
+      Data4: 661745352
+    Path: event:/Dialogue/Dialogue7
+  - Guid:
+      Data1: 215487951
+      Data2: 1207876944
+      Data3: -1981076804
+      Data4: -1974989063
+    Path: event:/Dialogue/Dialogue8
+  - Guid:
+      Data1: 550168440
+      Data2: 1327387425
+      Data3: 2070815643
+      Data4: -1600368885
+    Path: event:/Dialogue/Dialogue9
+  - Guid:
+      Data1: -1225806236
+      Data2: 1297435153
+      Data3: -1487768953
+      Data4: 292028199
+    Path: event:/Dialogue/Dialogue10
   - Guid:
       Data1: 0
       Data2: 0
@@ -236,87 +295,34 @@ MonoBehaviour:
       Data4: 0
     Path: 
   - Guid:
-      Data1: -697755403
-      Data2: 1127084418
-      Data3: 306466486
-      Data4: -655248522
-    Path: event:/InteractiveObjects/Teleporter
-  - Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+  DialogueVarManager: {fileID: 412835435895399320}
   thisDialogueHasBeenPlayed: 
   inventoryPlaceEventHere:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 255435067
+      Data2: 1309765136
+      Data3: -1034924865
+      Data4: -288326428
+    Path: event:/UI/Inventory
   clickPlaceEventHere:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 486086370
+      Data2: 1170471654
+      Data3: 474907567
+      Data4: -449327204
+    Path: event:/UI/UIClick
   upgradePlaceEventHere:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1381550165
+      Data2: 1226831612
+      Data3: -505028728
+      Data4: -1060550907
+    Path: event:/UI/UpgradePurchase
 --- !u!114 &1296933899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,3 +369,52 @@ MonoBehaviour:
   act1Finished: 0
   poddyFound: 0
   playerHasEnteredVehicle: 0
+--- !u!114 &2032878682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766805036538975002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f35b1f21b12944486c507922ad8ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeTeleportHumEventHere:
+    Guid:
+      Data1: -697755403
+      Data2: 1127084418
+      Data3: 306466486
+      Data4: -655248522
+    Path: event:/InteractiveObjects/Teleporter
+  placeTeleportActionEventHere:
+    Guid:
+      Data1: -134618877
+      Data2: 1094815638
+      Data3: 677222791
+      Data4: -1391741093
+    Path: event:/InteractiveObjects/TeleporterAction
+  is3D: 1
+--- !u!114 &7092233341152458076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766805036538975002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ce7701bd210254c9c61567733915c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeEventHere:
+    Guid:
+      Data1: -995654965
+      Data2: 1209111032
+      Data3: -743839846
+      Data4: -300852321
+    Path: event:/Ambience/AmbienceDesert
+  is3D: 0
+  minDuration: 30
+  maxDuration: 180

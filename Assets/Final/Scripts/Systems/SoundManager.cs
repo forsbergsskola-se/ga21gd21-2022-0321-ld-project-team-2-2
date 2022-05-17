@@ -38,6 +38,9 @@ public class SoundManager : MonoBehaviour
     bool stinger3Played = false;
     bool stinger4Played = false;
     bool stinger5Played = false;
+    FMOD.Studio.EventInstance muteMusicSnapshot;
+    bool musicOn = true;
+    
 
     [Header("Keycards")]
     public FMODUnity.EventReference keycardPickUpPlaceEventHere;
@@ -127,11 +130,32 @@ public class SoundManager : MonoBehaviour
         //Inventory
         clickInstance = FMODUnity.RuntimeManager.CreateInstance(clickPlaceEventHere);
         keycardPickUp = FMODUnity.RuntimeManager.CreateInstance(keycardPickUpPlaceEventHere);
+
+        StartCoroutine(Waiter(1));
     }
     // Update is called once per frame
     void Update()
     {
         Wind();
+        
+        //mute music
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            if (musicOn)
+            {
+                muteMusicSnapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/MuteMusic");
+                muteMusicSnapshot.start();
+                musicOn = false;
+            }
+            else if(!musicOn)
+            {
+                muteMusicSnapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/MuteMusic");
+                muteMusicSnapshot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                muteMusicSnapshot.release();
+                musicOn = true;
+            }
+            
+        }
         
         //Footsteps
         if(footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
@@ -250,21 +274,34 @@ public class SoundManager : MonoBehaviour
     {
         if (!thisDialogueHasBeenPlayed.Contains(dialogueNumber))
         {
-            thisDialogueHasBeenPlayed.Add(dialogueNumber);
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialoguePlaceEventHere[dialogueNumber - 1]);
-            dialogueInstance.start();
-            dialogueInstance.release();
-            int actOneDialoguesPlayed = 0;
-            for (int i = 1; i < 7; i++)
+            if (PlaybackState(dialogueInstance) == FMOD.Studio.PLAYBACK_STATE.STOPPED)
             {
-                if (thisDialogueHasBeenPlayed.Contains(i)) actOneDialoguesPlayed++;
+                dialogueInstance.release();
+                thisDialogueHasBeenPlayed.Add(dialogueNumber);
+                if (dialogueNumber == 4) DialogueVarManager.poddyFound = true;
+                dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialoguePlaceEventHere[dialogueNumber - 1]);
+                dialogueInstance.start();
+                int actOneDialoguesPlayed = 0;
+                for (int i = 1; i < 7; i++)
+                {
+                    if (thisDialogueHasBeenPlayed.Contains(i)) actOneDialoguesPlayed++;
+                }
+                if (actOneDialoguesPlayed == 6)
+                {
+                    DialogueVarManager.act1Finished = true;
+                }
             }
-            if (actOneDialoguesPlayed == 6)
+            else
             {
-                DialogueVarManager.act1Finished = true;
+                StartCoroutine(Waiter(dialogueNumber));
             }
         }
-        
+    }
+    FMOD.Studio.PLAYBACK_STATE PlaybackState(FMOD.Studio.EventInstance instance)
+    {
+        FMOD.Studio.PLAYBACK_STATE pS;
+        instance.getPlaybackState(out pS);
+        return pS;
     }
 
     //test
@@ -408,5 +445,10 @@ public class SoundManager : MonoBehaviour
         playerImpactInstance = FMODUnity.RuntimeManager.CreateInstance(playerImpactPlaceEventHere);
         playerImpactInstance.setParameterByName("Velocity", velocity);
         playerImpactInstance.release();
+    }
+    IEnumerator Waiter(int dialogueNum)
+    {
+        yield return new WaitForSeconds(1);
+        PlayDialogue(dialogueNum);
     }
 }

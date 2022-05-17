@@ -7,29 +7,40 @@ public class AudioObjectLoader : MonoBehaviour
     public EnterExitVehicle VehicleCheck;
     public FMODUnity.EventReference audioObjectPlaceEventHere;
     private FMOD.Studio.EventInstance audioObjectInstance;
+    public bool playOnlyOnce = false;
+    private bool soundHasBeenPlayed = false;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
-        if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
+        if (playOnlyOnce)
         {
-            audioObjectInstance = FMODUnity.RuntimeManager.CreateInstance(audioObjectPlaceEventHere);
-            FMODUnity.RuntimeManager.AttachInstanceToGameObject(audioObjectInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
-            audioObjectInstance.start();
+            if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar) && !soundHasBeenPlayed)
+            {
+                audioObjectInstance = FMODUnity.RuntimeManager.CreateInstance(audioObjectPlaceEventHere);
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(audioObjectInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+                audioObjectInstance.start();
+                soundHasBeenPlayed = true;
+            }
         }
+        else
+        {
+            if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
+            {
+                audioObjectInstance = FMODUnity.RuntimeManager.CreateInstance(audioObjectPlaceEventHere);
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(audioObjectInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+                audioObjectInstance.start();
+            }
+        }
+        
+
     }
     private void OnTriggerExit(Collider other)
     {
-        if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
+        if (((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar)) && playOnlyOnce)
+        {
+            audioObjectInstance.release();
+        }
+        else if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
             StopPlaying();
         }

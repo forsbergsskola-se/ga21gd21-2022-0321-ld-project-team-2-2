@@ -8,6 +8,6 @@ public class DestroyOtherGameObject : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") Destroyer.SelfDestructCommand();
+        if (other.tag == "Player")Destroyer.SelfDestructCommand();
     }
 }
