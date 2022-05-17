@@ -32,7 +32,8 @@ public class KeyManager : MonoBehaviour
             }
             else
             {
-                //Play sound of poddy saying no entrance
+                SoundManager.PlayKeycardUseSound(doorUnlocked: false);
+                SoundManager.PlayDialogue(9);
             }
         }
     }
