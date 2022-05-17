@@ -31,14 +31,15 @@ public class AmbienceZone : MonoBehaviour
         if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
             SoundBuddy.SetAmbienceZone(ambienceZone);
+            if (ambienceZone == 1 && DialogueVarManager.act1Finished == true)
+            {
+                SoundBuddy.PlayDialogue(6);
+            }
+            if (ambienceZone == 4 && DialogueVarManager.act1Finished == true)
+            {
+                SoundBuddy.PlayDialogue(7);
+            }
         }
-        if (ambienceZone == 1 && DialogueVarManager.act1Finished == true)
-        {
-            SoundBuddy.PlayDialogue(6);
-        }
-        if (ambienceZone == 4 && DialogueVarManager.act1Finished == true)
-        {
-            SoundBuddy.PlayDialogue(7);
-        }
+        
     }
 }

@@ -283,12 +283,22 @@ public class SoundManager : MonoBehaviour
                 int actOneDialoguesPlayed = 0;
                 for (int i = 1; i < 6; i++)
                 {
-                    if (thisDialogueHasBeenPlayed.Contains(i)) actOneDialoguesPlayed++;
+                    if (thisDialogueHasBeenPlayed.Contains(i))
+                    {
+                        actOneDialoguesPlayed++;
+                        print("Counting act one dialogues: " + actOneDialoguesPlayed);
+                    }
                 }
                 if (actOneDialoguesPlayed == 5)
                 {
                     DialogueVarManager.act1Finished = true;
+                    Debug.Log("Set " + DialogueVarManager.act1Finished + "to true");
                 }
+                Debug.Log("We have played " + actOneDialoguesPlayed + " dialogues from act 1.");
+                Debug.Log("We have now tried to play Dialoge event " + dialogueNumber);
+                Debug.Log("Act one is finished: " + DialogueVarManager.act1Finished);
+                Debug.Log("Poddy is found: " + DialogueVarManager.poddyFound);
+                Debug.Log("Act one is finished: " + DialogueVarManager.playerHasEnteredVehicle);
             }
             else
             {
