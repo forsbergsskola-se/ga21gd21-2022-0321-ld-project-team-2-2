@@ -76,7 +76,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 60
+  MaxDistance: 1200
   Length: 0
 --- !u!114 &-8691228137236968531
 MonoBehaviour:
@@ -343,7 +343,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -367,7 +367,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -999,7 +999,7 @@ MonoBehaviour:
   - {fileID: 8655626221629665118}
   - {fileID: 328898152888493447}
   - {fileID: 2932075037058511097}
-  - {fileID: 509201906499460583}
+  - {fileID: 2230164751937984827}
   EditorParameters:
   - {fileID: 9209889745470794689}
   - {fileID: 1937134625190273696}
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   - {fileID: 7169555627834706478}
   StringsBanks:
   - {fileID: 5129207736604290975}
-  cacheTime: 637883817775794664
+  cacheTime: 637883826529503178
   cacheVersion: 10
 --- !u!114 &30455482789983045
 MonoBehaviour:
@@ -1297,6 +1297,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &2230164751937984827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/MuteMusic
+  m_EditorClassIdentifier: 
+  Path: snapshot:/MuteMusic
+  Guid:
+    Data1: -1047212040
+    Data2: 1228852521
+    Data3: 1540552356
+    Data4: -902352784
+  Banks:
+  - {fileID: 7169555627834706478}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2231429014620420352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,7 +1718,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637883817775794664
+  lastModified: 637883809552668052
   FileSizes:
   - Name: 
     Value: 4346
@@ -2080,7 +2107,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 2426099296
     data2: 1862168771
@@ -2185,7 +2212,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637883817775724653
+  lastModified: 637883826529503178
   FileSizes: []
   Exists: 1
 --- !u!114 &7191742326758953476
@@ -2621,7 +2648,7 @@ MonoBehaviour:
   StudioPath: parameter:/InStartingArea
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 2426099296
     data2: 1862168771
