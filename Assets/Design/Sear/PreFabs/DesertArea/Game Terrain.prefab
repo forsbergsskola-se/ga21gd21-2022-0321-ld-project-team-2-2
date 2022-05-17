@@ -25286,7 +25286,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5905638000428897672}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2601423868073549556
+--- !u!114 &4597283228800288918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25295,10 +25295,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4394477652070481265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011be88d304ae9743b6a4a2b947a0665, type: 3}
+  m_Script: {fileID: 11500000, guid: 42a24b8a1447aa84b9e11a5c7f651767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VehicleCheck: {fileID: 0}
   audioObjectPlaceEventHere:
     Guid:
       Data1: -1262379496
@@ -25306,7 +25305,7 @@ MonoBehaviour:
       Data3: -796384324
       Data4: -1305652470
     Path: event:/Dialogue/GiantFootsteps
-  playOnlyOnce: 1
+  VehicleCheck: {fileID: 0}
 --- !u!1001 &5911120754285432352
 PrefabInstance:
   m_ObjectHideFlags: 0
