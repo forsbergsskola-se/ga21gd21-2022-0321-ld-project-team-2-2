@@ -27,23 +27,27 @@ public class KeyManager : MonoBehaviour
         {
             if (keys == 5)
             {
+                SoundManager.PlayKeycardUseSound(doorUnlocked: true);
+                SoundManager.PlayBigDoorSound();
                 StartCoroutine(OpenDoor());
-                
             }
             else
             {
-                //Play sound of poddy saying no entrance
+                SoundManager.PlayKeycardUseSound(doorUnlocked: false);
+                SoundManager.PlayDialogue(9);
             }
         }
     }
 
     IEnumerator OpenDoor()
     {
+        
         doorCam.SetActive(true);
         playerCam.SetActive(false);
+        
         yield return new WaitForSeconds(2);
         door.SetBool("isOpen", true);
-        SoundManager.PlayKeycardUseSound(doorUnlocked:true);
+ 
         ShakeCamera(intensity:2);
 
         yield return new WaitForSeconds(3);
@@ -62,6 +66,6 @@ public class KeyManager : MonoBehaviour
     public void AddKey()
     {
         keys++;
-        if (keys == 5) SoundManager.PlayDialogue(10);
+        if (keys == 5) SoundManager.PlayDialogue(8);
     }
 }

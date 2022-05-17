@@ -83,7 +83,6 @@ public class EnterExitVehicle : MonoBehaviour
         }
         SoundStuff.SetPlayerStateToInCar();
         SoundStuff.StartCarSound();
-        
         _carController.enabled = true;
         _wheel.enabled = true;
         carCol.isKinematic = false;

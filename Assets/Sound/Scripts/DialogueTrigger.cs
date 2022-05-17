@@ -19,8 +19,8 @@ public class DialogueTrigger : MonoBehaviour
     {
         if ((other.tag == "Player") || (other.tag == "Vehicle" && VehicleCheck.inCar))
         {
-            if (dialogueEvent >= 2 && dialogueEvent <= 4) DialoguePlayer.PlayDialogue(dialogueEvent);
-            else if ((dialogueEvent == 7) || (dialogueEvent == 8) && DialogueVarManager.act1Finished) DialoguePlayer.PlayDialogue(dialogueEvent);
+            if (dialogueEvent >= 2 && dialogueEvent <= 5) DialoguePlayer.PlayDialogue(dialogueEvent);
+            else if ((dialogueEvent == 7) && DialogueVarManager.act1Finished) DialoguePlayer.PlayDialogue(dialogueEvent);
         }
     }
 }
