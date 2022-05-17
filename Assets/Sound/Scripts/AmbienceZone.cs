@@ -35,11 +35,6 @@ public class AmbienceZone : MonoBehaviour
             {
                 SoundBuddy.PlayDialogue(6);
             }
-            if (ambienceZone == 4 && DialogueVarManager.act1Finished == true)
-            {
-                SoundBuddy.PlayDialogue(7);
-            }
         }
-        
     }
 }
