@@ -149,7 +149,6 @@ public class SoundManager : MonoBehaviour
             }
             else if(!musicOn)
             {
-                muteMusicSnapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/MuteMusic");
                 muteMusicSnapshot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 muteMusicSnapshot.release();
                 musicOn = true;

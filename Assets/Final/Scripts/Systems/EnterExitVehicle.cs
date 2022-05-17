@@ -78,7 +78,7 @@ public class EnterExitVehicle : MonoBehaviour
         carCamera.SetActive(true);
         if (DialogueVarManager.playerHasEnteredVehicle == false)
         {
-            SoundStuff.PlayDialogue(6);
+            SoundStuff.PlayDialogue(5);
             DialogueVarManager.playerHasEnteredVehicle = true;
         }
         SoundStuff.SetPlayerStateToInCar();
