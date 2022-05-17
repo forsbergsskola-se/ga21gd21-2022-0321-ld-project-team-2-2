@@ -2475,6 +2475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3390077810069568556}
+  - component: {fileID: 1574431262}
   m_Layer: 0
   m_Name: Poddy
   m_TagString: Untagged
@@ -2499,6 +2500,19 @@ Transform:
   m_Father: {fileID: 7656369105134571685}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1574431262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366594622868672090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8bc80e8c3f78b4b9eda5babfd7b30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioObjectLoader: {fileID: 1211826613089716055}
 --- !u!1 &4484226539948480482
 GameObject:
   m_ObjectHideFlags: 0
@@ -9316,22 +9330,22 @@ PrefabInstance:
     - target: {fileID: 2962891696234293279, guid: ac5d48fff42d82b4192e2bdebff9c93a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2962891696234293279, guid: ac5d48fff42d82b4192e2bdebff9c93a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2962891696234293279, guid: ac5d48fff42d82b4192e2bdebff9c93a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 90
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2962891696234293279, guid: ac5d48fff42d82b4192e2bdebff9c93a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 567.6107
+      value: 528.7
       objectReference: {fileID: 0}
     - target: {fileID: 2962891696234293279, guid: ac5d48fff42d82b4192e2bdebff9c93a,
         type: 3}
@@ -9341,7 +9355,7 @@ PrefabInstance:
     - target: {fileID: 2962891696234293279, guid: ac5d48fff42d82b4192e2bdebff9c93a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 434.49805
+      value: 432.2
       objectReference: {fileID: 0}
     - target: {fileID: 2962891696234293279, guid: ac5d48fff42d82b4192e2bdebff9c93a,
         type: 3}
@@ -16162,6 +16176,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3283285390972454786}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1229027212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318857187174129196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fc9fcabf0962341a231644c804dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destroyer: {fileID: 1574431262}
 --- !u!114 &8305477669516658447
 MonoBehaviour:
   m_ObjectHideFlags: 0
