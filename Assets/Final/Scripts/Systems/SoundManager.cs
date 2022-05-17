@@ -282,11 +282,11 @@ public class SoundManager : MonoBehaviour
                 dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialoguePlaceEventHere[dialogueNumber - 1]);
                 dialogueInstance.start();
                 int actOneDialoguesPlayed = 0;
-                for (int i = 1; i < 7; i++)
+                for (int i = 1; i < 6; i++)
                 {
                     if (thisDialogueHasBeenPlayed.Contains(i)) actOneDialoguesPlayed++;
                 }
-                if (actOneDialoguesPlayed == 6)
+                if (actOneDialoguesPlayed == 5)
                 {
                     DialogueVarManager.act1Finished = true;
                 }
