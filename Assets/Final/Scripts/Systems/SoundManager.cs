@@ -38,6 +38,9 @@ public class SoundManager : MonoBehaviour
     bool stinger3Played = false;
     bool stinger4Played = false;
     bool stinger5Played = false;
+    FMOD.Studio.EventInstance muteMusicSnapshot;
+    bool musicOn = true;
+    
 
     [Header("Keycards")]
     public FMODUnity.EventReference keycardPickUpPlaceEventHere;
@@ -134,6 +137,25 @@ public class SoundManager : MonoBehaviour
     void Update()
     {
         Wind();
+        
+        //mute music
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            if (musicOn)
+            {
+                muteMusicSnapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/MuteMusic");
+                muteMusicSnapshot.start();
+                musicOn = false;
+            }
+            else if(!musicOn)
+            {
+                muteMusicSnapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/MuteMusic");
+                muteMusicSnapshot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                muteMusicSnapshot.release();
+                musicOn = true;
+            }
+            
+        }
         
         //Footsteps
         if(footIs3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(myInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
@@ -268,9 +290,6 @@ public class SoundManager : MonoBehaviour
                 {
                     DialogueVarManager.act1Finished = true;
                 }
-                Debug.Log("Poddy is found: " + DialogueVarManager.poddyFound);
-                Debug.Log("Act 1 dialogues have been played: " + DialogueVarManager.act1Finished);
-                Debug.Log("Player has entered vehicle: " + DialogueVarManager.playerHasEnteredVehicle);
             }
             else
             {
