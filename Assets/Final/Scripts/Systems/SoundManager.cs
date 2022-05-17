@@ -399,9 +399,9 @@ public class SoundManager : MonoBehaviour
     }
     public void PlayKeycardUseSound(bool doorUnlocked)
     {
+        keycardUse = FMODUnity.RuntimeManager.CreateInstance(keycardUsePlaceEventHere);
         if (doorUnlocked) keycardUse.setParameterByName("Unlocked", 1);
         else keycardUse.setParameterByName("Unlocked", 0);
-        keycardUse = FMODUnity.RuntimeManager.CreateInstance(keycardUsePlaceEventHere);
         keycardUse.start();
         keycardUse.release();
     }
