@@ -34,6 +34,7 @@ public class WindScript : MonoBehaviour
             yield return new WaitForSeconds(seconds);
 
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("WindAmt", windRandom);
+            Debug.Log("Wind now at " + windRandom);
             weatherDuration = Random.Range(minDuration, maxDuration);
             StartCoroutine(Waiter(weatherDuration));
         }
