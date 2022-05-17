@@ -62,6 +62,6 @@ public class KeyManager : MonoBehaviour
     public void AddKey()
     {
         keys++;
-        if (keys == 5) SoundManager.PlayDialogue(10);
+        if (keys == 5) SoundManager.PlayDialogue(9);
     }
 }
