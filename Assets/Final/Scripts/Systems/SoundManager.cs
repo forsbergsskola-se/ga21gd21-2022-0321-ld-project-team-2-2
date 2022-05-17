@@ -65,6 +65,10 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance dialogueInstance;
     public List<int> thisDialogueHasBeenPlayed = new();
 
+    [Header("Animations")]
+    public FMODUnity.EventReference doorOpenPlaceEventHere;
+    private FMOD.Studio.EventInstance doorOpenInstance;
+
     /* public FMODUnity.EventReference dialogue1PlaceEventHere;
      public FMODUnity.EventReference dialogue2PlaceEventHere;
      public FMODUnity.EventReference dialogue3PlaceEventHere;
@@ -305,90 +309,12 @@ public class SoundManager : MonoBehaviour
         instance.getPlaybackState(out pS);
         return pS;
     }
-
-    //test
-
-    /*public void PlayDialogue(int dialogueNumber)
+    public void PlayBigDoorSound()
     {
-        if (dialogueNumber == 1 && !dialogue1HasBeenPlayed)
-        {
-            dialogue1HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue1PlaceEventHere);
-        }
-        else if (dialogueNumber == 2 && !dialogue2HasBeenPlayed)
-        {
-            dialogue2HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue2PlaceEventHere);
-        }
-        else if (dialogueNumber == 3 && !dialogue3HasBeenPlayed)
-        {
-            dialogue3HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue3PlaceEventHere);
-        }
-        else if(dialogueNumber == 4 && !dialogue4HasBeenPlayed)
-        {
-            dialogue4HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue4PlaceEventHere);
-        }
-        else if (dialogueNumber == 5 && !dialogue5HasBeenPlayed)
-        {
-            dialogue5HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue5PlaceEventHere);
-        }
-        else if (dialogueNumber == 6 && !dialogue6HasBeenPlayed)
-        {
-            dialogue6HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue6PlaceEventHere);
-        }
-        else if (dialogueNumber == 7 && !dialogue7HasBeenPlayed)
-        {
-            dialogue7HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue7PlaceEventHere);
-        }
-        else if (dialogueNumber == 8 && !dialogue8HasBeenPlayed)
-        {
-            dialogue8HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue8PlaceEventHere);
-        }
-        else if (dialogueNumber == 9 && !dialogue9HasBeenPlayed)
-        {
-            dialogue9HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue9PlaceEventHere);
-        }
-        else if (dialogueNumber == 10 && !dialogue10HasBeenPlayed)
-        {
-            dialogue10HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue10PlaceEventHere);
-        }
-        else if (dialogueNumber == 11 && !dialogue11HasBeenPlayed)
-        {
-            dialogue11HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue11PlaceEventHere);
-        }
-        else if (dialogueNumber == 12 && !dialogue12HasBeenPlayed)
-        {
-            dialogue12HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue12PlaceEventHere);
-        }
-        else if (dialogueNumber == 13 && !dialogue13HasBeenPlayed)
-        {
-            dialogue13HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue13PlaceEventHere);
-        }
-        else if (dialogueNumber == 14 && !dialogue14HasBeenPlayed)
-        {
-            dialogue14HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue14PlaceEventHere);
-        }
-        else if (dialogueNumber == 15 && !dialogue15HasBeenPlayed)
-        {
-            dialogue15HasBeenPlayed = true;
-            dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(dialogue15PlaceEventHere);
-        }
-
-        dialogueInstance.start();
-        dialogueInstance.release();
-    }*/
+        doorOpenInstance = FMODUnity.RuntimeManager.CreateInstance(doorOpenPlaceEventHere);
+        doorOpenInstance.start();
+        doorOpenInstance.release();
+    }
     public void PauseDialoguePlayback()
     {
         dialogueInstance.setPaused(true);

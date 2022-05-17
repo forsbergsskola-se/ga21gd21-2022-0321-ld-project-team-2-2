@@ -27,8 +27,9 @@ public class KeyManager : MonoBehaviour
         {
             if (keys == 5)
             {
+                SoundManager.PlayKeycardUseSound(doorUnlocked: true);
+                SoundManager.PlayBigDoorSound();
                 StartCoroutine(OpenDoor());
-                
             }
             else
             {
@@ -40,11 +41,13 @@ public class KeyManager : MonoBehaviour
 
     IEnumerator OpenDoor()
     {
+        
         doorCam.SetActive(true);
         playerCam.SetActive(false);
+        
         yield return new WaitForSeconds(2);
         door.SetBool("isOpen", true);
-        SoundManager.PlayKeycardUseSound(doorUnlocked:true);
+ 
         ShakeCamera(intensity:2);
 
         yield return new WaitForSeconds(3);
