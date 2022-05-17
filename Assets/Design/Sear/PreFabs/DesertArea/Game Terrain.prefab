@@ -902,6 +902,7 @@ Transform:
   - {fileID: 7418776784661971278}
   - {fileID: 5541276630169777774}
   - {fileID: 6231872290437646226}
+  - {fileID: 3044164370728406208}
   m_Father: {fileID: 3905088106640607611}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25194,6 +25195,118 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5879636966066617930}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5905638000428897672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 785473303725381258}
+    m_Modifications:
+    - target: {fileID: 7856908179543779577, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_Name
+      value: GiantFootsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 530.7407
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 246.56897
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1164.3887
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dc47f4d3716983f43beac7a9008cbf2f, type: 3}
+--- !u!4 &3044164370728406208 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8919943270398040392, guid: dc47f4d3716983f43beac7a9008cbf2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5905638000428897672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4394477652070481265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7856908179543779577, guid: dc47f4d3716983f43beac7a9008cbf2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5905638000428897672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2601423868073549556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394477652070481265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011be88d304ae9743b6a4a2b947a0665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VehicleCheck: {fileID: 0}
+  audioObjectPlaceEventHere:
+    Guid:
+      Data1: -1262379496
+      Data2: 1325221866
+      Data3: -796384324
+      Data4: -1305652470
+    Path: event:/Dialogue/GiantFootsteps
+  playOnlyOnce: 1
 --- !u!1001 &5911120754285432352
 PrefabInstance:
   m_ObjectHideFlags: 0
