@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class TriggerCarSpawn : MonoBehaviour
 {
-    public Spawn Spawn;
+    public GameObject car;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Spawn.Spawner();   
+            
+            Debug.Log("Doneeeee");
+            car.SetActive(true);   
         }
     }
 }

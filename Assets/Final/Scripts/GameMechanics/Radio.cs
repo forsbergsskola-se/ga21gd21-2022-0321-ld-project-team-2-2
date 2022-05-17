@@ -13,7 +13,7 @@ public class Radio : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
     bool radioFirstTime = true;
     public int secondsBeforeRadioStartsFirstTime = 3;
-    [SerializeField] private float radioWait = 3;
+    [SerializeField] private float radioWait = 1;
 
     #endregion
 
@@ -89,7 +89,6 @@ public class Radio : MonoBehaviour
 
     IEnumerator RadioFirstTime()
     {
-        DialogueManager.PlayDialogue(6);
         yield return new WaitForSeconds(radioWait);
         instance = FMODUnity.RuntimeManager.CreateInstance("event:/Radio/Radio");
         instance.start();
