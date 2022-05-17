@@ -79,11 +79,10 @@ public class EnterExitVehicle : MonoBehaviour
         if (DialogueVarManager.playerHasEnteredVehicle == false)
         {
             SoundStuff.PlayDialogue(5);
+            DialogueVarManager.playerHasEnteredVehicle = true;
         }
-        DialogueVarManager.playerHasEnteredVehicle = true;
         SoundStuff.SetPlayerStateToInCar();
         SoundStuff.StartCarSound();
-        
         _carController.enabled = true;
         _wheel.enabled = true;
         carCol.isKinematic = false;
