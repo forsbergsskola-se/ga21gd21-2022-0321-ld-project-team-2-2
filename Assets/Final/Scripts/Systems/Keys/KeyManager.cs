@@ -66,6 +66,7 @@ public class KeyManager : MonoBehaviour
     public void AddKey()
     {
         keys++;
+        SoundManager.SolvedPuzzleStinger();
         if (keys == 5) SoundManager.PlayDialogue(8);
     }
 }
