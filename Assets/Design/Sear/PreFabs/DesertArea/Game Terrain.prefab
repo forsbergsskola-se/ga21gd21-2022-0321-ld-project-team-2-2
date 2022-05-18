@@ -2808,7 +2808,7 @@ Transform:
   m_GameObject: {fileID: 5061333669398285913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.2, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3390077810069568556}
@@ -2873,7 +2873,7 @@ BoxCollider:
   m_GameObject: {fileID: 5061333669398285913}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -16204,6 +16204,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destroyer: {fileID: 2907627134726045051}
+--- !u!114 &514881524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318857187174129196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44a5e9dc2bd80441b53039bef0a042e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 0}
+--- !u!114 &514881531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318857187174129196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293b572cb792aaa479ce9f14e4de5dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundManager: {fileID: 0}
 --- !u!1001 &3287749546226813247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26976,7 +27002,7 @@ PrefabInstance:
     - target: {fileID: 2500075388027678470, guid: abf112029c4ab664fa35cf2b6865b617,
         type: 3}
       propertyPath: dialogueEvent
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5892866545839327924, guid: abf112029c4ab664fa35cf2b6865b617,
         type: 3}
