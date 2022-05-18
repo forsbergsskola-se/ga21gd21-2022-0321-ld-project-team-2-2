@@ -76,7 +76,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 700
+  MaxDistance: 800
   Length: 0
 --- !u!114 &-8691228137236968531
 MonoBehaviour:
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   - {fileID: 7169555627834706478}
   StringsBanks:
   - {fileID: 5129207736604290975}
-  cacheTime: 637885010762434049
+  cacheTime: 637885203146581184
   cacheVersion: 10
 --- !u!114 &30455482789983045
 MonoBehaviour:
@@ -1100,30 +1100,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &453984411956430516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/WindAmt
-  m_EditorClassIdentifier: 
-  Name: WindAmt
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 50.5
-  ID:
-    data1: 3585517453
-    data2: 3902911652
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &1132246334606315341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1698,7 +1674,6 @@ MonoBehaviour:
   - {fileID: 8975781511455055859}
   - {fileID: 7742324353485719728}
   - {fileID: -1191122739429125383}
-  - {fileID: 453984411956430516}
   MinDistance: 1
   MaxDistance: 20
   Length: 624065
@@ -1744,10 +1719,10 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637884828086399240
+  lastModified: 637885203146581184
   FileSizes:
   - Name: 
-    Value: 4390
+    Value: 4430
   Exists: 1
 --- !u!114 &5150981309024098315
 MonoBehaviour:
@@ -1798,6 +1773,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -1790011634052859592}
+  - {fileID: 6682462597835193338}
   MinDistance: 400
   MaxDistance: 2800
   Length: 0
@@ -2036,6 +2012,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 27656
+--- !u!114 &6682462597835193338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Stones/InMountains
+  m_EditorClassIdentifier: 
+  Name: InMountains
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 285085921
+    data2: 3602933542
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6700886150835896626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637885010762434049
+  lastModified: 637885203146511164
   FileSizes: []
   Exists: 1
 --- !u!114 &7191742326758953476
