@@ -6,7 +6,6 @@ public class WindScript : MonoBehaviour
 {
     public FMODUnity.EventReference placeEventHere;
     private FMOD.Studio.EventInstance windInstance;
-    public bool is3D = true;
     public int minDuration = 30;
     public int maxDuration = 180;
     private int weatherDuration;
@@ -22,7 +21,6 @@ public class WindScript : MonoBehaviour
         heightParam_EventDescription.getParameterDescriptionByName("Height", out heightParam_ParameterDescription);
         heightParam_ID = heightParam_ParameterDescription.id;
 
-        if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         windInstance.start();
         windInstance.setParameterByName("WindAmt", 0);
         weatherDuration = Random.Range(minDuration, maxDuration);
@@ -41,12 +39,13 @@ public class WindScript : MonoBehaviour
     }
     private void Update()
     {
-        if (is3D) FMODUnity.RuntimeManager.AttachInstanceToGameObject(windInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        
     }
 
     public void HeightParam(float height)
     {
         windInstance.setParameterByID(heightParam_ID, height);
+        Debug.Log("Current height: " + height);
     }
 
 }
