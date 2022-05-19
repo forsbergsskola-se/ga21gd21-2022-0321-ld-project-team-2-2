@@ -16,13 +16,9 @@ public class CameraAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             door.SetBool("isOpen", true);
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            camera.SetBool("move", true);
         }
     }
 }
