@@ -45,7 +45,6 @@ public class WindScript : MonoBehaviour
     public void HeightParam(float height)
     {
         windInstance.setParameterByID(heightParam_ID, height);
-        Debug.Log("Current height: " + height);
     }
 
 }
